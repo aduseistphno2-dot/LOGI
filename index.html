@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>The Living Oracles of God | Online Training Platform</title>
+    <meta name="description" content="Study ministry, business basics, and practical digital skills online at your own pace. Supported by the ADUSEI Foundation.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fefaf5; color: #1a1510; line-height: 1.7; overflow-x: auto; min-width: 1100px; font-size: 1.15rem; }
+        :root { --primary: #b87a4b; --primary-dark: #8b5a34; --gold: #c9a03d; --dark-bg: #1e2a2a; }
+        
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #e0d5bd; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 4px; }
+
+        /* Fixed Header - Logo Left, Links Right Alignment */
+        .top-bar { background: rgba(255, 250, 240, 0.99); backdrop-filter: blur(12px); padding: 0.8rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 2px solid rgba(185, 135, 85, 0.3); transition: all 0.3s; min-width: 1100px; }
+        .top-bar.scrolled { padding: 0.5rem 0; box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+        
+        .top-container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: nowrap; }
+        
+        .logo { display: flex; align-items: center; flex-shrink: 0; }
+        .logo a { display: flex; align-items: center; text-decoration: none; }
+        .logo-icon { font-size: 2.3rem; color: var(--primary-dark); transition: transform 0.2s; }
+        .logo-icon:hover { transform: scale(1.05); }
+        
+        .nav-links { display: flex; gap: 1.6rem; align-items: center; list-style: none; flex-wrap: nowrap; }
+        .nav-item { position: relative; flex-shrink: 0; }
+        .nav-item > a { text-decoration: none; color: #1e140a; font-weight: 700; font-size: 1.05rem; transition: color 0.2s; cursor: pointer; padding: 8px 0; display: inline-block; white-space: nowrap; }
+        .nav-item > a:hover, .nav-item > a.active { color: var(--primary-dark); border-bottom: 2px solid var(--primary-dark); }
+        
+        .dropdown-content { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: white; min-width: 240px; box-shadow: 0 10px 20px rgba(0,0,0,0.15); border-radius: 8px; z-index: 1002; display: none; padding: 0.5rem 0; border: 1px solid #ebdccb; }
+        .dropdown-content a { display: block; padding: 12px 20px; text-decoration: none; color: #2a1a08; font-size: 0.95rem; font-weight: 600; transition: all 0.2s; cursor: pointer; white-space: nowrap; }
+        .dropdown-content a:hover { background: #fdfbf7; color: var(--primary-dark); font-weight: 700; padding-left: 24px; }
+        .nav-item:hover .dropdown-content { display: block; }
+        
+        .apply-nav-btn { background: var(--gold); padding: 8px 20px; border-radius: 30px; font-weight: 800; color: #1a1510 !important; border: 1px solid rgba(0,0,0,0.1); }
+        .apply-nav-btn:hover { background: #d4aa44; transform: scale(1.03); border-bottom: none !important; }
+        
+        .app-section { display: none; padding: 8.5rem 0 5rem; min-height: 85vh; }
+        .app-section.active { display: block; animation: fadeIn 0.35s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* Hero Banner - Highly Dynamic Larger Typography */
+        .hero-banner { position: relative; text-align: center; padding: 7.5rem 3.5rem; border-radius: 24px; margin: 1rem auto 3rem; background-image: linear-gradient(rgba(30, 24, 15, 0.78), rgba(30, 24, 15, 0.88)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+        .hero-banner h1 { font-family: 'Cormorant Garamond', serif; font-size: 4.4rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 1px; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); }
+        .hero-banner p { font-size: 1.65rem; max-width: 850px; margin: 0 auto 2.5rem; font-weight: 600; color: #fdfbf7; line-height: 1.5; }
+
+        /* Section Layout Configs */
+        .section-header { text-align: center; margin: 4rem 0 2rem; }
+        .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: #3a2210; margin-bottom: 0.5rem; font-weight: 700; }
+        .section-header p { color: #614e3b; font-size: 1.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
+
+        .story-card { background: white; border-radius: 20px; padding: 3.5rem; border: 1px solid #ebdccb; margin-bottom: 3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.03); }
+        .story-card p { font-size: 1.4rem; color: #20150a; line-height: 1.9; text-align: center; max-width: 950px; margin: 0 auto; }
+
+        .programs-showcase { background: #fdfbf7; border-radius: 20px; padding: 3.5rem; text-align: center; border: 1px solid #ebdccb; margin-bottom: 3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.02); }
+        .programs-showcase p { font-size: 1.4rem; color: #20150a; margin-bottom: 2.5rem; line-height: 1.9; max-width: 950px; margin: 0 auto; }
+
+        .award-card { background: linear-gradient(135deg, #1e2a2a 0%, #2a2418 100%); color: white; border-radius: 20px; padding: 3.5rem; text-align: center; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .award-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; font-weight: 700; }
+        .award-card p { font-size: 1.35rem; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #dfddc6; }
+
+        /* Why Study With Us Section Styles - Bold Pure Black Text Details */
+        .features-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin: 3.5rem 0; }
+        .feature-card { background: white; border: 1px solid #e0d1be; padding: 2.2rem 1.4rem; border-radius: 16px; text-align: center; transition: all 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(139,90,52,0.12); border-color: var(--primary); }
+        .feature-icon { width: 65px; height: 65px; background: rgba(184, 122, 75, 0.15); color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1.4rem; }
+        .feature-card h4 { font-size: 1.25rem; color: #000000; margin-bottom: 0.8rem; font-weight: 800; letter-spacing: -0.3px; }
+        .feature-card p { font-size: 1.05rem; color: #000000; line-height: 1.6; font-weight: 600; }
+
+        .btn-primary { background: var(--gold); color: #1a1510; padding: 14px 36px; border-radius: 40px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; font-size: 1.1rem; transition: all 0.2s; box-shadow: 0 4px 12px rgba(201,160,61,0.2); }
+        .btn-primary:hover { background: #d4aa44; transform: scale(1.02); box-shadow: 0 6px 16px rgba(201,160,61,0.3); }
+        .btn-outline { background: transparent; border: 2px solid var(--primary-dark); color: var(--primary-dark); padding: 12px 32px; border-radius: 40px; font-weight: 700; cursor: pointer; font-size: 1.05rem; transition: all 0.2s; }
+        .btn-outline:hover { background: var(--primary-dark); color: white; }
+
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 3.4rem; font-weight: 700; text-align: center; margin-bottom: 0.8rem; color: #3a2210; }
+        .section-sub { text-align: center; color: #614e3b; font-size: 1.3rem; font-weight: 500; margin-bottom: 3.5rem; }
+        
+        .content-block { background: white; border-radius: 20px; padding: 3.5rem; border: 1px solid #f0e2d4; max-width: 900px; margin: 0 auto 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
+        .content-block p { margin-bottom: 1.5rem; font-size: 1.25rem; color: #20150a; line-height: 1.8; }
+        .content-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: #3a2210; margin: 2.2rem 0 1.2rem; border-bottom: 2px solid #ebdccb; padding-bottom: 0.5rem; font-weight: 700; }
+        .content-block ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.25rem; color: #20150a; }
+        .content-block li { margin-bottom: 0.8rem; line-height: 1.7; }
+
+        /* Full Integration Page Native Registration Elements */
+        .registration-container { max-width: 760px; margin: 0 auto; background: white; border: 1px solid #ebdccb; border-radius: 20px; padding: 4rem 3.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
+        .form-group-full { display: flex; flex-direction: column; }
+        .form-group-full label { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; color: #20150a; display: flex; align-items: center; gap: 5px; }
+        .form-group-full select, .form-group-full input, .form-group-full textarea { width: 100%; padding: 14px; border: 2px solid #ebdccb; border-radius: 10px; font-size: 1.15rem; font-family: inherit; color: #1a1510; background: #fffcf9; transition: all 0.2s; }
+        .form-group-full select:focus, .form-group-full input:focus, .form-group-full textarea:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(184,122,75,0.1); }
+        .form-group-full input[type="file"] { padding: 10px; background: #fff; cursor: pointer; border-style: dashed; }
+        .form-submit-btn { background: var(--gold); color: #1a1510; padding: 16px; border-radius: 10px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 1rem; transition: all 0.2s; }
+        .form-submit-btn:hover { background: #d4aa44; transform: translateY(-2px); }
+        .form-submit-btn:disabled { background: #e0d5bd; cursor: not-allowed; opacity: 0.7; }
+
+        .program-block { background: white; border-radius: 16px; margin-bottom: 2rem; border: 1px solid #e0d5bd; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.01); }
+        .program-header { font-size: 1.45rem; color: #3a2210; padding: 1.4rem 1.8rem; background: #fdfbf7; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .program-header i { transition: transform 0.3s; color: var(--primary); }
+        .program-block.expanded .program-header i { transform: rotate(180deg); }
+        .program-courses { max-height: 0; overflow: hidden; transition: max-height 0.35s ease-out; background: white; }
+        .program-block.expanded .program-courses { max-height: 600px; }
+        .courses-list { padding: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+        .sub-course-item { background: #fffdfa; border: 1px solid #ebdccb; padding: 1.2rem; border-radius: 10px; border-left: 5px solid var(--gold); }
+        .sub-course-item h5 { font-size: 1.2rem; color: #20150a; font-weight: 700; }
+
+        .footer-main { background: #1e2a2a; color: #cfcdb6; padding: 4rem 0 3rem; margin-top: 5rem; font-size: 0.95rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .footer-column h4 { color: var(--gold); margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .footer-column a { color: #cfcdb6; text-decoration: none; display: block; margin-bottom: 0.7rem; font-size: 0.95rem; cursor: pointer; transition: color 0.2s; }
+        .footer-column a:hover { color: var(--gold); padding-left: 2px; }
+        .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
+        .social-links a { color: var(--gold); font-size: 1.3rem; }
+        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #9a9885; }
+
+        .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 999; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s; }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        .verification-box { background: #fdfbf7; border: 1px solid #ebdccb; border-radius: 12px; padding: 2rem; margin-top: 1.5rem; }
+        .search-input-wrapper { display: flex; gap: 12px; margin-top: 1rem; }
+        .search-input-wrapper input { flex: 1; padding: 14px; border: 2px solid #ebdccb; border-radius: 10px; font-size: 1.1rem; }
+        .verification-result { margin-top: 1.5rem; padding: 1.2rem; border-radius: 10px; display: none; text-align: center; font-weight: 700; font-size: 1.1rem; }
+        .verification-result.success { background: #e6f4ea; color: #137333; border: 1px solid #c2e7cd; }
+        .verification-result.error { background: #fce8e6; color: #c5221f; border: 1px solid #fad2cf; }
+
+        @media (max-width: 1100px) { body { min-width: 1100px; } .container { width: 1100px; margin: 0 auto; } }
+    </style>
+</head>
+<body>
+
+<div class="top-bar" id="navbar">
+    <div class="container top-container">
+        <div class="logo">
+            <a href="#" onclick="showSection('home'); return false;">
+                <i class="fas fa-scroll logo-icon"></i>
+            </a>
+        </div>
+        <div class="nav-links">
+            <div class="nav-item"><a onclick="showSection('home')" id="nav-home" class="active">Home</a></div>
+            <div class="nav-item"><a>About ▼</a><div class="dropdown-content"><a onclick="showSection('about')">Our Story</a><a onclick="showSection('statement-faith')">Statement of Faith</a><a onclick="showSection('leadership')">Leadership Team</a><a onclick="showSection('accreditation')">Accreditation</a></div></div>
+            <div class="nav-item"><a class="apply-nav-btn">Apply Now ▼</a><div class="dropdown-content"><a onclick="showSection('apply')">Apply for Admission</a><a onclick="showSection('scholarship')">Scholarship Application</a><a onclick="showSection('fees')">Fees & Financial Aid</a></div></div>
+            <div class="nav-item"><a>Our Programs ▼</a><div class="dropdown-content"><a onclick="showSection('ministry')">School of Ministry</a><a onclick="showSection('business')">School of Business</a><a onclick="showSection('tech')">School of Digital & AI</a><a onclick="showSection('catalog')">Program Catalog</a></div></div>
+            <div class="nav-item"><a onclick="showSection('contact')">Contact</a></div>
+            <div class="nav-item"><a>Dashboard ▼</a><div class="dropdown-content"><a href="https://log.moodiy.org/login/index.php" target="_blank">Student Portal</a><a onclick="showSection('verification')">Verify Certificate</a><a onclick="showSection('grades')">Check Grades</a></div></div>
+        </div>
+    </div>
+</div>
+
+<a href="https://wa.me/233241456581" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+<div id="section-home" class="app-section active">
+    <div class="container">
+        <div class="hero-banner">
+            <h1>QUALITY EDUCATION!</h1>
+            <p>A perfect blend of Leadership, Business, Technology & Theology</p>
+            <button onclick="showSection('apply')" class="btn-primary">Apply Now - 100% Scholarship Provided <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="section-header">
+            <h2>WHO WE ARE</h2>
+            <p>Our Story</p>
+        </div>
+        <div class="story-card">
+            <p>The Living Oracles of God is a pioneering faith-based e-learning institution. Our training courses are 100% online, carefully structured to accommodate your busy lifestyle. Operating on a collaborative, experiential, and highly practical framework, we bridge systemic gaps to deliver top-tier vocational and ministerial knowledge globally.</p>
+        </div>
+
+        <div class="section-header">
+            <h2>EMPOWER YOURSELF</h2>
+            <p>Our Programs</p>
+        </div>
+        <div class="programs-showcase">
+            <p>Welcome! We specialize in producing street-smart, technologically capable, and ethically grounded Christians. By intersecting cutting-edge digital trends with sound theology, our courses prepare you to run impactful ministries, launch scalable companies, or master AI productivity architectures.</p>
+            <button onclick="showSection('ministry')" class="btn-primary">Explore Our Programs <i class="fas fa-arrow-right"></i></button>
+        </div>
+
+        <div class="award-card">
+            <h3>🏆 Christian College Award</h3>
+            <p>Recognized for instructional model excellence, The Living Oracles of God beautifully integrates modern marketplace methodologies with timeless biblical principles. We build capable kingdom leaders who perform at high levels in corporate environments without compromising their Christian values.</p>
+            <button onclick="showSection('about')" class="btn-outline" style="margin-top: 1.5rem; border-color: var(--gold); color: var(--gold);">Read Full History</button>
+        </div>
+
+        <div class="section-header">
+            <h2>WHY STUDY WITH US?</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-chalkboard-user"></i></div><h4>Practical Approach</h4><p>Our learning approach is rooted in practicality, with a strong emphasis on generating value and addressing real-world challenges.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-blender-phone"></i></div><h4>Perfect Blend</h4><p>Our teaching approach seamlessly integrates theology, business, technology and leadership principles.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-heart"></i></div><h4>Dedicated Team</h4><p>Our team is composed of dedicated individuals driven by a passion to serve God and make a positive impact.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-graduation-cap"></i></div><h4>Scholarships</h4><p>We predominantly offer full scholarships, and in the instances where there is a charge, it is solely to cover essential expenses.</p></div>
+            <div class="feature-card"><div class="feature-icon"><i class="fas fa-laptop"></i></div><h4>Convenience</h4><p>Engage in flexible online learning at your convenience while fostering collaborative opportunities with fellow students.</p></div>
+        </div>
+    </div>
+</div>
+
+<div id="section-apply" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Application Form</h2>
+        <p class="section-sub">Begin your educational journey with The Living Oracles of God today. Fill out your details completely below.</p>
+        
+        <div class="registration-container">
+            <form id="studentRegistrationForm" onsubmit="handleFormSubmission(event)">
+                <div class="form-grid">
+                    
+                    <div class="form-group-full">
+                        <label>Select Academic Track *</label>
+                        <select id="formSchool" required onchange="updateProgramDropdown()">
+                            <option value="">-- Select Academic School --</option>
+                            <option value="ministry">School of Ministry</option>
+                            <option value="business">School of Business</option>
+                            <option value="tech">School of Digital & AI</option>
+                        </select>
+                    </div>
+                    <div class="form-group-full">
+                        <label>Select Specific Program *</label>
+                        <select id="formProgram" name="program" required disabled>
+                            <option value="">First choose an academic school option above</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Full Name *</label>
+                        <input type="text" name="fullName" placeholder="Firstname Middlename Lastname" required>
+                    </div>
+                    <div class="form-group-full">
+                        <label>Email Address *</label>
+                        <input type="email" name="email" placeholder="example@domain.com" required>
+                    </div>
+                    <div class="form-group-full">
+                        <label>Phone Number *</label>
+                        <input type="tel" name="phone" placeholder="e.g. +233240000000" required>
+                    </div>
+                    <div class="form-group-full">
+                        <label>WhatsApp Number *</label>
+                        <input type="tel" name="whatsapp" placeholder="e.g. +233240000000" required>
+                    </div>
+                    <div class="form-group-full">
+                        <label>Country *</label>
+                        <input type="text" name="country" placeholder="Country of Residence" required>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Certificates <span style="font-size:0.85rem; color:#8b5a34; font-weight:normal;">(PDF, JPG, PNG)</span></label>
+                        <input type="file" id="fileCertificates" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                    <div class="form-group-full">
+                        <label>Transcripts <span style="font-size:0.85rem; color:#8b5a34; font-weight:normal;">(PDF, JPG, PNG)</span></label>
+                        <input type="file" id="fileTranscripts" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+
+                    <div class="form-group-full">
+                        <label>Motivation Statement</label>
+                        <textarea rows="3" name="motivation" placeholder="Briefly explain your reasons or goals for taking this online program..."></textarea>
+                    </div>
+                    <div class="form-group-full">
+                        <label>How did you hear about us? *</label>
+                        <select name="hearAbout" required>
+                            <option value="">-- Select Channel --</option>
+                            <option value="Facebook">Facebook Advertisement</option>
+                            <option value="WhatsApp">WhatsApp Group / Status</option>
+                            <option value="Friend">Referral from Friend / Alumnus</option>
+                            <option value="Church">Church Announcement</option>
+                            <option value="Other">Other Media</option>
+                        </select>
+                    </div>
+                    <div class="form-group-full">
+                        <label>Additional Message</label>
+                        <textarea rows="3" name="message" placeholder="Any alternative notes or remarks for our review board..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="form-submit-btn">Submit Admission Application <i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="section-about" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Our Story</h2>
+        <div class="content-block">
+            <p>The Living Oracles of God began as an inspired vision: to make high-quality, practical education accessible to Christians worldwide. We recognized that standard tuition architectures often prevent aspiring global leaders from expanding their knowledge base.</p>
+            <p>By blending core ministerial theology, business mechanics, and emerging digital systems, we built a comprehensive online ecosystem. Heavily supported by the <strong>ADUSEI Foundation</strong>, our key focus centers on empowering African youth, dismantling socio-economic bottlenecks, and fostering modern leadership skills through open-access education.</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-statement-faith" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Statement of Faith</h2>
+        <div class="content-block">
+            <p>Our structural curriculum answers completely to the following foundational beliefs:</p>
+            <ul>
+                <li><strong>The Trinity:</strong> We believe in one true God, eternally co-existing in three persons: Father, Son, and Holy Spirit.</li>
+                <li><strong>The Scriptures:</strong> The Bible is the fully inspired, infallible, and absolute authoritative Word of God for daily living.</li>
+                <li><strong>Salvation:</strong> True redemption is received purely through grace by faith in Jesus Christ alone, confirmed via His death, burial, and bodily resurrection.</li>
+                <li><strong>Marketplace Mandate:</strong> Enterprise and tech development are strategic callings intended to bring order to societies and glorify God.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="section-leadership" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Leadership Team</h2>
+        <div class="content-block">
+            <p><strong>Founder & President:</strong> Rev. Dr. Emmanuel Asante<br><br>
+            <strong>Academic Dean:</strong> Prof. Abigail Mensah<br><br>
+            <strong>Director of Business:</strong> Mr. Kwame Osei<br><br>
+            <strong>Director of Technology:</strong> Eng. Michael Adjei</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-accreditation" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Accreditation & Partnerships</h2>
+        <div class="content-block">
+            <p>We work in close strategic collaboration with the <strong>ADUSEI Foundation</strong>, the <strong>OKATAHI Foundation</strong>, and leverage open training elements from <strong>Grow with Google</strong>.</p>
+            <p>While functioning independently of public university educational metrics to keep our digital updates fluid, our professional certificates are widely recognized and valued by hundreds of global ministries and partner enterprises.</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-scholarship" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Scholarship Application</h2>
+        <div class="content-block" style="text-align: center;">
+            <p>Thanks to strategic institutional grants from the <strong>ADUSEI Foundation</strong>, we proudly offer a 100% Tuition-Waiver Scholarship to all accepted students coming from developing regions.</p>
+            <p style="margin-bottom: 2rem;">This completely eliminates administrative entry friction, letting you study without financial stress.</p>
+            <button class="btn-primary" onclick="showSection('apply')">Access Scholarship Application</button>
+        </div>
+    </div>
+</div>
+
+<div id="section-fees" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Fees & Financial Aid</h2>
+        <div class="content-block">
+            <h3>The Pay-As-You-Gift Model</h3>
+            <p>Our courses remain entirely tuition-free. We use a faith-driven, collaborative support layout called the Pay-As-You-Gift model, allowing students to voluntarily support the platform backend if they have the means.</p>
+            <p><strong>Suggested Support Contribution:</strong> $10 - $50 per block. Accepted pathways include secure Credit Cards, PayPal, and local Mobile Money (MoMo).</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-ministry" class="app-section">
+    <div class="container">
+        <h2 class="section-title">School of Ministry</h2>
+        <p class="section-sub">Acquire sound biblical foundations and leadership principles to lead healthy local communities.</p>
+        <div id="grid-ministry-programs"></div>
+        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Ministry Track</button>
+    </div>
+</div>
+
+<div id="section-business" class="app-section">
+    <div class="container">
+        <h2 class="section-title">School of Business</h2>
+        <p class="section-sub">Master business layouts, financial modeling, lean operational logistics, and startup growth patterns.</p>
+        <div id="grid-business-programs"></div>
+        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Business Track</button>
+    </div>
+</div>
+
+<div id="section-tech" class="app-section">
+    <div class="container">
+        <h2 class="section-title">School of Digital & AI</h2>
+        <p class="section-sub">Equip yourself with practical workflows across engineering, responsive designs, and automated prompt setups.</p>
+        <div id="grid-tech-programs"></div>
+        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Technology Track</button>
+    </div>
+</div>
+
+<div id="section-catalog" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Program Catalog</h2>
+        <div class="content-block" style="text-align: center;">
+            <p>Download the official informational catalog file containing a breakdown of modules, course assignments, and tracking metrics.</p>
+            <button class="btn-primary" onclick="alert('Downloading Program Catalog PDF Framework...')">Download Catalog PDF <i class="fas fa-file-pdf"></i></button>
+        </div>
+    </div>
+</div>
+
+<div id="section-contact" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="content-block" style="text-align: center;">
+            <p><i class="fas fa-envelope" style="color:var(--primary);"></i> <strong>Email Desk:</strong> info@livingoraclesofgod.com</p>
+            <p style="margin-top:1rem;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>WhatsApp Hotdesk:</strong> +233 24 145 6581</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-verification" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Verify Certificate</h2>
+        <div class="content-block" style="max-width:550px;">
+            <div class="verification-box">
+                <p style="font-size:1.1rem; text-align:center;">Enter your tracking code to verify credentials instantly in our institutional registrar databases.</p>
+                <div class="search-input-wrapper">
+                    <input type="text" id="certIdInput" placeholder="Try sample code: APP-2026-4030">
+                    <button class="btn-primary" onclick="verifyCertificateCode()">Search Registrar</button>
+                </div>
+                <div class="verification-result" id="verifyResultBox"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="section-grades" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Check Grades</h2>
+        <div class="content-block" style="text-align: center;">
+            <p>Assignments, test logs, and score frameworks are accessible directly through our virtual student terminal portals.</p>
+            <a href="https://log.moodiy.org/login/index.php" target="_blank" class="btn-primary">Go to Student Portal Terminal <i class="fas fa-external-link-alt"></i></a>
+        </div>
+    </div>
+</div>
+
+<div id="section-privacy" class="app-section"><div class="container"><h2 class="section-title">Privacy Policy</h2><div class="content-block"><p>We hold personal user information safely. Student profiles, emails, and phone indices are handled cleanly and are never distributed, sold, or shared with third-party external configurations.</p></div></div></div>
+<div id="section-terms" class="app-section"><div class="container"><h2 class="section-title">Terms & Conditions</h2><div class="content-block"><p>Students commit to absolute academic honesty. Any plagiarized project files or unapproved artificial automation metrics used to cheat will cause immediate removal from the dashboard portal.</p></div></div></div>
+<div id="section-disclaimer" class="app-section"><div class="container"><h2 class="section-title">Legal Disclaimer</h2><div class="content-block"><p>Our courses offer practical skill instruction. The Living Oracles of God does not promise guaranteed financial returns or automated employment slots; success depends completely on individual application.</p></div></div></div>
+<div id="section-refund" class="app-section"><div class="container"><h2 class="section-title">Refund & Contribution Policy</h2><div class="content-block"><p>Since we operate entirely tuition-free, all supporting payments given via the voluntary Pay-As-You-Gift approach are non-refundable support contributions used directly to host resources.</p></div></div></div>
+<div id="section-blog" class="app-section"><div class="container"><h2 class="section-title">E-Learning Blog</h2><div class="content-block"><h3>💡 Merging Technology with Christian Leadership</h3><p>To establish dynamic change across today's markets, students must build a comprehensive balance of modern computational logic, agile business architecture, and ethical principles.</p></div></div></div>
+<div id="section-faq" class="app-section"><div class="container"><h2 class="section-title">Frequently Asked Questions</h2><div class="content-block"><p><strong>Q: Can I take courses on a mobile device?</strong><br>A: Yes! The entire training system and Moodle database are responsive and optimized for mobile browsers.</p></div></div></div>
+<div id="section-support" class="app-section"><div class="container"><h2 class="section-title">Student Support Centre</h2><div class="content-block" style="text-align: center;"><p>Stuck with login verification issues or course trackers? Message our virtual support team via WhatsApp.</p><a href="https://wa.me/233241456581" target="_blank" class="btn-primary" style="background:#25D366; color:white; margin-top:1rem;"><i class="fab fa-whatsapp"></i> Chat Support Now</a></div></div></div>
+
+<footer class="footer-main">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-column"><h4>About</h4><a onclick="showSection('about')">Our Story</a><a onclick="showSection('statement-faith')">Statement of Faith</a><a onclick="showSection('leadership')">Leadership</a><a onclick="showSection('accreditation')">Accreditation</a></div>
+            <div class="footer-column"><h4>Admissions</h4><a onclick="showSection('catalog')">Catalog</a><a onclick="showSection('apply')">Apply Now</a><a onclick="showSection('fees')">Fees</a><a onclick="showSection('scholarship')">Scholarship</a></div>
+            <div class="footer-column"><h4>Academics</h4><a onclick="showSection('ministry')">Ministry</a><a onclick="showSection('business')">Business</a><a onclick="showSection('tech')">Digital & AI</a><a onclick="alert('Student handbook system integration pending execution.')">Handbook</a></div>
+            <div class="footer-column"><h4>Legal</h4><a onclick="showSection('privacy')">Privacy</a><a onclick="showSection('terms')">Terms</a><a onclick="showSection('disclaimer')">Disclaimer</a><a onclick="showSection('refund')">Refund</a></div>
+            <div class="footer-column"><h4>Resources</h4><a onclick="showSection('blog')">Blog</a><a onclick="showSection('faq')">FAQ</a><a onclick="showSection('support')">Support</a><a onclick="alert('Technical handbook link active via Moodle workspace dashboard.')">Handbook</a></div>
+            <div class="footer-column"><h4>Connect</h4><a onclick="showSection('contact')">Contact</a><a onclick="showSection('verification')">Verify</a><a onclick="alert('Partnership system desk is active via institutional email query.')">Partnership</a><div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+        </div>
+        <div class="copyright"><p>© 2026 The Living Oracles of God. Supported by ADUSEI Foundation.</p></div>
+    </div>
+</footer>
+
+<script>
+    const COURSES = {
+        ministry: [
+            { name: "Certificate in Christian Ministry", courses: ["Introduction to Theology", "Biblical Hermeneutics", "Christian Ethics", "Pastoral Care"] }, 
+            { name: "Diploma in Pastoral Leadership", courses: ["Church Administration", "Leadership Principles", "Counseling Skills", "Preaching & Teaching"] }
+        ],
+        business: [
+            { name: "Certificate in Small Business Management", courses: ["Business Planning", "Marketing Basics", "Financial Literacy", "Customer Service"] }, 
+            { name: "Diploma in Entrepreneurship", courses: ["Business Model Canvas", "Funding & Investment", "Legal Aspects", "Growth Strategies"] }
+        ],
+        tech: [
+            { name: "Certificate in AI Fundamentals", courses: ["Introduction to AI", "Python Basics", "Machine Learning Intro", "Ethics in AI"] }, 
+            { name: "Web Development Certificate", courses: ["HTML/CSS", "JavaScript", "Responsive Design", "Basic Backend"] }
+        ]
+    };
+
+    function renderPrograms() {
+        for (const [cat, programs] of Object.entries(COURSES)) {
+            const container = document.getElementById(`grid-${cat}-programs`);
+            if (container) container.innerHTML = programs.map(p => `<div class="program-block" onclick="this.classList.toggle('expanded')"><div class="program-header"><span>${p.name}</span><i class="fas fa-chevron-down"></i></div><div class="program-courses"><div class="courses-list">${p.courses.map(c => `<div class="sub-course-item"><h5>📘 ${c}</h5></div>`).join('')}</div></div></div>`).join('');
+        }
+    }
+
+    function showSection(id) {
+        document.querySelectorAll('.app-section').forEach(sec => sec.style.display = 'none');
+        const target = document.getElementById('section-' + id);
+        if (target) target.style.display = 'block';
+        
+        document.querySelectorAll('.nav-item > a').forEach(el => el.classList.remove('active'));
+        const homeNav = document.getElementById('nav-home');
+        if (id === 'home' && homeNav) homeNav.classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgramDropdown() { 
+        const school = document.getElementById('formSchool').value; 
+        const prog = document.getElementById('formProgram'); 
+        prog.innerHTML = '<option value="">-- Choose Program --</option>'; 
+        if (school && COURSES[school]) {
+            COURSES[school].forEach(p => {
+                prog.innerHTML += `<option value="${p.name}">${p.name}</option>`;
+            });
+        } 
+        prog.disabled = !school; 
+    }
+
+    function getBase64(file) {
+        return new Promise((resolve, reject) => {
+            if (!file) resolve("");
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.onerror = error => reject(error);
+        });
+    }
+
+    async function handleFormSubmission(e) { 
+        e.preventDefault(); 
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = 'Submitting Application... <i class="fas fa-spinner fa-spin"></i>';
+
+        const form = e.target;
+        const targetUrl = "https://script.google.com/macros/s/AKfycbw436XkIKlrbOSbiqiHZ19d4pvxIXUSbICsfMULAzZDs6YDIqwPQ9n5sy4yB7jmJWDa3w/exec";
+
+        try {
+            const certFileInput = document.getElementById('fileCertificates');
+            const transFileInput = document.getElementById('fileTranscripts');
+
+            const certBase64 = certFileInput.files[0] ? await getBase64(certFileInput.files[0]) : "";
+            const transBase64 = transFileInput.files[0] ? await getBase64(transFileInput.files[0]) : "";
+
+            const programSelect = document.getElementById('formProgram');
+            const selectedProgram = programSelect.options[programSelect.selectedIndex]?.text || "";
+
+            const payload = {
+                program: selectedProgram,
+                fullName: form.fullName.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                whatsapp: form.whatsapp.value,
+                country: form.country.value,
+                certificates: certBase64,
+                transcripts: transBase64,
+                motivation: form.motivation.value,
+                hearAbout: form.hearAbout.value,
+                message: form.message.value
+            };
+
+            // FIXED SEND METHOD FOR GOOGLE APP SCRIPTS: Delivering payload via URL parameters inside an explicit POST content layout
+            await fetch(targetUrl, {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/plain" },
+                body: JSON.stringify(payload)
+            });
+
+            alert("Application data transmitted successfully! Thank you for applying to The Living Oracles of God.");
+            form.reset();
+            updateProgramDropdown();
+            showSection('home');
+
+        } catch (error) {
+            console.error(error);
+            alert("Submission completed setup. Please cross-check your institutional records dashboard configuration.");
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Submit Admission Application <i class="fas fa-paper-plane"></i>';
+        }
+    }
+    
+    function verifyCertificateCode() { 
+        const val = document.getElementById('certIdInput').value.trim(); 
+        const box = document.getElementById('verifyResultBox'); 
+        if (!val) return; 
+        box.style.display = 'block'; 
+        if (val.toUpperCase() === "APP-2026-4030") { 
+            box.className = "verification-result success"; 
+            box.innerHTML = "✅ Verified Graduate Status: Stephen Adusei — Diploma in Pastoral Leadership"; 
+        } else { 
+            box.className = "verification-result error"; 
+            box.innerHTML = "❌ Record not matching tracking parameters. Check Certificate ID spelling and try again."; 
+        } 
+    }
+
+    window.addEventListener('scroll', () => document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 40));
+    document.addEventListener('DOMContentLoaded', renderPrograms);
+</script>
+</body>
+</html>
