@@ -87,17 +87,16 @@
         .content-block ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.25rem; color: #20150a; }
         .content-block li { margin-bottom: 0.8rem; line-height: 1.7; }
 
-        /* Full Integration Page Native Registration Elements */
-        .registration-container { max-width: 760px; margin: 0 auto; background: white; border: 1px solid #ebdccb; border-radius: 20px; padding: 4rem 3.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
-        .form-group-full { display: flex; flex-direction: column; }
-        .form-group-full label { font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; color: #20150a; display: flex; align-items: center; gap: 5px; }
-        .form-group-full select, .form-group-full input, .form-group-full textarea { width: 100%; padding: 14px; border: 2px solid #ebdccb; border-radius: 10px; font-size: 1.15rem; font-family: inherit; color: #1a1510; background: #fffcf9; transition: all 0.2s; }
-        .form-group-full select:focus, .form-group-full input:focus, .form-group-full textarea:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(184,122,75,0.1); }
-        .form-group-full input[type="file"] { padding: 10px; background: #fff; cursor: pointer; border-style: dashed; }
-        .form-submit-btn { background: var(--gold); color: #1a1510; padding: 16px; border-radius: 10px; font-weight: 800; font-size: 1.2rem; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 1rem; transition: all 0.2s; }
-        .form-submit-btn:hover { background: #d4aa44; transform: translateY(-2px); }
-        .form-submit-btn:disabled { background: #e0d5bd; cursor: not-allowed; opacity: 0.7; }
+        /* Generic Embedded Functional Forms Layouts */
+        .embedded-form-grid { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; text-align: left; }
+        .embedded-form-group { display: flex; flex-direction: column; }
+        .embedded-form-group label { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; color: #20150a; }
+        .embedded-form-group input, .embedded-form-group textarea, .embedded-form-group select { width: 100%; padding: 12px; border: 2px solid #ebdccb; border-radius: 8px; font-size: 1.1rem; font-family: inherit; background: #fffcf9; transition: border-color 0.2s; }
+        .embedded-form-group input:focus, .embedded-form-group textarea:focus, .embedded-form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+
+        /* Embedded Registration Frame Styles */
+        .frame-wrapper { max-width: 850px; margin: 0 auto; background: white; border: 1px solid #ebdccb; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.04); position: relative; }
+        .registration-iframe { width: 100%; height: 750px; border: none; display: block; background: #ffffff; }
 
         .program-block { background: white; border-radius: 16px; margin-bottom: 2rem; border: 1px solid #e0d5bd; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.01); }
         .program-header { font-size: 1.45rem; color: #3a2210; padding: 1.4rem 1.8rem; background: #fdfbf7; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
@@ -109,11 +108,23 @@
         .sub-course-item { background: #fffdfa; border: 1px solid #ebdccb; padding: 1.2rem; border-radius: 10px; border-left: 5px solid var(--gold); }
         .sub-course-item h5 { font-size: 1.2rem; color: #20150a; font-weight: 700; }
 
+        /* Refined Footer Styles with Integrated Subscription Setup */
         .footer-main { background: #1e2a2a; color: #cfcdb6; padding: 4rem 0 3rem; margin-top: 5rem; font-size: 0.95rem; }
-        .footer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .footer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; margin-bottom: 3.5rem; }
         .footer-column h4 { color: var(--gold); margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
         .footer-column a { color: #cfcdb6; text-decoration: none; display: block; margin-bottom: 0.7rem; font-size: 0.95rem; cursor: pointer; transition: color 0.2s; }
         .footer-column a:hover { color: var(--gold); padding-left: 2px; }
+        
+        .footer-subscribe-box { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(201, 160, 61, 0.2); border-radius: 16px; padding: 2.2rem; max-width: 750px; margin: 0 auto 3.5rem; text-align: center; }
+        .footer-subscribe-box h4 { color: var(--gold); font-size: 1.4rem; margin-bottom: 0.4rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; letter-spacing: 0.5px; }
+        .footer-subscribe-box p { color: #b1b09e; font-size: 1.05rem; margin-bottom: 1.2rem; }
+        .subscribe-input-wrapper { display: flex; gap: 10px; max-width: 500px; margin: 0 auto; }
+        .subscribe-input-wrapper input { flex: 1; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.2); border-radius: 30px; color: white; font-size: 1.05rem; }
+        .subscribe-input-wrapper input::placeholder { color: #727164; }
+        .subscribe-input-wrapper input:focus { outline: none; border-color: var(--gold); }
+        .subscribe-btn { background: var(--gold); color: #1a1510; border: none; padding: 0 24px; border-radius: 30px; font-weight: 800; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
+        .subscribe-btn:hover { background: #d4aa44; }
+
         .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
         .social-links a { color: var(--gold); font-size: 1.3rem; }
         .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #9a9885; }
@@ -199,82 +210,11 @@
 
 <div id="section-apply" class="app-section">
     <div class="container">
-        <h2 class="section-title">Application Form</h2>
-        <p class="section-sub">Begin your educational journey with The Living Oracles of God today. Fill out your details completely below.</p>
+        <h2 class="section-title">Admission Application</h2>
+        <p class="section-sub">Begin your educational journey with The Living Oracles of God today. Fill out your details below.</p>
         
-        <div class="registration-container">
-            <form id="studentRegistrationForm" onsubmit="handleFormSubmission(event)">
-                <div class="form-grid">
-                    
-                    <div class="form-group-full">
-                        <label>Select Academic Track *</label>
-                        <select id="formSchool" required onchange="updateProgramDropdown()">
-                            <option value="">-- Select Academic School --</option>
-                            <option value="ministry">School of Ministry</option>
-                            <option value="business">School of Business</option>
-                            <option value="tech">School of Digital & AI</option>
-                        </select>
-                    </div>
-                    <div class="form-group-full">
-                        <label>Select Specific Program *</label>
-                        <select id="formProgram" name="program" required disabled>
-                            <option value="">First choose an academic school option above</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group-full">
-                        <label>Full Name *</label>
-                        <input type="text" name="fullName" placeholder="Firstname Middlename Lastname" required>
-                    </div>
-                    <div class="form-group-full">
-                        <label>Email Address *</label>
-                        <input type="email" name="email" placeholder="example@domain.com" required>
-                    </div>
-                    <div class="form-group-full">
-                        <label>Phone Number *</label>
-                        <input type="tel" name="phone" placeholder="e.g. +233240000000" required>
-                    </div>
-                    <div class="form-group-full">
-                        <label>WhatsApp Number *</label>
-                        <input type="tel" name="whatsapp" placeholder="e.g. +233240000000" required>
-                    </div>
-                    <div class="form-group-full">
-                        <label>Country *</label>
-                        <input type="text" name="country" placeholder="Country of Residence" required>
-                    </div>
-
-                    <div class="form-group-full">
-                        <label>Certificates <span style="font-size:0.85rem; color:#8b5a34; font-weight:normal;">(PDF, JPG, PNG)</span></label>
-                        <input type="file" id="fileCertificates" accept=".pdf,.jpg,.jpeg,.png">
-                    </div>
-                    <div class="form-group-full">
-                        <label>Transcripts <span style="font-size:0.85rem; color:#8b5a34; font-weight:normal;">(PDF, JPG, PNG)</span></label>
-                        <input type="file" id="fileTranscripts" accept=".pdf,.jpg,.jpeg,.png">
-                    </div>
-
-                    <div class="form-group-full">
-                        <label>Motivation Statement</label>
-                        <textarea rows="3" name="motivation" placeholder="Briefly explain your reasons or goals for taking this online program..."></textarea>
-                    </div>
-                    <div class="form-group-full">
-                        <label>How did you hear about us? *</label>
-                        <select name="hearAbout" required>
-                            <option value="">-- Select Channel --</option>
-                            <option value="Facebook">Facebook Advertisement</option>
-                            <option value="WhatsApp">WhatsApp Group / Status</option>
-                            <option value="Friend">Referral from Friend / Alumnus</option>
-                            <option value="Church">Church Announcement</option>
-                            <option value="Other">Other Media</option>
-                        </select>
-                    </div>
-                    <div class="form-group-full">
-                        <label>Additional Message</label>
-                        <textarea rows="3" name="message" placeholder="Any alternative notes or remarks for our review board..."></textarea>
-                    </div>
-
-                    <button type="submit" id="submitBtn" class="form-submit-btn">Submit Admission Application <i class="fas fa-paper-plane"></i></button>
-                </div>
-            </form>
+        <div class="frame-wrapper">
+            <iframe class="registration-iframe" src="https://script.google.com/macros/s/AKfycbw436XkIKlrbOSbiqiHZ19d4pvxIXUSbICsfMULAzZDs6YDIqwPQ9n5sy4yB7jmJWDa3w/exec"></iframe>
         </div>
     </div>
 </div>
@@ -322,6 +262,43 @@
         <div class="content-block">
             <p>We work in close strategic collaboration with the <strong>ADUSEI Foundation</strong>, the <strong>OKATAHI Foundation</strong>, and leverage open training elements from <strong>Grow with Google</strong>.</p>
             <p>While functioning independently of public university educational metrics to keep our digital updates fluid, our professional certificates are widely recognized and valued by hundreds of global ministries and partner enterprises.</p>
+        </div>
+    </div>
+</div>
+
+<div id="section-partnership" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Institutional Partnership</h2>
+        <p class="section-sub">Collaborate with our review boards to scale educational delivery tools worldwide.</p>
+        <div class="content-block" style="max-width:650px;">
+            <p>Thank you for exploring alliances with our digital learning models. Please complete this brief configuration request, and our desk team will get back to you shortly.</p>
+            
+            <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="embedded-form-grid">
+                <input type="hidden" name="_subject" value="New Partnership Request - Living Oracles">
+                <div class="embedded-form-group">
+                    <label>Organization / Ministry Name *</label>
+                    <input type="text" name="organization" required placeholder="Name of your entity">
+                </div>
+                <div class="embedded-form-group">
+                    <label>Official Email Address *</label>
+                    <input type="email" name="email" required placeholder="partner@domain.com">
+                </div>
+                <div class="embedded-form-group">
+                    <label>Partnership Type *</label>
+                    <select name="partnership_type" required>
+                        <option value="">-- Choose Objective Track --</option>
+                        <option value="Academic Collaboration">Academic & Program Collaboration</option>
+                        <option value="Financial Support / Sponsorship">Financial Sponsorship & Grants</option>
+                        <option value="Technology Integration">Resource & Technology Integration</option>
+                        <option value="Other Expansion">Other Expansion Outlines</option>
+                    </select>
+                </div>
+                <div class="embedded-form-group">
+                    <label>Proposal Summary Remarks *</label>
+                    <textarea rows="4" name="proposal" required placeholder="Briefly introduce your mission or requested partnership scope..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top:0.5rem; justify-content:center;">Submit Partnership Inquiry <i class="fas fa-handshake"></i></button>
+            </form>
         </div>
     </div>
 </div>
@@ -388,9 +365,29 @@
 <div id="section-contact" class="app-section">
     <div class="container">
         <h2 class="section-title">Contact Us</h2>
-        <div class="content-block" style="text-align: center;">
-            <p><i class="fas fa-envelope" style="color:var(--primary);"></i> <strong>Email Desk:</strong> info@livingoraclesofgod.com</p>
-            <p style="margin-top:1rem;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>WhatsApp Hotdesk:</strong> +233 24 145 6581</p>
+        <p class="section-sub">Get in touch with our institutional support office.</p>
+        <div class="content-block" style="max-width:650px;">
+            <div style="text-align: center; margin-bottom: 2.2rem;">
+                <p><i class="fas fa-envelope" style="color:var(--primary);"></i> <strong>Email Desk:</strong> info@livingoraclesofgod.com</p>
+                <p style="margin-top:0.6rem;"><i class="fab fa-whatsapp" style="color:#25D366;"></i> <strong>WhatsApp Hotdesk:</strong> +233 24 145 6581</p>
+            </div>
+            
+            <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="embedded-form-grid">
+                <input type="hidden" name="_subject" value="New Website Contact Message - Living Oracles">
+                <div class="embedded-form-group">
+                    <label>Your Name *</label>
+                    <input type="text" name="name" required placeholder="Enter full name">
+                </div>
+                <div class="embedded-form-group">
+                    <label>Email Address *</label>
+                    <input type="email" name="email" required placeholder="example@domain.com">
+                </div>
+                <div class="embedded-form-group">
+                    <label>Your Message *</label>
+                    <textarea rows="4" name="message" required placeholder="Type your alternative notes or technical support questions here..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="margin-top:0.5rem; justify-content:center;">Send Secure Message <i class="fas fa-paper-plane"></i></button>
+            </form>
         </div>
     </div>
 </div>
@@ -431,13 +428,24 @@
 
 <footer class="footer-main">
     <div class="container">
+        
+        <div class="footer-subscribe-box">
+            <h4>Subscribe to Our newsletter</h4>
+            <p>Stay updated on new courses, academic timelines, scholarships, and e-learning developments.</p>
+            <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="subscribe-input-wrapper">
+                <input type="hidden" name="_subject" value="New Newsletter Subscription Submission">
+                <input type="email" name="subscriber_email" placeholder="Your email address" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+            </form>
+        </div>
+
         <div class="footer-grid">
             <div class="footer-column"><h4>About</h4><a onclick="showSection('about')">Our Story</a><a onclick="showSection('statement-faith')">Statement of Faith</a><a onclick="showSection('leadership')">Leadership</a><a onclick="showSection('accreditation')">Accreditation</a></div>
             <div class="footer-column"><h4>Admissions</h4><a onclick="showSection('catalog')">Catalog</a><a onclick="showSection('apply')">Apply Now</a><a onclick="showSection('fees')">Fees</a><a onclick="showSection('scholarship')">Scholarship</a></div>
             <div class="footer-column"><h4>Academics</h4><a onclick="showSection('ministry')">Ministry</a><a onclick="showSection('business')">Business</a><a onclick="showSection('tech')">Digital & AI</a><a onclick="alert('Student handbook system integration pending execution.')">Handbook</a></div>
             <div class="footer-column"><h4>Legal</h4><a onclick="showSection('privacy')">Privacy</a><a onclick="showSection('terms')">Terms</a><a onclick="showSection('disclaimer')">Disclaimer</a><a onclick="showSection('refund')">Refund</a></div>
             <div class="footer-column"><h4>Resources</h4><a onclick="showSection('blog')">Blog</a><a onclick="showSection('faq')">FAQ</a><a onclick="showSection('support')">Support</a><a onclick="alert('Technical handbook link active via Moodle workspace dashboard.')">Handbook</a></div>
-            <div class="footer-column"><h4>Connect</h4><a onclick="showSection('contact')">Contact</a><a onclick="showSection('verification')">Verify</a><a onclick="alert('Partnership system desk is active via institutional email query.')">Partnership</a><div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
+            <div class="footer-column"><h4>Connect</h4><a onclick="showSection('contact')">Contact</a><a onclick="showSection('verification')">Verify</a><a onclick="showSection('partnership')">Partnership</a><div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
         </div>
         <div class="copyright"><p>© 2026 The Living Oracles of God. Supported by ADUSEI Foundation.</p></div>
     </div>
@@ -476,83 +484,6 @@
         if (id === 'home' && homeNav) homeNav.classList.add('active');
         
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function updateProgramDropdown() { 
-        const school = document.getElementById('formSchool').value; 
-        const prog = document.getElementById('formProgram'); 
-        prog.innerHTML = '<option value="">-- Choose Program --</option>'; 
-        if (school && COURSES[school]) {
-            COURSES[school].forEach(p => {
-                prog.innerHTML += `<option value="${p.name}">${p.name}</option>`;
-            });
-        } 
-        prog.disabled = !school; 
-    }
-
-    function getBase64(file) {
-        return new Promise((resolve, reject) => {
-            if (!file) resolve("");
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result.split(',')[1]);
-            reader.onerror = error => reject(error);
-        });
-    }
-
-    async function handleFormSubmission(e) { 
-        e.preventDefault(); 
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting Application... <i class="fas fa-spinner fa-spin"></i>';
-
-        const form = e.target;
-        const targetUrl = "https://script.google.com/macros/s/AKfycbw436XkIKlrbOSbiqiHZ19d4pvxIXUSbICsfMULAzZDs6YDIqwPQ9n5sy4yB7jmJWDa3w/exec";
-
-        try {
-            const certFileInput = document.getElementById('fileCertificates');
-            const transFileInput = document.getElementById('fileTranscripts');
-
-            const certBase64 = certFileInput.files[0] ? await getBase64(certFileInput.files[0]) : "";
-            const transBase64 = transFileInput.files[0] ? await getBase64(transFileInput.files[0]) : "";
-
-            const programSelect = document.getElementById('formProgram');
-            const selectedProgram = programSelect.options[programSelect.selectedIndex]?.text || "";
-
-            const payload = {
-                program: selectedProgram,
-                fullName: form.fullName.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                whatsapp: form.whatsapp.value,
-                country: form.country.value,
-                certificates: certBase64,
-                transcripts: transBase64,
-                motivation: form.motivation.value,
-                hearAbout: form.hearAbout.value,
-                message: form.message.value
-            };
-
-            // FIXED SEND METHOD FOR GOOGLE APP SCRIPTS: Delivering payload via URL parameters inside an explicit POST content layout
-            await fetch(targetUrl, {
-                method: "POST",
-                mode: "no-cors",
-                headers: { "Content-Type": "application/plain" },
-                body: JSON.stringify(payload)
-            });
-
-            alert("Application data transmitted successfully! Thank you for applying to The Living Oracles of God.");
-            form.reset();
-            updateProgramDropdown();
-            showSection('home');
-
-        } catch (error) {
-            console.error(error);
-            alert("Submission completed setup. Please cross-check your institutional records dashboard configuration.");
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Submit Admission Application <i class="fas fa-paper-plane"></i>';
-        }
     }
     
     function verifyCertificateCode() { 
