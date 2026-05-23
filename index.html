@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>The Living Oracles of God | Online Training Platform</title>
+    <title>The Living Oracles Global Institute | Online Training Platform</title>
     <meta name="description" content="Study ministry, business basics, and practical digital skills online at your own pace. Supported by the ADUSEI Foundation.">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fefaf5; color: #1a1510; line-height: 1.7; overflow-x: auto; min-width: 1100px; font-size: 1.15rem; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fefaf5; color: #1a1510; line-height: 1.6; overflow-x: auto; min-width: 1100px; font-size: 1.1rem; }
         :root { --primary: #b87a4b; --primary-dark: #8b5a34; --gold: #c9a03d; --dark-bg: #1e2a2a; }
         
         ::-webkit-scrollbar { width: 8px; height: 8px; }
         ::-webkit-scrollbar-track { background: #e0d5bd; }
         ::-webkit-scrollbar-thumb { background: var(--primary-dark); border-radius: 4px; }
 
-        /* Fixed Header - Logo Left, Links Right Alignment */
+        /* Fixed Header */
         .top-bar { background: rgba(255, 250, 240, 0.99); backdrop-filter: blur(12px); padding: 0.8rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; border-bottom: 2px solid rgba(185, 135, 85, 0.3); transition: all 0.3s; min-width: 1100px; }
         .top-bar.scrolled { padding: 0.5rem 0; box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
         .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
@@ -25,8 +25,10 @@
         
         .logo { display: flex; align-items: center; flex-shrink: 0; }
         .logo a { display: flex; align-items: center; text-decoration: none; }
-        .logo-icon { font-size: 2.3rem; color: var(--primary-dark); transition: transform 0.2s; }
-        .logo-icon:hover { transform: scale(1.05); }
+        
+        /* ENLARGED LOGO CONFIGURATION STYLE */
+        .logo-img { height: 75px; width: auto; object-fit: contain; transition: transform 0.2s; }
+        .logo-img:hover { transform: scale(1.03); }
         
         .nav-links { display: flex; gap: 1.6rem; align-items: center; list-style: none; flex-wrap: nowrap; }
         .nav-item { position: relative; flex-shrink: 0; }
@@ -41,45 +43,42 @@
         .apply-nav-btn { background: var(--gold); padding: 8px 20px; border-radius: 30px; font-weight: 800; color: #1a1510 !important; border: 1px solid rgba(0,0,0,0.1); }
         .apply-nav-btn:hover { background: #d4aa44; transform: scale(1.03); border-bottom: none !important; }
         
-        .app-section { display: none; padding: 8.5rem 0 5rem; min-height: 85vh; }
+        .app-section { display: none; padding: 8.5rem 0 3rem; min-height: 85vh; }
         .app-section.active { display: block; animation: fadeIn 0.35s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Hero Banner - Highly Dynamic Larger Typography */
+        /* Hero Banner */
         .hero-banner { position: relative; text-align: center; padding: 7.5rem 3.5rem; border-radius: 24px; margin: 1rem auto 3rem; background-image: linear-gradient(rgba(30, 24, 15, 0.78), rgba(30, 24, 15, 0.88)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
         .hero-banner h1 { font-family: 'Cormorant Garamond', serif; font-size: 4.4rem; font-weight: 800; margin-bottom: 1.2rem; letter-spacing: 1px; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.4); }
         .hero-banner p { font-size: 1.65rem; max-width: 850px; margin: 0 auto 2.5rem; font-weight: 600; color: #fdfbf7; line-height: 1.5; }
 
-        /* Section Layout Configs */
+        /* Section Typography Layouts */
+        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 3.4rem; font-weight: 700; text-align: center; margin-bottom: 0.8rem; color: #3a2210; }
+        .section-sub { text-align: center; color: #614e3b; font-size: 1.3rem; font-weight: 500; margin-bottom: 2.5rem; }
         .section-header { text-align: center; margin: 4rem 0 2rem; }
         .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: 3.2rem; color: #3a2210; margin-bottom: 0.5rem; font-weight: 700; }
         .section-header p { color: #614e3b; font-size: 1.25rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; }
 
-        .story-card { background: white; border-radius: 20px; padding: 3.5rem; border: 1px solid #ebdccb; margin-bottom: 3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.03); }
-        .story-card p { font-size: 1.4rem; color: #20150a; line-height: 1.9; text-align: center; max-width: 950px; margin: 0 auto; }
-
-        .programs-showcase { background: #fdfbf7; border-radius: 20px; padding: 3.5rem; text-align: center; border: 1px solid #ebdccb; margin-bottom: 3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.02); }
-        .programs-showcase p { font-size: 1.4rem; color: #20150a; margin-bottom: 2.5rem; line-height: 1.9; max-width: 950px; margin: 0 auto; }
+        .story-card, .programs-showcase { background: white; border-radius: 20px; padding: 3.5rem; border: 1px solid #ebdccb; margin-bottom: 3rem; box-shadow: 0 6px 20px rgba(0,0,0,0.03); }
+        .story-card p, .programs-showcase p { font-size: 1.4rem; color: #20150a; line-height: 1.9; text-align: center; max-width: 950px; margin: 0 auto; }
+        .programs-showcase p { margin-bottom: 2.5rem; }
 
         .award-card { background: linear-gradient(135deg, #1e2a2a 0%, #2a2418 100%); color: white; border-radius: 20px; padding: 3.5rem; text-align: center; margin-bottom: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
         .award-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--gold); margin-bottom: 1rem; font-weight: 700; }
         .award-card p { font-size: 1.35rem; line-height: 1.8; max-width: 900px; margin: 0 auto; color: #dfddc6; }
 
-        /* Why Study With Us Section Styles - Bold Pure Black Text Details */
+        /* Why Study With Us Grid */
         .features-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin: 3.5rem 0; }
-        .feature-card { background: white; border: 1px solid #e0d1be; padding: 2.2rem 1.4rem; border-radius: 16px; text-align: center; transition: all 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
+        .feature-card { background: #1e2a2a; border: 1px solid #e0d1be; padding: 2.2rem 1.4rem; border-radius: 16px; text-align: center; transition: all 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.02); }
         .feature-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(139,90,52,0.12); border-color: var(--primary); }
         .feature-icon { width: 65px; height: 65px; background: rgba(184, 122, 75, 0.15); color: var(--primary-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1.4rem; }
-        .feature-card h4 { font-size: 1.25rem; color: #000000; margin-bottom: 0.8rem; font-weight: 800; letter-spacing: -0.3px; }
-        .feature-card p { font-size: 1.05rem; color: #000000; line-height: 1.6; font-weight: 600; }
+        .feature-card h4 { font-size: 1.25rem; color: var(--gold); margin-bottom: 0.8rem; font-weight: 800; letter-spacing: -0.3px; }
+        .feature-card p { font-size: 1.05rem; color: #cfcdb6; line-height: 1.6; font-weight: 600; }
 
         .btn-primary { background: var(--gold); color: #1a1510; padding: 14px 36px; border-radius: 40px; text-decoration: none; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; border: none; cursor: pointer; font-size: 1.1rem; transition: all 0.2s; box-shadow: 0 4px 12px rgba(201,160,61,0.2); }
         .btn-primary:hover { background: #d4aa44; transform: scale(1.02); box-shadow: 0 6px 16px rgba(201,160,61,0.3); }
         .btn-outline { background: transparent; border: 2px solid var(--primary-dark); color: var(--primary-dark); padding: 12px 32px; border-radius: 40px; font-weight: 700; cursor: pointer; font-size: 1.05rem; transition: all 0.2s; }
         .btn-outline:hover { background: var(--primary-dark); color: white; }
-
-        .section-title { font-family: 'Cormorant Garamond', serif; font-size: 3.4rem; font-weight: 700; text-align: center; margin-bottom: 0.8rem; color: #3a2210; }
-        .section-sub { text-align: center; color: #614e3b; font-size: 1.3rem; font-weight: 500; margin-bottom: 3.5rem; }
         
         .content-block { background: white; border-radius: 20px; padding: 3.5rem; border: 1px solid #f0e2d4; max-width: 900px; margin: 0 auto 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
         .content-block p { margin-bottom: 1.5rem; font-size: 1.25rem; color: #20150a; line-height: 1.8; }
@@ -87,16 +86,27 @@
         .content-block ul { margin-left: 2rem; margin-bottom: 1.5rem; font-size: 1.25rem; color: #20150a; }
         .content-block li { margin-bottom: 0.8rem; line-height: 1.7; }
 
-        /* Generic Embedded Functional Forms Layouts */
+        /* Embedded Contact / Partner Forms */
         .embedded-form-grid { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2rem; text-align: left; }
         .embedded-form-group { display: flex; flex-direction: column; }
         .embedded-form-group label { font-weight: 700; font-size: 1.05rem; margin-bottom: 6px; color: #20150a; }
-        .embedded-form-group input, .embedded-form-group textarea, .embedded-form-group select { width: 100%; padding: 12px; border: 2px solid #ebdccb; border-radius: 8px; font-size: 1.1rem; font-family: inherit; background: #fffcf9; transition: border-color 0.2s; }
+        .embedded-form-group input, .embedded-form-group textarea, .embedded-form-group select { width: 100%; padding: 12px; border: 2px solid #ebdccb; border-radius: 8px; font-size: 1.1rem; font-family: inherit; background: #fffcf9; transition: border-color 0.2s; color: #1a1510; }
         .embedded-form-group input:focus, .embedded-form-group textarea:focus, .embedded-form-group select:focus { outline: none; border-color: var(--primary); background: white; }
 
-        /* Embedded Registration Frame Styles */
-        .frame-wrapper { max-width: 850px; margin: 0 auto; background: white; border: 1px solid #ebdccb; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.04); position: relative; }
-        .registration-iframe { width: 100%; height: 750px; border: none; display: block; background: #ffffff; }
+        /* EMBEDDED GOOGLE WEB APP FORM IFRAME WRAPPER STYLE */
+        .form-iframe-container { max-width: 1040px; margin: 0 auto; background: white; border: 2px solid #ebdccb; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 35px rgba(0,0,0,0.05); }
+        .form-iframe-container iframe { width: 100%; height: 950px; border: none; display: block; background: #ffffff; }
+
+        /* FAQ Accordions */
+        .faq-accordion { max-width: 850px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.2rem; }
+        .faq-item { background: #ffffff; border: 2px solid #b87a4b; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.04); transition: all 0.2s; }
+        .faq-trigger { width: 100%; background: #fffcf7; border: none; padding: 1.5rem 2rem; text-align: left; font-size: 1.25rem; font-weight: 800; color: #000000; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-family: inherit; border-bottom: 1px solid rgba(184,122,75,0.2); }
+        .faq-trigger i { transition: transform 0.3s ease; color: var(--primary-dark); font-size: 1.3rem; }
+        .faq-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; background: #faf5ee; }
+        .faq-panel p { padding: 1.6rem 2rem; line-height: 1.7; color: #000000; font-size: 1.15rem; font-weight: 600; }
+        .faq-item.open { border-color: var(--primary-dark); box-shadow: 0 8px 22px rgba(139,90,52,0.15); }
+        .faq-item.open .faq-trigger i { transform: rotate(180deg); }
+        .faq-item.open .faq-panel { max-height: 400px; }
 
         .program-block { background: white; border-radius: 16px; margin-bottom: 2rem; border: 1px solid #e0d5bd; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.01); }
         .program-header { font-size: 1.45rem; color: #3a2210; padding: 1.4rem 1.8rem; background: #fdfbf7; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
@@ -108,26 +118,27 @@
         .sub-course-item { background: #fffdfa; border: 1px solid #ebdccb; padding: 1.2rem; border-radius: 10px; border-left: 5px solid var(--gold); }
         .sub-course-item h5 { font-size: 1.2rem; color: #20150a; font-weight: 700; }
 
-        /* Refined Footer Styles with Integrated Subscription Setup */
+        /* Integrated Footer Stack Layout */
         .footer-main { background: #1e2a2a; color: #cfcdb6; padding: 4rem 0 3rem; margin-top: 5rem; font-size: 0.95rem; }
         .footer-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; margin-bottom: 3.5rem; }
         .footer-column h4 { color: var(--gold); margin-bottom: 1.2rem; font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
         .footer-column a { color: #cfcdb6; text-decoration: none; display: block; margin-bottom: 0.7rem; font-size: 0.95rem; cursor: pointer; transition: color 0.2s; }
         .footer-column a:hover { color: var(--gold); padding-left: 2px; }
-        
-        .footer-subscribe-box { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(201, 160, 61, 0.2); border-radius: 16px; padding: 2.2rem; max-width: 750px; margin: 0 auto 3.5rem; text-align: center; }
-        .footer-subscribe-box h4 { color: var(--gold); font-size: 1.4rem; margin-bottom: 0.4rem; font-family: 'Cormorant Garamond', serif; font-weight: 700; letter-spacing: 0.5px; }
-        .footer-subscribe-box p { color: #b1b09e; font-size: 1.05rem; margin-bottom: 1.2rem; }
-        .subscribe-input-wrapper { display: flex; gap: 10px; max-width: 500px; margin: 0 auto; }
-        .subscribe-input-wrapper input { flex: 1; padding: 12px 16px; border: 1px solid rgba(255,255,255,0.15); background: rgba(0,0,0,0.2); border-radius: 30px; color: white; font-size: 1.05rem; }
-        .subscribe-input-wrapper input::placeholder { color: #727164; }
-        .subscribe-input-wrapper input:focus { outline: none; border-color: var(--gold); }
-        .subscribe-btn { background: var(--gold); color: #1a1510; border: none; padding: 0 24px; border-radius: 30px; font-weight: 800; font-size: 1rem; cursor: pointer; transition: background 0.2s; }
-        .subscribe-btn:hover { background: #d4aa44; }
-
         .social-links { display: flex; gap: 1rem; margin-top: 1rem; }
         .social-links a { color: var(--gold); font-size: 1.3rem; }
-        .copyright { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.85rem; color: #9a9885; }
+        
+        /* Subscription Form */
+        .footer-bottom-wrapper { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 2.5rem; display: flex; flex-direction: column; gap: 2rem; align-items: flex-start; }
+        .sub-box-left { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(201, 160, 61, 0.15); border-radius: 16px; padding: 2rem; width: 100%; max-width: 520px; text-align: left; }
+        .sub-box-left h3 { color: var(--gold); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.4rem; }
+        .sub-box-left p { color: #a2a08b; font-size: 0.95rem; margin-bottom: 1.2rem; line-height: 1.5; }
+        .sub-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 0.8rem; }
+        .sub-form-row input { background: rgba(0, 0, 0, 0.2); border: 1px solid rgba(235, 220, 203, 0.25); padding: 11px 14px; border-radius: 8px; color: white; font-family: inherit; font-size: 0.95rem; width: 100%; }
+        .sub-form-row input:focus { outline: none; border-color: var(--gold); }
+        .sub-box-left .btn-subscribe { background: var(--gold); color: #1a1510; border: none; padding: 12px; border-radius: 8px; font-weight: 800; font-size: 1rem; cursor: pointer; width: 100%; transition: background 0.2s; }
+        .sub-box-left .btn-subscribe:hover { background: #d4aa44; }
+        
+        .copyright { font-size: 0.85rem; color: #9a9885; margin-top: 0.5rem; }
 
         .whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; z-index: 999; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s; }
         .whatsapp-float:hover { transform: scale(1.1); }
@@ -148,7 +159,7 @@
     <div class="container top-container">
         <div class="logo">
             <a href="#" onclick="showSection('home'); return false;">
-                <i class="fas fa-scroll logo-icon"></i>
+                <img src="https://drive.google.com/thumbnail?id=1XrI2olhOWvxhOn4IypivWjBDQBPVwuKL" alt="The Living Oracles Global Institute" class="logo-img">
             </a>
         </div>
         <div class="nav-links">
@@ -177,7 +188,7 @@
             <p>Our Story</p>
         </div>
         <div class="story-card">
-            <p>The Living Oracles of God is a pioneering faith-based e-learning institution. Our training courses are 100% online, carefully structured to accommodate your busy lifestyle. Operating on a collaborative, experiential, and highly practical framework, we bridge systemic gaps to deliver top-tier vocational and ministerial knowledge globally.</p>
+            <p>The Living Oracles Global Institute is a pioneering faith-based e-learning institution. Our training courses are 100% online, carefully structured to accommodate your busy lifestyle. Operating on a collaborative, experiential, and highly practical framework, we bridge systemic gaps to deliver top-tier vocational and ministerial knowledge globally.</p>
         </div>
 
         <div class="section-header">
@@ -191,7 +202,7 @@
 
         <div class="award-card">
             <h3>🏆 Christian College Award</h3>
-            <p>Recognized for instructional model excellence, The Living Oracles of God beautifully integrates modern marketplace methodologies with timeless biblical principles. We build capable kingdom leaders who perform at high levels in corporate environments without compromising their Christian values.</p>
+            <p>Recognized for instructional model excellence, The Living Oracles Global Institute beautifully integrates modern marketplace methodologies with timeless biblical principles. We build capable kingdom leaders who perform at high levels in corporate environments without compromising their Christian values.</p>
             <button onclick="showSection('about')" class="btn-outline" style="margin-top: 1.5rem; border-color: var(--gold); color: var(--gold);">Read Full History</button>
         </div>
 
@@ -210,11 +221,10 @@
 
 <div id="section-apply" class="app-section">
     <div class="container">
-        <h2 class="section-title">Admission Application</h2>
-        <p class="section-sub">Begin your educational journey with The Living Oracles of God today. Fill out your details below.</p>
-        
-        <div class="frame-wrapper">
-            <iframe class="registration-iframe" src="https://script.google.com/macros/s/AKfycbw436XkIKlrbOSbiqiHZ19d4pvxIXUSbICsfMULAzZDs6YDIqwPQ9n5sy4yB7jmJWDa3w/exec"></iframe>
+        <div class="form-iframe-container">
+            <iframe src="https://script.google.com/macros/s/AKfycbw436XkIKlrbOSbiqiHZ19d4pvxIXUSbICsfMULAzZDs6YDIqwPQ9n5sy4yB7jmJWDa3w/exec">
+                Loading Application Form...
+            </iframe>
         </div>
     </div>
 </div>
@@ -223,7 +233,7 @@
     <div class="container">
         <h2 class="section-title">Our Story</h2>
         <div class="content-block">
-            <p>The Living Oracles of God began as an inspired vision: to make high-quality, practical education accessible to Christians worldwide. We recognized that standard tuition architectures often prevent aspiring global leaders from expanding their knowledge base.</p>
+            <p>The Living Oracles Global Institute began as an inspired vision: to make high-quality, practical education accessible to Christians worldwide. We recognized that standard tuition architectures often prevent aspiring global leaders from expanding their knowledge base.</p>
             <p>By blending core ministerial theology, business mechanics, and emerging digital systems, we built a comprehensive online ecosystem. Heavily supported by the <strong>ADUSEI Foundation</strong>, our key focus centers on empowering African youth, dismantling socio-economic bottlenecks, and fostering modern leadership skills through open-access education.</p>
         </div>
     </div>
@@ -260,7 +270,7 @@
     <div class="container">
         <h2 class="section-title">Accreditation & Partnerships</h2>
         <div class="content-block">
-            <p>We work in close strategic collaboration with the <strong>ADUSEI Foundation</strong>, the <strong>OKATAHI Foundation</strong>, and leverage open training elements from <strong>Grow with Google</strong>.</p>
+            <p>We work in close strategic partnership exclusively with the <strong>ADUSEI Foundation</strong> and <strong>The Living Oracles Of God Ministry</strong>.</p>
             <p>While functioning independently of public university educational metrics to keep our digital updates fluid, our professional certificates are widely recognized and valued by hundreds of global ministries and partner enterprises.</p>
         </div>
     </div>
@@ -351,6 +361,120 @@
         <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Technology Track</button>
     </div>
 </div>
+    
+    <div id="section-handbook" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Student Handbook</h2>
+        <p class="section-sub">Your Guide to Success at The Living Oracles Global Institute</p>
+        
+        <!-- Download Links Section -->
+        <div style="background: #fdfbf7; border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #ebdccb; text-align: center;">
+            <h3 style="margin-bottom: 1rem; color: #4a2e1a;">📥 Download Student Handbook</h3>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+                <a href="https://drive.google.com/uc?export=download&id=1XrI2olhOWvxhOn4IypivWjBDQBPVwuKL" class="btn-primary" style="background: var(--gold);"><i class="fas fa-file-pdf"></i> Ministry Programs Handbook</a>
+                <a href="#" class="btn-primary" style="background: var(--gold);"><i class="fas fa-file-pdf"></i> Business Programs Handbook</a>
+                <a href="#" class="btn-primary" style="background: var(--gold);"><i class="fas fa-file-pdf"></i> Digital & AI Handbook</a>
+                <a href="#" class="btn-primary" style="background: var(--gold);"><i class="fas fa-file-pdf"></i> Engineering Programs Handbook</a>
+                <a href="#" class="btn-primary" style="background: var(--gold);"><i class="fas fa-file-pdf"></i> Complete Handbook (All Programs)</a>
+            </div>
+            <p style="margin-top: 1rem; font-size: 0.8rem; color: #6b5a4c;"><i class="fas fa-info-circle"></i> Click any link to download the PDF handbook for your program of interest.</p>
+        </div>
+        
+        <div class="content-block">
+            <h3>📜 Welcome Message</h3>
+            <p>Welcome to The Living Oracles Global Institute! This handbook is designed to help you navigate your learning journey successfully. Please read it carefully and refer back to it whenever you have questions about policies, procedures, or expectations.</p>
+
+            <h3>🎯 Our Mission</h3>
+            <p>To provide accessible, practical, and faith-integrated education that equips students for impactful service in ministry, business, and engineering fields worldwide.</p>
+
+            <h3>1. Registration and Account Setup</h3>
+            <p><strong>1.1 Creating Your Account</strong><br>Complete the online application form on our website. You will receive an email with your Moodle login credentials within 48 hours.</p>
+            <p><strong>1.2 Account Security</strong><br>You are responsible for maintaining the confidentiality of your password. Do not share your login credentials with anyone. If you suspect unauthorized access, change your password immediately and contact support.</p>
+            <p><strong>1.3 Personal Information</strong><br>Keep your profile information up to date, including email address and phone number, as we use these for important communications.</p>
+
+            <h3>2. Course Enrollment and Access</h3>
+            <p><strong>2.1 Enrolling in Courses</strong><br>Once logged into Moodle, you will see available courses. Click "Enroll" to add a course to your dashboard. You can enroll in multiple courses simultaneously.</p>
+            <p><strong>2.2 Course Structure</strong><br>Each course is organized into modules or weeks. Modules typically include video lessons, reading materials, quizzes, and practical assignments.</p>
+            <p><strong>2.3 Access Duration</strong><br>You have indefinite access to courses you have enrolled in. There are no expiration dates. You can review materials even after completing the course.</p>
+
+            <h3>3. Self-Paced Learning</h3>
+            <p><strong>3.1 No Deadlines</strong><br>Our courses are completely self-paced. There are no strict deadlines for completing modules or assignments. You set your own schedule.</p>
+            <p><strong>3.2 Recommended Pacing</strong><br>While there are no deadlines, we recommend dedicating 3-5 hours per week to each course to maintain momentum and retain information effectively.</p>
+            <p><strong>3.3 Progress Tracking</strong><br>Your Moodle dashboard shows your progress through each course, including completed modules, quiz scores, and assignment submissions.</p>
+
+            <h3>4. Assessments and Grading</h3>
+            <p><strong>4.1 Quiz and Exam Policy</strong><br>Most courses include quizzes to reinforce learning. You may retake quizzes as many times as needed. Your highest score will be recorded.</p>
+            <p><strong>4.2 Assignments</strong><br>Some courses require practical assignments, such as sermon outlines, business plans, or technical projects. Submit these through the Moodle assignment portal.</p>
+            <p><strong>4.3 Passing Requirements</strong><br>To receive a certificate, you must complete all modules and achieve an average score of 70% or higher on quizzes and assignments.</p>
+            <p><strong>4.4 Grading Scale</strong><br>90-100%: Excellent | 80-89%: Very Good | 70-79%: Satisfactory | Below 70%: Insufficient (retake required)</p>
+
+            <h3>5. Academic Integrity</h3>
+            <p><strong>5.1 Original Work Policy</strong><br>All assignments and quiz responses must be your own original work. Plagiarism, copying, or unauthorized collaboration is strictly prohibited.</p>
+            <p><strong>5.2 Artificial Intelligence Use</strong><br>AI tools may be used as learning aids but not to complete assignments on your behalf. If you use AI for research or drafting, you must disclose this in your submission.</p>
+            <p><strong>5.3 Consequences of Violations</strong><br>First violation: Warning and opportunity to resubmit. Second violation: Automatic failure of the assignment. Third violation: Account suspension and revocation of certificates.</p>
+
+            <h3>6. Communication and Support</h3>
+            <p><strong>6.1 Technical Support</strong><br>For login issues, platform errors, or technical problems, email support@livingoraclesofgod.com. Response within 48 hours.</p>
+            <p><strong>6.2 Academic Support</strong><br>For questions about course content, assignments, or grades, email academics@livingoraclesofgod.com.</p>
+            <p><strong>6.3 WhatsApp Support</strong><br>Reach us on WhatsApp at +233 24 145 6581 for urgent inquiries. Hours: Monday-Friday, 9am-5pm GMT.</p>
+            <p><strong>6.4 Response Time</strong><br>We strive to respond to all inquiries within 2 business days. During high-volume periods, response times may be longer.</p>
+
+            <h3>7. Community Guidelines</h3>
+            <p><strong>7.1 Telegram Community</strong><br>All enrolled students are invited to join our Telegram group for peer support, discussions, and prayer requests. The invitation link is sent via email after registration.</p>
+            <p><strong>7.2 Respectful Communication</strong><br>Treat all community members with respect. Harassment, hate speech, bullying, or discriminatory language will result in immediate removal from the group and possible account suspension.</p>
+            <p><strong>7.3 Appropriate Content</strong><br>Do not share inappropriate, offensive, or explicit content in any institute-affiliated channel. This includes spam, advertisements, or promotional messages.</p>
+            <p><strong>7.4 Privacy in Groups</strong><br>Respect the privacy of fellow students. Do not share personal information or screenshots from private conversations without permission.</p>
+
+            <h3>8. Certificate Policy</h3>
+            <p><strong>8.1 Digital Certificates</strong><br>Upon successfully completing a course, you can download your digital certificate directly from your Moodle dashboard. Digital certificates are free.</p>
+            <p><strong>8.2 Printed Certificates</strong><br>If you require a physical printed certificate, you may request one for a nominal fee to cover printing and shipping costs. Contact certificates@livingoraclesofgod.com for pricing and ordering.</p>
+            <p><strong>8.3 Certificate Verification</strong><br>Each certificate includes a unique verification ID. Employers, churches, or organizations can verify authenticity through our website's Verification Dashboard.</p>
+            <p><strong>8.4 Lost Certificates</strong><br>If you lose your certificate, you can re-download the digital version from Moodle at any time. For replacement printed certificates, contact certificates@livingoraclesofgod.com.</p>
+
+            <h3>9. Technical Requirements</h3>
+            <p><strong>9.1 Internet Connection</strong><br>A stable internet connection with at least 2 Mbps download speed is recommended. Our platform works on 3G/4G mobile networks.</p>
+            <p><strong>9.2 Device Requirements</strong><br>Our platform is accessible on smartphones, tablets, laptops, and desktop computers. Modern browsers such as Chrome, Firefox, Safari, or Edge are recommended.</p>
+            <p><strong>9.3 Moodle Mobile App</strong><br>Download the Moodle app from Google Play Store or Apple App Store for offline access to course materials and mobile-friendly learning.</p>
+            <p><strong>9.4 Required Software</strong><br>Most courses require no additional software. Some technical courses may recommend free tools such as code editors or design software, which will be specified in the course materials.</p>
+
+            <h3>10. Scholarship and Financial Aid</h3>
+            <p><strong>10.1 ADUSEI Foundation Scholarship</strong><br>The ADUSEI Foundation provides full tuition scholarships to students from underserved communities, particularly across Africa. All students automatically qualify; no separate application is needed.</p>
+            <p><strong>10.2 Data and Device Support</strong><br>In special cases, the ADUSEI Foundation may provide internet data bundles or device assistance to students facing extreme financial hardship. Contact scholarships@livingoraclesofgod.com to inquire.</p>
+            <p><strong>10.3 Voluntary Donations</strong><br>Students who are able may choose to make voluntary donations to support the platform's operations and help fund scholarships for others. Donations are optional and non-refundable.</p>
+
+            <h3>11. Grievance and Appeals</h3>
+            <p><strong>11.1 Grade Appeals</strong><br>If you believe a quiz or assignment was graded incorrectly, you may submit an appeal within 14 days of receiving the grade. Email academics@livingoraclesofgod.com with your course name, assignment details, and explanation.</p>
+            <p><strong>11.2 Policy Violation Appeals</strong><br>If you believe an academic integrity violation or account suspension was issued in error, you may submit an appeal to appeals@livingoraclesofgod.com. Include your name, course, and supporting evidence.</p>
+            <p><strong>11.3 Appeal Process</strong><br>Appeals are reviewed by an academic committee within 14 business days. Decisions are final.</p>
+
+            <h3>12. Withdrawal and Inactivity</h3>
+            <p><strong>12.1 Voluntary Withdrawal</strong><br>If you wish to withdraw from a course, simply stop accessing it. There is no formal withdrawal process. You may resume at any time.</p>
+            <p><strong>12.2 Extended Inactivity</strong><br>Your account remains active indefinitely. There is no penalty for extended periods of inactivity. You can resume your studies whenever you are ready.</p>
+
+            <h3>13. Code of Conduct Summary</h3>
+            <p>As a student of The Living Oracles Global Institute, you agree to:</p>
+            <ul>
+                <li>Complete your own work with honesty and integrity</li>
+                <li>Treat fellow students, staff, and instructors with respect</li>
+                <li>Use platform resources responsibly and ethically</li>
+                <li>Respect the intellectual property of the institute</li>
+                <li>Represent the institute positively in all interactions</li>
+            </ul>
+
+            <h3>14. Acknowledgment</h3>
+            <p>By enrolling in our courses, you acknowledge that you have read, understood, and agree to abide by the policies outlined in this Student Handbook, as well as our Terms & Conditions and Privacy Policy.</p>
+
+            <h3>15. Contact Information</h3>
+            <p>
+                <strong>The Living Oracles Global Institute</strong><br>
+                Student Support: support@livingoraclesofgod.com<br>
+                Academic Inquiries: academics@livingoraclesofgod.com<br>
+                WhatsApp: +233 24 145 6581<br>
+                Website: https://livingoraclesofgod.com
+            </p>
+        </div>
+    </div>
+</div>
 
 <div id="section-catalog" class="app-section">
     <div class="container">
@@ -384,7 +508,7 @@
                 </div>
                 <div class="embedded-form-group">
                     <label>Your Message *</label>
-                    <textarea rows="4" name="message" required placeholder="Type your alternative notes or technical support questions here..."></textarea>
+                    <textarea rows="4" name="message" required placeholder="Type your notes or support questions here..."></textarea>
                 </div>
                 <button type="submit" class="btn-primary" style="margin-top:0.5rem; justify-content:center;">Send Secure Message <i class="fas fa-paper-plane"></i></button>
             </form>
@@ -418,36 +542,606 @@
     </div>
 </div>
 
-<div id="section-privacy" class="app-section"><div class="container"><h2 class="section-title">Privacy Policy</h2><div class="content-block"><p>We hold personal user information safely. Student profiles, emails, and phone indices are handled cleanly and are never distributed, sold, or shared with third-party external configurations.</p></div></div></div>
-<div id="section-terms" class="app-section"><div class="container"><h2 class="section-title">Terms & Conditions</h2><div class="content-block"><p>Students commit to absolute academic honesty. Any plagiarized project files or unapproved artificial automation metrics used to cheat will cause immediate removal from the dashboard portal.</p></div></div></div>
-<div id="section-disclaimer" class="app-section"><div class="container"><h2 class="section-title">Legal Disclaimer</h2><div class="content-block"><p>Our courses offer practical skill instruction. The Living Oracles of God does not promise guaranteed financial returns or automated employment slots; success depends completely on individual application.</p></div></div></div>
-<div id="section-refund" class="app-section"><div class="container"><h2 class="section-title">Refund & Contribution Policy</h2><div class="content-block"><p>Since we operate entirely tuition-free, all supporting payments given via the voluntary Pay-As-You-Gift approach are non-refundable support contributions used directly to host resources.</p></div></div></div>
-<div id="section-blog" class="app-section"><div class="container"><h2 class="section-title">E-Learning Blog</h2><div class="content-block"><h3>💡 Merging Technology with Christian Leadership</h3><p>To establish dynamic change across today's markets, students must build a comprehensive balance of modern computational logic, agile business architecture, and ethical principles.</p></div></div></div>
-<div id="section-faq" class="app-section"><div class="container"><h2 class="section-title">Frequently Asked Questions</h2><div class="content-block"><p><strong>Q: Can I take courses on a mobile device?</strong><br>A: Yes! The entire training system and Moodle database are responsive and optimized for mobile browsers.</p></div></div></div>
+<div id="section-privacy" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="section-sub">Last Updated: May 2026</p>
+        
+        <div class="content-block">
+            <h3>1. Information We Collect</h3>
+            <p>The Living Oracles Global Institute collects personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Register for a course or program</li>
+                <li>Submit an application form</li>
+                <li>Contact our support team</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Participate in our community forums or Telegram group</li>
+            </ul>
+            <p>This information may include your full name, email address, phone number, WhatsApp number, country of residence, educational background, and any additional information you choose to share with us.</p>
+
+            <h3>2. How We Use Your Information</h3>
+            <p>We use the information we collect for the following purposes:</p>
+            <ul>
+                <li>To process your registration and enrollment in courses</li>
+                <li>To provide you with access to our Moodle learning platform</li>
+                <li>To communicate with you about your courses, assignments, and progress</li>
+                <li>To respond to your inquiries and support requests</li>
+                <li>To send you important updates about the institute, new courses, or policy changes</li>
+                <li>To improve our website, courses, and student experience</li>
+                <li>To verify your identity when you request certificate verification</li>
+            </ul>
+
+            <h3>3. Information Sharing and Disclosure</h3>
+            <p><strong>We do not sell, rent, or trade your personal information to third parties.</strong> We only share your information in the following limited circumstances:</p>
+            <ul>
+                <li><strong>With your consent:</strong> When you explicitly authorize us to share your information.</li>
+                <li><strong>With service providers:</strong> We use trusted third-party platforms such as Moodle (for course delivery), Google Workspace (for email and document management), and Telegram (for student community). These providers have their own privacy policies and are contractually obligated to protect your data.</li>
+                <li><strong>For legal compliance:</strong> If required by law, regulation, or legal process, we may disclose your information to governmental authorities or law enforcement.</li>
+                <li><strong>To protect rights and safety:</strong> If necessary to protect the rights, property, or safety of The Living Oracles Global Institute, our students, or the public.</li>
+            </ul>
+
+            <h3>4. Data Security</h3>
+            <p>We take the security of your personal information seriously. We implement reasonable administrative, technical, and physical safeguards to protect your data from unauthorized access, use, alteration, or disclosure. These measures include:</p>
+            <ul>
+                <li>Encrypted data transmission using SSL/TLS technology</li>
+                <li>Secure password-protected access to our systems</li>
+                <li>Regular security reviews and updates</li>
+                <li>Limited access to personal data by authorized personnel only</li>
+            </ul>
+            <p>However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
+
+            <h3>5. Data Retention</h3>
+            <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. This includes:</p>
+            <ul>
+                <li>Course records and certificates: Indefinitely for verification purposes</li>
+                <li>Registration information: For the duration of your enrollment plus a reasonable period thereafter</li>
+                <li>Support communications: For up to 3 years after resolution</li>
+                <li>Newsletter subscriptions: Until you unsubscribe</li>
+            </ul>
+
+            <h3>6. Your Rights and Choices</h3>
+            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>
+                <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain exceptions (e.g., we may need to retain records for verification or legal compliance)</li>
+                <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time by clicking the "unsubscribe" link in our emails or contacting us directly</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us at <strong>privacy@livingoraclesofgod.com</strong>.</p>
+
+            <h3>7. Cookies and Tracking Technologies</h3>
+            <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us understand how you use our site. You can control cookie preferences through your browser settings. However, disabling cookies may affect the functionality of certain features on our website.</p>
+            <p>We currently use:</p>
+            <ul>
+                <li>Essential cookies: Required for basic website operation</li>
+                <li>Analytics cookies: To understand how visitors interact with our site (e.g., Cloudflare Analytics)</li>
+            </ul>
+
+            <h3>8. Children's Privacy</h3>
+            <p>Our courses and services are intended for adults aged 18 years and older. We do not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately, and we will take steps to delete such information.</p>
+
+            <h3>9. International Data Transfers</h3>
+            <p>The Living Oracles Global Institute operates from Ghana, but our students are located worldwide. Your information may be transferred to, stored, and processed in countries outside your home country. We take appropriate safeguards to ensure that your data is protected in accordance with this Privacy Policy.</p>
+
+            <h3>10. Third-Party Links</h3>
+            <p>Our website may contain links to third-party websites, such as our Moodle platform, payment processors, or partner organizations. We are not responsible for the privacy practices or content of these external sites. We encourage you to read the privacy policies of any third-party websites you visit.</p>
+
+            <h3>11. Changes to This Privacy Policy</h3>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on this page and updating the "Last Updated" date at the top. We encourage you to review this page periodically.</p>
+
+            <h3>12. Contact Us</h3>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+            <p>
+                <strong>The Living Oracles Global Institute</strong><br>
+                Email: thelivingoraclesofgod@gmail.com<br>
+                WhatsApp: +233 24 145 6581<br>
+                Address: Accra, Ghana
+            </p>
+        </div>
+    </div>
+</div>
+ 
+    <div id="section-terms" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Terms & Conditions</h2>
+        <p class="section-sub">Last Updated: May 2026</p>
+        
+        <div class="content-block">
+            <h3>1. Acceptance of Terms</h3>
+            <p>By accessing or using The Living Oracles Global Institute website, learning platform (Moodle), or any associated services, you agree to be bound by these Terms & Conditions. If you do not agree with any part of these terms, you may not access or use our services.</p>
+
+            <h3>2. Non-Accredited Status Disclosure</h3>
+            <p><strong>Important:</strong> The Living Oracles Global Institute is an independent, non-accredited training institution. We do NOT issue government-recognized degrees. Our certificates are certificates of completion that validate the skills and knowledge you have gained through our programs. We operate transparently and lawfully under the legal framework of Ghana.</p>
+            <p>By enrolling in our courses, you acknowledge and accept that:</p>
+            <ul>
+                <li>Our certificates are not equivalent to university degrees</li>
+                <li>Our programs are not accredited by any government education body</li>
+                <li>Credits earned may not be transferable to accredited institutions</li>
+                <li>Employment outcomes depend on individual effort and employer recognition</li>
+            </ul>
+
+            <h3>3. User Accounts and Registration</h3>
+            <p>To access our courses, you must register for a student account. You agree to:</p>
+            <ul>
+                <li>Provide accurate, current, and complete information during registration</li>
+                <li>Maintain the security and confidentiality of your login credentials</li>
+                <li>Notify us immediately of any unauthorized use of your account</li>
+                <li>Accept responsibility for all activities that occur under your account</li>
+            </ul>
+            <p>We reserve the right to suspend or terminate any account that violates these terms or provides false information.</p>
+
+            <h3>4. Enrollment and Course Access</h3>
+            <p>Upon successful registration, you will receive access to your enrolled courses through our Moodle learning platform. Course access includes:</p>
+            <ul>
+                <li>Video lessons and written materials</li>
+                <li>Quizzes and assignments</li>
+                <li>Discussion forums (where applicable)</li>
+                <li>Progress tracking and grade reports</li>
+            </ul>
+            <p>Course access is provided on a self-paced basis. There are no strict deadlines, but we encourage consistent progress to complete the program successfully.</p>
+
+            <h3>5. Payment and Financial Terms</h3>
+            <p>The Living Oracles Global Institute operates on a <strong>Pay-As-You-Gift</strong> model:</p>
+            <ul>
+                <li>All course materials are provided free of charge</li>
+                <li>Voluntary donations are accepted to support platform operations, server costs, and student scholarships</li>
+                <li>Donations are non-refundable and considered gifts to the institute</li>
+                <li>No student is denied access due to inability to pay</li>
+                <li>Full scholarships are available through the ADUSEI Foundation for qualifying students</li>
+            </ul>
+
+            <h3>6. Certificate Issuance</h3>
+            <p>To receive a certificate of completion, you must:</p>
+            <ul>
+                <li>Complete all required course modules</li>
+                <li>Achieve a minimum passing score of 70% on quizzes and assignments</li>
+                <li>Submit any required practical projects</li>
+                <li>Adhere to our academic honesty policy</li>
+            </ul>
+            <p>Certificates are issued digitally and include a unique verification code that employers or churches can use to verify authenticity. Replacement certificates may be issued upon request and verification of identity.</p>
+
+            <h3>7. Academic Honesty Policy</h3>
+            <p>We expect all students to submit their own original work. The following actions constitute academic dishonesty:</p>
+            <ul>
+                <li>Plagiarism: Copying text, ideas, or code from others without attribution</li>
+                <li>Cheating: Using unauthorized materials or assistance during quizzes or exams</li>
+                <li>Unauthorized AI use: Submitting AI-generated content as your own without disclosure</li>
+                <li>Impersonation: Allowing another person to complete assignments on your behalf</li>
+                <li>Sharing answers: Distributing quiz or assignment solutions to other students</li>
+            </ul>
+            <p>Violations may result in immediate account suspension, revocation of any pending certificates, and permanent ban from future courses.</p>
+
+            <h3>8. Intellectual Property</h3>
+            <p>All course materials, including videos, text, graphics, quizzes, and assignments, are the intellectual property of The Living Oracles Global Institute or its content providers. You may:</p>
+            <ul>
+                <li>Access and view materials for your personal educational use</li>
+                <li>Download materials for offline study</li>
+                <li>Share materials within your church or ministry group with attribution</li>
+            </ul>
+            <p>You may NOT:</p>
+            <ul>
+                <li>Republish, redistribute, or resell course materials</li>
+                <li>Use materials for commercial purposes without written permission</li>
+                <li>Create derivative works based on our content</li>
+                <li>Remove copyright or attribution notices</li>
+            </ul>
+
+            <h3>9. User Conduct and Community Guidelines</h3>
+            <p>When using our website, learning platform, or community channels (including Telegram and discussion forums), you agree to:</p>
+            <ul>
+                <li>Treat all students, staff, and instructors with respect</li>
+                <li>Refrain from using offensive, harassing, or discriminatory language</li>
+                <li>Not spam, advertise, or promote unrelated products or services</li>
+                <li>Not share inappropriate or explicit content</li>
+                <li>Respect the privacy of other students</li>
+            </ul>
+            <p>Violations may result in warnings, temporary suspension, or permanent ban from our community channels and learning platform.</p>
+
+            <h3>10. Limitation of Liability</h3>
+            <p>To the fullest extent permitted by law, The Living Oracles Global Institute, its directors, staff, and partners shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, or consequential damages arising from your use of our services</li>
+                <li>Loss of data, income, or business opportunities</li>
+                <li>Any outcomes related to employment, ordination, or professional advancement</li>
+                <li>Technical issues beyond our reasonable control, including internet outages or platform downtime</li>
+            </ul>
+            <p>Our total liability to you for any claim arising from these terms or your use of our services shall not exceed the total amount you have paid to us (if any) in the preceding 12 months.</p>
+
+            <h3>11. Disclaimer of Warranties</h3>
+            <p>Our courses and platform are provided on an "as is" and "as available" basis. We make no warranties or representations about:</p>
+            <ul>
+                <li>The completeness, accuracy, or reliability of course content</li>
+                <li>That the platform will be uninterrupted, error-free, or secure</li>
+                <li>Specific employment, ordination, or career outcomes</li>
+                <li>Recognition of certificates by any specific employer, church, or organization</li>
+            </ul>
+
+            <h3>12. Third-Party Services</h3>
+            <p>Our services integrate with third-party platforms, including:</p>
+            <ul>
+                <li><strong>Moodle:</strong> For course delivery and learning management</li>
+                <li><strong>Google Workspace:</strong> For email and document management</li>
+                <li><strong>Telegram:</strong> For student community communication</li>
+                <li><strong>Cloudflare Pages:</strong> For website hosting</li>
+            </ul>
+            <p>These third parties have their own terms of service and privacy policies. We are not responsible for their practices.</p>
+
+            <h3>13. Termination and Suspension</h3>
+            <p>We reserve the right to suspend or terminate your account immediately, without notice, for:</p>
+            <ul>
+                <li>Violation of these Terms & Conditions</li>
+                <li>Academic dishonesty or cheating</li>
+                <li>Harassment or abusive behavior toward staff or other students</li>
+                <li>Providing false information during registration</li>
+                <li>Attempting to compromise platform security</li>
+            </ul>
+            <p>Upon termination, you will lose access to all courses and materials. No refunds will be issued for voluntary donations.</p>
+
+            <h3>14. Modifications to Terms</h3>
+            <p>We may revise these Terms & Conditions from time to time. The most current version will always be posted on this page. By continuing to use our services after changes become effective, you agree to be bound by the revised terms.</p>
+
+            <h3>15. Governing Law</h3>
+            <p>These Terms & Conditions shall be governed by and construed in accordance with the laws of the Republic of Ghana. Any disputes arising under these terms shall be subject to the exclusive jurisdiction of the courts of Ghana.</p>
+
+            <h3>16. Contact Information</h3>
+            <p>If you have any questions about these Terms & Conditions, please contact us:</p>
+            <p>
+                <strong>The Living Oracles Global Institute</strong><br>
+                Email: thelivingoraclesofgod@gmail.com<br>
+                WhatsApp: +233 24 145 6581<br>
+                Address: Accra, Ghana
+            </p>
+        </div>
+    </div>
+</div>
+   
+    <div id="section-disclaimer" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Disclaimer</h2>
+        <p class="section-sub">Last Updated: May 2026</p>
+        
+        <div class="content-block">
+            <h3>1. Non-Accredited Status Disclaimer</h3>
+            <p><strong>The Living Oracles Global Institute is not an accredited university or college.</strong> We are an independent, private online training institution. Our certificates are certificates of completion that demonstrate successful completion of our programs. They are not government-recognized academic degrees or diplomas.</p>
+            <p>We encourage all prospective students to read this disclaimer carefully before enrolling. If you require a government-accredited degree for your career or educational goals, please consult accredited institutions in your country.</p>
+
+            <h3>2. Educational Outcomes Disclaimer</h3>
+            <p>While we strive to provide high-quality, practical education, we do not guarantee specific outcomes, including but not limited to:</p>
+            <ul>
+                <li>Employment, promotion, or salary increases</li>
+                <li>Ordination, licensure, or church leadership positions</li>
+                <li>Admission to accredited universities or graduate programs</li>
+                <li>Professional certification or licensing in any field</li>
+                <li>Recognition of certificates by any specific employer or organization</li>
+            </ul>
+            <p>Your success depends on your individual effort, skills, experience, and the specific requirements of employers or organizations you engage with.</p>
+
+            <h3>3. Content Accuracy Disclaimer</h3>
+            <p>We make reasonable efforts to ensure that all course content, website information, and program descriptions are accurate and up to date. However, we do not warrant or guarantee:</p>
+            <ul>
+                <li>The completeness, accuracy, or reliability of any information provided</li>
+                <li>That course content will meet your specific requirements or expectations</li>
+                <li>That technical, theological, or business information is error-free or current with industry standards</li>
+            </ul>
+            <p>Course content is provided for educational purposes only. You should independently verify any critical information before relying on it.</p>
+
+            <h3>4. Professional Advice Disclaimer</h3>
+            <p>Course content is for informational and educational purposes only and does not constitute professional advice in any field, including:</p>
+            <ul>
+                <li>Legal advice: Consult a qualified attorney for legal matters</li>
+                <li>Financial advice: Consult a certified financial advisor for investment decisions</li>
+                <li>Medical advice: Consult a licensed physician for health concerns</li>
+                <li>Counseling advice: Consult a licensed counselor for mental health issues</li>
+                <li>Theological advice: Consult your local church leadership for doctrinal matters specific to your denomination</li>
+            </ul>
+
+            <h3>5. Third-Party Links Disclaimer</h3>
+            <p>Our website and course materials may contain links to third-party websites, resources, or services. These links are provided for your convenience only. We do not endorse, control, or assume responsibility for:</p>
+            <ul>
+                <li>The content, accuracy, or availability of third-party websites</li>
+                <li>The privacy practices or terms of service of third-party platforms</li>
+                <li>Any products, services, or information offered by third parties</li>
+            </ul>
+            <p>You access third-party resources at your own risk. We encourage you to review the terms and policies of any third-party site you visit.</p>
+
+            <h3>6. Technical Disclaimer</h3>
+            <p>While we strive to maintain reliable and secure services, we do not guarantee that:</p>
+            <ul>
+                <li>The website or learning platform will be uninterrupted, error-free, or secure</li>
+                <li>Any defects or errors will be corrected</li>
+                <li>The platform is free from viruses or other harmful components</li>
+                <li>Your data will be completely immune from unauthorized access</li>
+            </ul>
+            <p>You are responsible for implementing adequate security measures, such as using strong passwords and keeping your login credentials confidential.</p>
+
+            <h3>7. Testimonial Disclaimer</h3>
+            <p>Testimonials and success stories shared on our website or marketing materials represent individual experiences and are not guarantees of similar results. Your outcomes may vary based on your effort, prior experience, and other factors beyond our control.</p>
+
+            <h3>8. Scholarship and Financial Aid Disclaimer</h3>
+            <p>Scholarships provided through the ADUSEI Foundation are awarded based on demonstrated financial need and program availability. We do not guarantee that every applicant will receive a scholarship. Scholarships cover tuition only and may not cover additional costs such as internet data, devices, or printed certificates.</p>
+
+            <h3>9. Certificate Verification Disclaimer</h3>
+            <p>Our certificate verification system is provided as a convenience to employers, churches, and other organizations. While we make every effort to maintain accurate records, we do not guarantee that:</p>
+            <ul>
+                <li>All certificates are included in the verification database</li>
+                <li>Verification results are error-free or up to date</li>
+                <li>The system will be available at all times</li>
+            </ul>
+            <p>If you have questions about a certificate's authenticity, please contact us directly at verification@livingoraclesofgod.com.</p>
+
+            <h3>10. Force Majeure Disclaimer</h3>
+            <p>We shall not be liable for any delay or failure to perform our obligations under these terms if such delay or failure results from circumstances beyond our reasonable control, including but not limited to:</p>
+            <ul>
+                <li>Natural disasters, pandemics, or public health emergencies</li>
+                <li>War, terrorism, or civil unrest</li>
+                <li>Internet outages, power failures, or cyber attacks</li>
+                <li>Government regulations or actions</li>
+                <li>Labor strikes or disputes</li>
+            </ul>
+
+            <h3>11. Changes to This Disclaimer</h3>
+            <p>We may update this Disclaimer from time to time. The most current version will always be posted on this page with the "Last Updated" date at the top. By continuing to use our services after changes become effective, you acknowledge and agree to the updated disclaimer.</p>
+
+            <h3>12. Contact Us</h3>
+            <p>If you have any questions about this Disclaimer, please contact us:</p>
+            <p>
+                <strong>The Living Oracles Global Institute</strong><br>
+                Email: thelivingoraclesofgod@gmail.com<br>
+                WhatsApp: +233 24 145 6581<br>
+                Address: Accra, Ghana
+            </p>
+        </div>
+    </div>
+</div>
+    
+    <div id="section-refund" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Refund & Contribution Policy</h2>
+        <p class="section-sub">Last Updated: May 2026</p>
+        
+        <div class="content-block">
+            <h3>1. Our Tuition-Free Model</h3>
+            <p>The Living Oracles Global Institute operates on a <strong>tuition-free, pay-as-you-gift model</strong>. All course materials, lessons, quizzes, and assignments are provided at no cost to students. You are never required to pay to access or complete our courses.</p>
+
+            <h3>2. Voluntary Donations</h3>
+            <p>Students and supporters may choose to make voluntary donations to support:</p>
+            <ul>
+                <li>Platform maintenance and server hosting costs</li>
+                <li>Development of new courses and programs</li>
+                <li>Scholarships for students who cannot afford internet data or devices</li>
+                <li>Administrative and support staff operations</li>
+                <li>Technology improvements and security updates</li>
+            </ul>
+            <p>Donations are completely voluntary. Your access to courses, certificates, and all services is identical whether you donate or not.</p>
+
+            <h3>3. No Refunds for Voluntary Donations</h3>
+            <p>Because donations are voluntary gifts to support the institute's mission, <strong>they are non-refundable</strong>. By making a donation, you acknowledge and agree that:</p>
+            <ul>
+                <li>You are making a charitable gift, not paying for a service</li>
+                <li>No goods or services are provided in exchange for your donation</li>
+                <li>Your access to courses does not depend on your donation</li>
+                <li>Donations are final and cannot be reversed</li>
+            </ul>
+
+            <h3>4. Accidental or Duplicate Donations</h3>
+            <p>If you accidentally make an incorrect donation (wrong amount, duplicate transaction, or unintended payment), please contact us within 7 days of the transaction date at <strong>finance@livingoraclesofgod.com</strong>. We will review your request and may issue a refund at our discretion, subject to payment processor fees.</p>
+            <p>Please include your name, donation date, amount, and transaction reference number (if available) in your request.</p>
+
+            <h3>5. Printed Certificate Fees</h3>
+            <p>While digital certificates are provided free of charge, there may be a nominal fee for printed, physical certificates shipped to your address. These fees cover:</p>
+            <ul>
+                <li>Printing and paper materials</li>
+                <li>Packaging and handling</li>
+                <li>Shipping and delivery costs</li>
+            </ul>
+            <p>If you paid for a printed certificate that was never delivered, please contact us within 30 days of your payment. We will investigate and either reship the certificate or issue a refund for the shipping and handling portion of your payment.</p>
+
+            <h3>6. Scholarship Funds</h3>
+            <p>Donations designated for scholarships are used exclusively to support students in need. These funds are not refundable to donors, as they are distributed to eligible students for internet data, devices, or other educational expenses.</p>
+
+            <h3>7. Payment Processing Fees</h3>
+            <p>When you make a donation through our payment processors (PayPal, Mobile Money, or credit card), third-party transaction fees may apply. These fees are not refundable by The Living Oracles Global Institute, even if we approve a refund of your donation.</p>
+
+            <h3>8. Disputes and Chargebacks</h3>
+            <p>If you dispute a donation with your bank or payment provider without first contacting us to resolve the issue, we may:</p>
+            <ul>
+                <li>Suspend your student account pending resolution</li>
+                <li>Charge a processing fee to recover costs associated with the dispute</li>
+                <li>Terminate your access to courses if the dispute is found to be invalid</li>
+            </ul>
+            <p>We encourage you to contact us first to resolve any concerns.</p>
+
+            <h3>9. Contact for Refund Requests</h3>
+            <p>For any refund-related inquiries, please contact:</p>
+            <p>
+                <strong>The Living Oracles Global Institute - Finance Department</strong><br>
+                Email: thelivingoraclesofgod@gmail.com<br>
+                WhatsApp: +233 24 145 6581
+            </p>
+        </div>
+    </div>
+</div>
+    
+    
+    
+    
+    <div id="section-blog" class="app-section"><div class="container"><h2 class="section-title">E-Learning Blog</h2><div class="content-block"><h3>💡 Merging Technology with Christian Leadership</h3><p>To establish dynamic change across today's markets, students must build a comprehensive balance of modern computational logic, agile business architecture, and ethical principles.</p></div></div></div>
+
+<div id="section-faq" class="app-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Find instant answers to common administrative questions regarding our interactive learning workspace platform channels.</p>
+        
+        <div class="faq-accordion">
+            <<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I take courses on a mobile device? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes! The entire training layout, virtual simulator interfaces, and Moodle databases are modern and structurally fully responsive optimized cleanly across small or large smartphone display panels.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Are there any hidden verification or entry fees? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>No. Admission tracks are covered under full-tuition grants. Optional Pay-As-You-Gift structures let students contribute strictly to server asset resources, without any mandatory charges for certification processing desk work.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">How long does each academic track take to finish? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Certificate tracks run for 4 to 8 weeks, while full Diploma programs generally span 3 to 6 months depending on how quickly you complete your practical workspace project submissions.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Do I receive a certificate after completing a course? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes! Upon successfully completing all course modules and assignments, you will receive a certificate of completion. This certificate validates your acquired skills and knowledge from The Living Oracles Global Institute.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Are your certificates accredited or government-recognized? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Our certificates are certificates of completion from an independent training institution. While they are not government-accredited degrees, they are recognized by our partner churches, ministries, and organizations that value practical, skill-based learning.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Do I need prior experience to enroll in a program? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>No. Our programs are designed for beginners and intermediate learners. Each course starts with foundational concepts and gradually progresses to more advanced topics. All you need is a willingness to learn and access to a smartphone or computer.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I take multiple courses at the same time? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes! You are welcome to enroll in multiple courses simultaneously. However, we recommend starting with one course to understand our learning platform and pacing before adding more.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">What happens if I don't finish a course within the suggested timeframe? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>No problem. Our courses are completely self-paced. There are no strict deadlines. Your progress is saved automatically, and you can continue from where you left off at any time, even months later.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Is there any support if I get stuck on an assignment? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Absolutely! You can reach our student support team via email at info@livingoraclesofgod.com or through WhatsApp at +233 24 145 6581. We also have a Telegram community where students help each other.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Do I need to buy any software or textbooks for my courses? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>No. All learning materials, including video lessons, reading materials, and practical exercises, are provided within our Moodle platform. You only need an internet connection and a device to study.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I share my certificate with employers or churches? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes. Your certificate includes a unique verification code that employers, churches, or organizations can use to verify its authenticity on our website. This proves that you successfully completed the program.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">How do I access my courses after registration? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>After registration, you will receive an email with your Moodle login credentials. Simply visit log.moodiy.org, enter your username and password, and your enrolled courses will appear on your dashboard.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Is there a community or group for students to interact? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes! We have an active Telegram community where students share resources, ask questions, and pray for one another. Your login email will contain the invitation link to join the group.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I suggest a new course or program? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Absolutely! We value student input. Send your course suggestions to info@livingoraclesofgod.com. If there is enough demand, we will develop and add it to our catalog.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Are there live classes or only recorded materials? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Our standard courses are self-paced with recorded video lessons, readings, and quizzes. Occasionally, we offer live webinars and Q&A sessions for specific programs, which are announced in advance.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Is The Living Oracles Global Institute a registered institution? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes. The Living Oracles Global Institute is a registered independent training institution operating under the legal framework of Ghana. We are not a government-accredited university, but we operate transparently and lawfully as a private training provider.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can students from any country enroll? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Absolutely! The Living Oracles Global Institute welcomes students from all nations. Our platform is 100% online, and our courses are designed to be accessible regardless of your location or time zone.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">What is the ADUSEI Foundation and how does it support students? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>The ADUSEI Foundation is our primary philanthropic partner. It provides full tuition scholarships, data bundles, and mentorship resources to students from underserved communities, particularly across Africa, ensuring financial barriers never block access to quality education.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I transfer my credits to another university or college? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Credit transfer depends entirely on the receiving institution's policies. Some of our partner organizations accept our certificates for advanced standing, but we recommend checking directly with the institution you wish to transfer to before enrolling.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Do you offer refunds for voluntary donations? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Since our courses are offered completely tuition-free, all donations are considered voluntary gifts to support platform maintenance, server costs, and student scholarships. These contributions are non-refundable, and donors receive a receipt for their records.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">How do I verify someone else's certificate? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Employers or churches can verify a certificate by visiting our Verification Dashboard at the bottom of our website, entering the unique certificate ID, and confirming the graduate's name. The system will instantly display the verification status.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">What internet speed do I need for the courses? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Our platform is optimized for low-bandwidth environments. Most course materials are text-based with compressed images and videos. A basic 3G or 4G mobile connection is sufficient. You can also download resources when you have stronger connectivity for offline study.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I access course materials after completing the program? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes. Once you complete a course, you retain read-only access to all materials for future reference. You can review lessons, download resources, and revisit quizzes anytime from your Moodle dashboard.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Do you offer group enrollment for churches or organizations? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Yes! We offer group enrollment discounts and cohort-based tracking for churches, ministries, and organizations. Please contact our partnership desk at partner@livingoraclesofgod.com for custom pricing and administrative reporting tools.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">What is your policy on academic honesty and plagiarism? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>We expect all students to submit their own original work. Plagiarism, copying answers from other students, or using unauthorized AI tools to complete graded assignments may result in immediate account suspension and revocation of any pending certificates.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">Can I apply for a teaching or mentorship role at the institute? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>We are always looking for qualified instructors and mentors, especially in engineering, business, and theology. Send your CV and a brief teaching philosophy to careers@livingoraclesofgod.com. Our academic team will review and respond within 14 business days.</p></div>
+</div>
+
+<div class="faq-item">
+    <button class="faq-trigger" onclick="toggleFaq(this)">How is The Living Oracles Global Institute different from other online Christian schools? <i class="fas fa-chevron-down"></i></button>
+    <div class="faq-panel"><p>Unlike traditional Christian schools that focus only on theology, we uniquely combine faith-based training with practical business and engineering skills. Our pay-as-you-gift model makes education accessible, and our ADUSEI Foundation partnership provides full scholarships to students who genuinely cannot afford to pay anything.</p></div>
+</div>
+        </div>
+    </div>
+</div>
+
 <div id="section-support" class="app-section"><div class="container"><h2 class="section-title">Student Support Centre</h2><div class="content-block" style="text-align: center;"><p>Stuck with login verification issues or course trackers? Message our virtual support team via WhatsApp.</p><a href="https://wa.me/233241456581" target="_blank" class="btn-primary" style="background:#25D366; color:white; margin-top:1rem;"><i class="fab fa-whatsapp"></i> Chat Support Now</a></div></div></div>
 
 <footer class="footer-main">
     <div class="container">
-        
-        <div class="footer-subscribe-box">
-            <h4>Subscribe to Our newsletter</h4>
-            <p>Stay updated on new courses, academic timelines, scholarships, and e-learning developments.</p>
-            <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="subscribe-input-wrapper">
-                <input type="hidden" name="_subject" value="New Newsletter Subscription Submission">
-                <input type="email" name="subscriber_email" placeholder="Your email address" required>
-                <button type="submit" class="subscribe-btn">Subscribe</button>
-            </form>
-        </div>
-
         <div class="footer-grid">
             <div class="footer-column"><h4>About</h4><a onclick="showSection('about')">Our Story</a><a onclick="showSection('statement-faith')">Statement of Faith</a><a onclick="showSection('leadership')">Leadership</a><a onclick="showSection('accreditation')">Accreditation</a></div>
             <div class="footer-column"><h4>Admissions</h4><a onclick="showSection('catalog')">Catalog</a><a onclick="showSection('apply')">Apply Now</a><a onclick="showSection('fees')">Fees</a><a onclick="showSection('scholarship')">Scholarship</a></div>
-            <div class="footer-column"><h4>Academics</h4><a onclick="showSection('ministry')">Ministry</a><a onclick="showSection('business')">Business</a><a onclick="showSection('tech')">Digital & AI</a><a onclick="alert('Student handbook system integration pending execution.')">Handbook</a></div>
+            <div class="footer-column"><h4>Academics</h4><a onclick="showSection('ministry')">Ministry</a><a onclick="showSection('business')">Business</a><a onclick="showSection('tech')">Digital & AI</a><a onclick="showSection('handbook')">Handbook</a></div>
             <div class="footer-column"><h4>Legal</h4><a onclick="showSection('privacy')">Privacy</a><a onclick="showSection('terms')">Terms</a><a onclick="showSection('disclaimer')">Disclaimer</a><a onclick="showSection('refund')">Refund</a></div>
-            <div class="footer-column"><h4>Resources</h4><a onclick="showSection('blog')">Blog</a><a onclick="showSection('faq')">FAQ</a><a onclick="showSection('support')">Support</a><a onclick="alert('Technical handbook link active via Moodle workspace dashboard.')">Handbook</a></div>
+            <div class="footer-column"><h4>Resources</h4><a onclick="showSection('blog')">Blog</a><a onclick="showSection('faq')">FAQ</a><a onclick="showSection('support')">Support</a><a onclick="showSection('handbook')">Handbook</a></div>
             <div class="footer-column"><h4>Connect</h4><a onclick="showSection('contact')">Contact</a><a onclick="showSection('verification')">Verify</a><a onclick="showSection('partnership')">Partnership</a><div class="social-links"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a></div></div>
         </div>
-        <div class="copyright"><p>© 2026 The Living Oracles of God. Supported by ADUSEI Foundation.</p></div>
+        
+        <div class="footer-bottom-wrapper">
+            <div class="sub-box-left">
+                <h3>Subscribe to Our newsletter</h3>
+                <p>Stay updated on new courses, academic timelines, scholarships, and e-learning developments.</p>
+                <form action="https://formspree.io/f/xnjrjbqg" method="POST">
+                    <input type="hidden" name="_subject" value="New Website Newsletter Subscription">
+                    <div class="sub-form-row">
+                        <input type="text" name="subscriber_name" placeholder="Your Name" required>
+                        <input type="email" name="subscriber_email" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2026 The Living Oracles Global Institute. Partners: ADUSEI Foundation & The Living Oracles Of God Ministry.</p>
+            </div>
+        </div>
     </div>
 </footer>
 
@@ -484,6 +1178,13 @@
         if (id === 'home' && homeNav) homeNav.classList.add('active');
         
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleFaq(button) {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
     }
     
     function verifyCertificateCode() { 
