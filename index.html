@@ -177,11 +177,11 @@
 
 <div id="section-home" class="app-section active">
    <style>
-    /* Isolated Container Modifiers */
+    /* Standalone Container Modifiers */
     .hero-container-standalone {
         max-width: 1140px;
         margin: 0 auto;
-        padding: 5rem 2rem;
+        padding: 6rem 2rem;
         border-radius: 16px;
         position: relative;
         overflow: hidden;
@@ -190,8 +190,8 @@
         justify-content: center;
         text-align: center;
         
-        /* Direct GIF Background Configuration Slot */
-        background-image: url('https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif'); /* Replace with your specific custom GIF URL */
+        /* Educational/Tech Relevant Dynamic Background GIF Layout */
+        background-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2g5Ymd4MndwN3Zpd3FvNXZ2bW15MmltMnd0dzI5b3U4ZndpdWp0eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw1lM2gxbWNjZHl0cm13/l3q2uySsZmVCUdJrG/giphy.gif');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -205,7 +205,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(13, 35, 58, 0.94) 0%, rgba(26, 58, 92, 0.88) 100%);
+        background: linear-gradient(135deg, rgba(13, 35, 58, 0.95) 0%, rgba(26, 58, 92, 0.88) 100%);
         z-index: 1;
     }
 
@@ -215,7 +215,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.75rem;
         width: 100%;
     }
 
@@ -225,10 +225,10 @@
         font-weight: 900;
         color: #ffffff;
         margin: 0;
-        padding-bottom: 1.25rem;
+        padding-bottom: 1.5rem;
         position: relative;
         display: inline-block;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
         line-height: 1.2;
     }
 
@@ -238,15 +238,18 @@
         }
     }
 
-    /* Custom Geometric Gold Underline Accent Line */
+    /* Custom Extended Gold Underline Accent Line */
     .hero-banner-standalone h1::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 140px; /* Width size metric of gold underline path */
-        height: 5px;   /* Structural thickness token */
+        
+        /* Makes the underline explicitly wider than the word boundary limits */
+        width: 115%; 
+        height: 6px;   /* Structural thickness token */
+        
         background-color: #c5a059; /* Brand Gold Accent */
         border-radius: 4px;
     }
@@ -254,10 +257,11 @@
     .hero-banner-standalone p {
         font-size: 1.15rem;
         color: #e2e8f0;
-        max-width: 650px;
+        max-width: 700px;
         line-height: 1.6;
-        margin: 0 0 1.25rem 0;
+        margin: 0.5rem 0 1.25rem 0;
         font-weight: 500;
+        letter-spacing: 0.5px;
     }
 
     @media (min-width: 768px) {
@@ -279,7 +283,7 @@
         outline: none;
         font-size: 1.05rem;
         font-weight: 700;
-        padding: 1rem 2.25rem;
+        padding: 1.1rem 2.5rem;
         border-radius: 8px;
         cursor: pointer;
         box-shadow: 0 4px 14px rgba(197, 160, 89, 0.3);
@@ -315,44 +319,6 @@
             Apply Now - 100% Scholarship Provided <i class="fas fa-arrow-right"></i>
         </button>
         
-    </div>
-</div>
-
-        <div class="section-header">
-            <h2>WHO WE ARE</h2>
-            <p>Our Story</p>
-        </div>
-        <div class="story-card">
-            <p>The Living Oracles Global Institute is a pioneering faith-based e-learning institution. Our training courses are 100% online, carefully structured to accommodate your busy lifestyle. Operating on a collaborative, experiential, and highly practical framework, we bridge systemic gaps to deliver top-tier vocational and ministerial knowledge globally.</p>
-        </div>
-
-        <div class="section-header">
-            <h2>EMPOWER YOURSELF</h2>
-            <p>Our Programs</p>
-        </div>
-        <div class="programs-showcase">
-            <p>Welcome! We specialize in producing street-smart, technologically capable, and ethically grounded Christians. By intersecting cutting-edge digital trends with sound theology, our courses prepare you to run impactful ministries, launch scalable companies, or master AI productivity architectures.</p>
-            <button onclick="showSection('ministry')" class="btn-primary">Explore Our Programs <i class="fas fa-arrow-right"></i></button>
-        </div>
-
-        <div class="award-card">
-            <h3>Our Trusted Partners</h3>
-            <div class="partner-logo">
-            <img src="https://drive.google.com/thumbnail?id=1GnTtl9iBTOTIEoVcd-jvmMxkw0DjLCx6" alt="ADUSEI Foundation">               <img src="https://drive.google.com/thumbnail?id=18VL0BLOCPuDP3axH9s_UDamzAiScmOf6" alt="The Living Oracles of God Ministry">
-        </div>
-           <button onclick="showSection('accreditation')" class="btn-outline" style="margin-top: 1.5rem; border-color: var(--gold); color: var(--gold);">Read More</button>
-        </div>
-
-        <div class="section-header">
-            <h2>WHY STUDY WITH US?</h2>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-chalkboard-user"></i></div><h4>Practical Approach</h4><p>Our learning approach is rooted in practicality, with a strong emphasis on generating value and addressing real-world challenges.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-blender-phone"></i></div><h4>Perfect Blend</h4><p>Our teaching approach seamlessly integrates theology, business, technology and leadership principles.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-heart"></i></div><h4>Dedicated Team</h4><p>Our team is composed of dedicated individuals driven by a passion to serve God and make a positive impact.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-graduation-cap"></i></div><h4>Scholarships</h4><p>We predominantly offer full scholarships, and in the instances where there is a charge, it is solely to cover essential expenses.</p></div>
-            <div class="feature-card"><div class="feature-icon"><i class="fas fa-laptop"></i></div><h4>Convenience</h4><p>Engage in flexible online learning at your convenience while fostering collaborative opportunities with fellow students.</p></div>
-        </div>
     </div>
 </div>
 
