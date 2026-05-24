@@ -2490,15 +2490,238 @@
 
     </div>
 </div>
+
+<style>
+    /* Institutional Catalog Layout Architecture */
+    .catalog-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
+
+    .catalog-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+    }
+
+    .catalog-header h2 {
+        color: #0d233a; /* Brand Navy */
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.5px;
+    }
+
+    .catalog-header p {
+        color: #64748b;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* Professional Multi-Column Curriculum Grid Matrix */
+    .catalog-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+        .catalog-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .catalog-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* High-End Program Card Design */
+    .catalog-card {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: 12px;
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Distinct top border tracks matching your core domains */
+    .card-theology { border-top: 4px solid #0d233a; } /* Deep Navy */
+    .card-business { border-top: 4px solid #c5a059; } /* Premium Gold */
+    .card-tech { border-top: 4px solid #1e293b; }     /* Slate Gray */
+
+    .catalog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(13, 35, 58, 0.06);
+    }
+
+    .card-theology:hover { border-color: #0d233a; }
+    .card-business:hover { border-color: #c5a059; }
+    .card-tech:hover { border-color: #1e293b; }
+
+    /* Category Ribbons Meta Indicators */
+    .card-badge {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 1.25rem;
+        display: inline-block;
+    }
+    .badge-theology { color: #0d233a; }
+    .badge-business { color: #c5a059; }
+    .badge-tech { color: #475569; }
+
+    .catalog-card h3 {
+        color: #0d233a;
+        font-size: 1.35rem;
+        font-weight: 800;
+        margin: 0 0 1rem 0;
+        line-height: 1.4;
+    }
+
+    .catalog-card p {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0 0 2rem 0;
+    }
+
+    /* Clean Uniform Interactive Action Link Framework */
+    .btn-catalog-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.9rem 1.5rem;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        text-align: center;
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .btn-theology {
+        background: #f0f4f8;
+        color: #0d233a !important;
+    }
+    .btn-theology:hover {
+        background: #0d233a;
+        color: #ffffff !important;
+    }
+
+    .btn-business {
+        background: #fdfbf7;
+        color: #c5a059 !important;
+        border: 1px solid rgba(197, 160, 89, 0.2);
+    }
+    .btn-business:hover {
+        background: #c5a059;
+        color: #ffffff !important;
+    }
+
+    .btn-tech {
+        background: #f8fafc;
+        color: #1e293b !important;
+    }
+    .btn-tech:hover {
+        background: #1e293b;
+        color: #ffffff !important;
+    }
+</style>
+
 <div id="section-catalog" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Program Catalog</h2>
-        <div class="content-block" style="text-align: center;">
-            <p>Download the official informational catalog file containing a breakdown of modules, course assignments, and tracking metrics.</p>
-            <button class="btn-primary" onclick="alert('Downloading Program Catalog PDF Framework...')">Download Catalog PDF <i class="fas fa-file-pdf"></i></button>
+    <div class="catalog-wrapper">
+        
+        <div class="catalog-header">
+            <h2>Our Course Categories</h2>
+            <p>Select your specialized academic pathway combining professional expertise with systemic structural foundations.</p>
         </div>
+
+        <div class="catalog-grid">
+            
+            <div class="catalog-card card-theology">
+                <div>
+                    <span class="card-badge badge-theology"><i class="fas fa-cross"></i> Theology & Leadership</span>
+                    <h3>Certificate in Christian Ministry & Leadership</h3>
+                    <p>Foundational logic parsing systemic theology, hermeneutical models, and pastoral community orchestration frameworks.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-theology">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="catalog-card card-theology">
+                <div>
+                    <span class="card-badge badge-theology"><i class="fas fa-church"></i> Digital Ministry</span>
+                    <h3>Diploma in Church Administration & Digital Ministry</h3>
+                    <p>Operational strategies for governing ecclesiastical structures alongside data hosting setups and communication pipelines.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-theology">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="catalog-card card-business">
+                <div>
+                    <span class="card-badge badge-business"><i class="fas fa-chart-line"></i> Management</span>
+                    <h3>Certificate in Business Administration</h3>
+                    <p>Core competencies in organizational logistics, enterprise strategy, lean operational mechanics, and corporate governance.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-business">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="catalog-card card-business">
+                <div>
+                    <span class="card-badge badge-business"><i class="fas fa-laptop-house"></i> E-Commerce</span>
+                    <h3>Diploma in Digital Entrepreneurship & Online Business Systems</h3>
+                    <p>Frameworks for scaling digital architectures, workflow automation, monetization modules, and global online ecosystems.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-business">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="catalog-card card-tech">
+                <div>
+                    <span class="card-badge badge-tech"><i class="fas fa-robot"></i> Artificial Intelligence</span>
+                    <h3>Certificate in AI Tools & Digital Productivity</h3>
+                    <p>Practical integration of large language models, structured prompting arrays, and specialized workflow acceleration.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-tech">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <div class="catalog-card card-tech">
+                <div>
+                    <span class="card-badge badge-tech"><i class="fas fa-network-wired"></i> Systems Engineering</span>
+                    <h3>Diploma in Automation Systems & No-Code Development</h3>
+                    <p>Architecting autonomous database synchronization loops, software logic pipelines, and visual application deployments.</p>
+                </div>
+                <a href="https://log.moodiy.org/course/index.php?categoryid=18" class="btn-catalog-action btn-tech">
+                    View Courses <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+        </div>
+
     </div>
 </div>
+    
 
 <div id="section-contact" class="app-section">
     <div class="container">
