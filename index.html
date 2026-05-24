@@ -460,9 +460,511 @@
     }
 </style>
 
+<style>
+    /* About Component Global Layout Tokens */
+    .about-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .about-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2.5rem;
+    }
+
+    .about-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .about-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Responsive Interactive Layout Grid */
+    .about-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+    }
+
+    @media (min-width: 992px) {
+        .about-layout {
+            grid-template-columns: 1.2fr 1fr;
+        }
+    }
+
+    /* Narrative Timeline Architecture Components */
+    .about-narrative {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .story-block {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-left: 4px solid #0d233a;
+        transition: all 0.25s ease;
+    }
+
+    .story-block:hover {
+        border-left-color: #c5a059;
+        transform: translateX(4px);
+        box-shadow: 0 6px 24px rgba(197, 160, 89, 0.06);
+    }
+
+    .story-block h3 {
+        color: #0d233a;
+        font-size: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .story-block p {
+        color: #334155;
+        font-size: 1rem;
+        line-height: 1.65;
+        margin-bottom: 0;
+    }
+
+    /* Pillars Sidebar Dashboard Group Elements */
+    .about-pillars {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .pillar-card {
+        background: #ffffff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    .pillar-card.accent-pillar {
+        border-top: 4px solid #c5a059;
+    }
+
+    .pillar-card h4 {
+        color: #0d233a;
+        font-size: 1.2rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .pillar-card p {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* Metric Grid Highlight Panel Elements */
+    .metrics-panel {
+        background: linear-gradient(135deg, #0d233a 0%, #1a3a5c 100%);
+        color: #ffffff;
+        padding: 2.5rem 2rem;
+        border-radius: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .metric-item {
+        padding: 0.5rem;
+    }
+
+    .metric-number {
+        font-size: 2.25rem;
+        font-weight: 800;
+        color: #c5a059;
+        margin-bottom: 0.25rem;
+        font-family: sans-serif;
+    }
+
+    .metric-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #e2e8f0;
+        font-weight: 500;
+    }
+</style>
+
+<!-- Unified About Our Story Component Module -->
 <div id="section-about" class="app-section">
-    <div class="container">
+    <div class="about-container">
         
+        <div class="about-header">
+            <h2 class="section-title about-title">About Our Story</h2>
+            <p class="about-sub">Bridging the gap between timeless faith and cutting-edge global innovation.</p>
+        </div>
+
+        <div class="about-layout">
+            
+            <!-- Left Side Column: Narrative Timeline Blocks -->
+            <div class="about-narrative">
+                
+                <div class="story-block">
+                    <h3>🎯 The Genesis</h3>
+                    <p>The Living Oracles Global Institute was established to answer a critical global challenge: the artificial separation of academic excellence, technological expertise, and deep spiritual baseline training. Founded in Accra, Ghana, we set out to build an accessible, borderless workspace where students do not have to choose between their spiritual callings and professional marketplace mastery.</p>
+                </div>
+
+                <div class="story-block">
+                    <h3>🚀 The Evolution</h3>
+                    <p>Recognizing that legacy university tuition fees continuously lock out millions of gifted leaders across developing economies, we threw away the traditional commercial structure. By migrating entirely onto the open-source Moodle infrastructure and coordinating with key international ministries and philanthropic drivers, we deployed an advanced, enterprise-grade, tuition-free digital workspace canvas.</p>
+                </div>
+
+                <div class="story-block">
+                    <h3>🌍 The Horizon</h3>
+                    <p>Today, our interactive campus serves an expansive, multinational student body spanning several countries. Through our pay-as-you-gift ecosystem and targeted skill paths across engineering, modern enterprise, and biblical theology, we are actively structuring an elite generation of ethical marketplace professionals positioned to transform global systems.</p>
+                </div>
+
+            </div>
+
+            <!-- Right Side Column: Strategic Pillars & Quick Metric Widgets -->
+            <div class="about-pillars">
+                
+                <div class="pillar-card accent-pillar">
+                    <h4>👁️ Our Vision Statement</h4>
+                    <p>To operate as the premier global center for contextual learning, establishing a unified network of kingdom-minded industry experts, technologists, and ministers who execute excellence across every cultural mountain.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <h4>⚡ Our Core Mandate</h4>
+                    <p>To dismantle financial barriers to elite training by providing fully responsive, localized, and practical skills development programs embedded directly inside foundational biblical truths.</p>
+                </div>
+
+                <!-- Snapshot High-Value Institutional Metrics Panel -->
+                <div class="metrics-panel">
+                    <div class="metric-item">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-label">Tuition-Free Grants</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">Online</div>
+                        <div class="metric-label">Moodle Workspace</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">Global</div>
+                        <div class="metric-label">Student Network</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">Partner</div>
+                        <div class="metric-label">ADUSEI Foundation</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+    
+<style>
+    /* Statement of Faith Specific Layout Tokens */
+    .faith-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .faith-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2rem;
+    }
+
+    .faith-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .faith-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .faith-card {
+        background: #ffffff;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-top: 4px solid #0d233a;
+    }
+
+    /* Elegant Custom Faith Bullet Point Architecture */
+    .faith-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .faith-list li {
+        position: relative;
+        padding-left: 2.5rem;
+        font-size: 1.05rem;
+        color: #2c3e50;
+        line-height: 1.65;
+    }
+
+    /* Premium Custom Cross Accent Icon */
+    .faith-list li::before {
+        content: "✟";
+        font-size: 1.2rem;
+        color: #c5a059;
+        position: absolute;
+        left: 0.5rem;
+        top: 2px;
+        font-weight: bold;
+    }
+
+    .faith-list strong {
+        color: #0d233a;
+        font-size: 1.15rem;
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 700;
+    }
+</style>
+
+<!-- Unified Institutional Statement of Faith Component -->
+<div id="section-statement-faith" class="app-section">
+    <div class="faith-container">
+        
+        <div class="faith-header">
+            <h2 class="section-title faith-title">Statement of Faith</h2>
+            <p class="faith-sub">Our structural curriculum answers completely to the following foundational beliefs:</p>
+        </div>
+
+        <div class="faith-card">
+            <ul class="faith-list">
+                <li>
+                    <strong>The Trinity</strong> 
+                    We believe in one true God, eternally co-existing in three persons: Father, Son, and Holy Spirit.
+                </li>
+                <li>
+                    <strong>The Scriptures</strong> 
+                    The Bible is the fully inspired, infallible, and absolute authoritative Word of God for daily living.
+                </li>
+                <li>
+                    <strong>Salvation</strong> 
+                    True redemption is received purely through grace by faith in Jesus Christ alone, confirmed via His death, burial, and bodily resurrection.
+                </li>
+                <li>
+                    <strong>Marketplace Mandate</strong> 
+                    Enterprise and tech development are strategic callings intended to bring order to societies and glorify God.
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /* Leadership Grid Section Specific Layout Tokens */
+    .leadership-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .leadership-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2.5rem;
+    }
+
+    .leadership-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .leadership-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Professional Responsive Column Dashboard Architecture Grid */
+    .leadership-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    @media (min-width: 576px) {
+        .leadership-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 992px) {
+        .leadership-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /* Executive Leadership Custom Card UI Profile Modules */
+    .leader-card {
+        background: #ffffff;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-radius: 12px;
+        padding: 2.5rem 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .leader-card:hover {
+        transform: translateY(-5px);
+        border-color: #ebdccb;
+        box-shadow: 0 10px 30px rgba(197, 160, 89, 0.12);
+    }
+
+    /* Custom Avatar Circle Accent Icon Placement Holder */
+    .leader-avatar-placeholder {
+        width: 80px;
+        height: 80px;
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0d233a;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .leader-card:hover .leader-avatar-placeholder {
+        background: #0d233a;
+        color: #c5a059;
+        border-color: #c5a059;
+    }
+
+    /* Executive Structural Text Styling Content Tags */
+    .leader-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #0d233a;
+        margin-bottom: 0.4rem;
+        line-height: 1.4;
+    }
+
+    .leader-role {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #c5a059;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+</style>
+
+<!-- Unified Executive Leadership Team Component Module Layout -->
+<div id="section-leadership" class="app-section">
+    <div class="leadership-container">
+        
+        <div class="leadership-header">
+            <h2 class="section-title leadership-title">Leadership Team</h2>
+            <p class="leadership-sub">Guiding our institutional vision, academic integrity, and technological innovation pipelines.</p>
+        </div>
+
+        <div class="leadership-grid">
+            
+            <!-- EXECUTIVE 1: FOUNDER & PRESIDENT -->
+            <div class="leader-card">
+                <div class="leader-avatar-placeholder">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div class="leader-name">Rev. Dr. Emmanuel Asante</div>
+                <div class="leader-role">Founder & President</div>
+            </div>
+
+            <!-- EXECUTIVE 2: ACADEMIC DEAN -->
+            <div class="leader-card">
+                <div class="leader-avatar-placeholder">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <div class="leader-name">Prof. Abigail Mensah</div>
+                <div class="leader-role">Academic Dean</div>
+            </div>
+
+            <!-- EXECUTIVE 3: DIRECTOR OF BUSINESS -->
+            <div class="leader-card">
+                <div class="leader-avatar-placeholder">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="leader-name">Mr. Kwame Osei</div>
+                <div class="leader-role">Director of Business</div>
+            </div>
+
+            <!-- EXECUTIVE 4: DIRECTOR OF TECHNOLOGY -->
+            <div class="leader-card">
+                <div class="leader-avatar-placeholder">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="leader-name">Eng. Michael Adjei</div>
+                <div class="leader-role">Director of Technology</div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="section-accreditation" class="app-section">
+    <div class="container">
         <div class="section-header">
             <h2 class="section-title">Our Trusted Partners</h2>
             <p class="section-sub">Collaborating for Quality Education Worldwide</p>
@@ -541,60 +1043,182 @@
     </div>
 </div>
 
-<div id="section-statement-faith" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Statement of Faith</h2>
-        <div class="content-block">
-            <p>Our structural curriculum answers completely to the following foundational beliefs:</p>
-            <ul>
-                <li><strong>The Trinity:</strong> We believe in one true God, eternally co-existing in three persons: Father, Son, and Holy Spirit.</li>
-                <li><strong>The Scriptures:</strong> The Bible is the fully inspired, infallible, and absolute authoritative Word of God for daily living.</li>
-                <li><strong>Salvation:</strong> True redemption is received purely through grace by faith in Jesus Christ alone, confirmed via His death, burial, and bodily resurrection.</li>
-                <li><strong>Marketplace Mandate:</strong> Enterprise and tech development are strategic callings intended to bring order to societies and glorify God.</li>
-            </ul>
-        </div>
-    </div>
-</div>
+<style>
+    /* Institutional Partnership Specific Layout Tokens */
+    .partner-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
 
-<div id="section-leadership" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Leadership Team</h2>
-        <div class="content-block">
-            <p><strong>Founder & President:</strong> Rev. Dr. Emmanuel Asante<br><br>
-            <strong>Academic Dean:</strong> Prof. Abigail Mensah<br><br>
-            <strong>Director of Business:</strong> Mr. Kwame Osei<br><br>
-            <strong>Director of Technology:</strong> Eng. Michael Adjei</p>
-        </div>
-    </div>
-</div>
+    .partner-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2rem;
+    }
 
-<div id="section-accreditation" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Accreditation & Partnerships</h2>
-        <div class="content-block">
-            <p>We work in close strategic partnership exclusively with the <strong>ADUSEI Foundation</strong> and <strong>The Living Oracles Of God Ministry</strong>.</p>
-            <p>While functioning independently of public university educational metrics to keep our digital updates fluid, our professional certificates are widely recognized and valued by hundreds of global ministries and partner enterprises.</p>
-        </div>
-    </div>
-</div>
+    .partner-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
 
+    .partner-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Core Form Card Design Wrapper */
+    .partner-card {
+        background: #ffffff;
+        padding: 3rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-top: 4px solid #0d233a;
+    }
+
+    .partner-intro {
+        color: #334155;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* Embedded Form Grid Framework Layout */
+    .embedded-form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .embedded-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .embedded-form-group label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0d233a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Premium Input Elements Interactivity Controls */
+    .embedded-form-grid input[type="text"],
+    .embedded-form-grid input[type="email"],
+    .embedded-form-grid select,
+    .embedded-form-grid textarea {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-size: 1rem;
+        color: #334155;
+        background-color: #f8fafc;
+        outline: none;
+        box-sizing: border-box;
+        transition: all 0.25s ease;
+    }
+
+    .embedded-form-grid input:focus,
+    .embedded-form-grid select:focus,
+    .embedded-form-grid textarea:focus {
+        border-color: #c5a059;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .embedded-form-grid select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230d233a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.15rem;
+        padding-right: 2.5rem;
+    }
+
+    .embedded-form-grid textarea {
+        resize: vertical;
+        font-family: inherit;
+    }
+
+    /* Premium Dynamic Action Form Trigger CTA Button */
+    .btn-partner-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background: #0d233a;
+        color: #ffffff !important;
+        border: none;
+        outline: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(13, 35, 58, 0.15);
+        margin-top: 0.5rem;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-partner-submit:hover {
+        background: #c5a059;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .btn-partner-submit i {
+        font-size: 1.1rem;
+        transition: transform 0.25s ease;
+    }
+
+    .btn-partner-submit:hover i {
+        transform: scale(1.1);
+    }
+</style>
+
+<!-- Unified Institutional Partnership Intake Dashboard Component -->
 <div id="section-partnership" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Institutional Partnership</h2>
-        <p class="section-sub">Collaborate with our review boards to scale educational delivery tools worldwide.</p>
-        <div class="content-block" style="max-width:650px;">
-            <p>Thank you for exploring alliances with our digital learning models. Please complete this brief configuration request, and our desk team will get back to you shortly.</p>
+    <div class="partner-container">
+        
+        <div class="partner-header">
+            <h2 class="section-title partner-title">Institutional Partnership</h2>
+            <p class="partner-sub">Collaborate with our review boards to scale educational delivery tools worldwide.</p>
+        </div>
+
+        <div class="partner-card">
+            <p class="partner-intro">
+                Thank you for exploring strategic alliances with our digital learning models. 
+                Please complete this brief configuration request framework, and our desk team will process your inquiry details shortly.
+            </p>
             
             <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="embedded-form-grid">
+                <!-- Formspree Target Config Parameters -->
                 <input type="hidden" name="_subject" value="New Partnership Request - Living Oracles">
+                
                 <div class="embedded-form-group">
                     <label>Organization / Ministry Name *</label>
                     <input type="text" name="organization" required placeholder="Name of your entity">
                 </div>
+                
                 <div class="embedded-form-group">
                     <label>Official Email Address *</label>
                     <input type="email" name="email" required placeholder="partner@domain.com">
                 </div>
+                
                 <div class="embedded-form-group">
                     <label>Partnership Type *</label>
                     <select name="partnership_type" required>
@@ -605,63 +1229,591 @@
                         <option value="Other Expansion">Other Expansion Outlines</option>
                     </select>
                 </div>
+                
                 <div class="embedded-form-group">
                     <label>Proposal Summary Remarks *</label>
                     <textarea rows="4" name="proposal" required placeholder="Briefly introduce your mission or requested partnership scope..."></textarea>
                 </div>
-                <button type="submit" class="btn-primary" style="margin-top:0.5rem; justify-content:center;">Submit Partnership Inquiry <i class="fas fa-handshake"></i></button>
+                
+                <button type="submit" class="btn-partner-submit">
+                    Submit Partnership Inquiry <i class="fas fa-handshake"></i>
+                </button>
             </form>
         </div>
+
     </div>
 </div>
 
+<style>
+    /* Scholarship Application Specific Layout Tokens */
+    .scholarship-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .scholarship-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2rem;
+    }
+
+    .scholarship-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .scholarship-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Core Form Card Design Wrapper */
+    .scholarship-card {
+        background: #ffffff;
+        padding: 3rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-top: 4px solid #0d233a;
+    }
+
+    .scholarship-intro {
+        color: #334155;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* Embedded Form Grid Framework Layout */
+    .scholarship-form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .scholarship-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .scholarship-form-group label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #0d233a;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    /* Premium Input Elements Interactivity Controls */
+    .scholarship-form-grid input[type="text"],
+    .scholarship-form-grid input[type="email"],
+    .scholarship-form-grid select,
+    .scholarship-form-grid textarea {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-size: 1rem;
+        color: #334155;
+        background-color: #f8fafc;
+        outline: none;
+        box-sizing: border-box;
+        transition: all 0.25s ease;
+    }
+
+    .scholarship-form-grid input:focus,
+    .scholarship-form-grid select:focus,
+    .scholarship-form-grid textarea:focus {
+        border-color: #c5a059;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+    }
+
+    .scholarship-form-grid select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%230d233a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        background-size: 1.15rem;
+        padding-right: 2.5rem;
+    }
+
+    .scholarship-form-grid textarea {
+        resize: vertical;
+        font-family: inherit;
+    }
+
+    /* Premium Dynamic Action Form Trigger CTA Button */
+    .btn-scholarship-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background: #0d233a;
+        color: #ffffff !important;
+        border: none;
+        outline: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(13, 35, 58, 0.15);
+        margin-top: 0.5rem;
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-scholarship-submit:hover {
+        background: #c5a059;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25);
+        transform: translateY(-2px);
+    }
+
+    .btn-scholarship-submit i {
+        font-size: 1.1rem;
+        transition: transform 0.25s ease;
+    }
+
+    .btn-scholarship-submit:hover i {
+        transform: scale(1.1);
+    }
+</style>
+
+<!-- Unified Scholarship Application Intake Dashboard Component -->
 <div id="section-scholarship" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Scholarship Application</h2>
-        <div class="content-block" style="text-align: center;">
-            <p>Thanks to strategic institutional grants from the <strong>ADUSEI Foundation</strong>, we proudly offer a 100% Tuition-Waiver Scholarship to all accepted students coming from developing regions.</p>
-            <p style="margin-bottom: 2rem;">This completely eliminates administrative entry friction, letting you study without financial stress.</p>
-            <button class="btn-primary" onclick="showSection('apply')">Access Scholarship Application</button>
+    <div class="scholarship-container">
+        
+        <div class="scholarship-header">
+            <h2 class="section-title scholarship-title">Scholarship Application</h2>
+            <p class="scholarship-sub">ADUSEI Foundation Tuition-Waiver Grant Pipeline</p>
         </div>
+
+        <div class="scholarship-card">
+            <p class="scholarship-intro">
+                Thanks to strategic institutional grants from the <strong>ADUSEI Foundation</strong>, we proudly offer a 100% Tuition-Waiver Scholarship to all accepted students coming from developing regions. This completely eliminates administrative entry friction, letting you study without financial stress.
+            </p>
+            
+            <!-- Mirrored Formspree Gateway End Point Alignment -->
+            <form action="https://formspree.io/f/xnjrjbqg" method="POST" class="scholarship-form-grid">
+                <!-- Formspree Subject Config Parameter -->
+                <input type="hidden" name="_subject" value="New Scholarship Application - Living Oracles">
+                
+                <div class="scholarship-form-group">
+                    <label>Full Legal Name *</label>
+                    <input type="text" name="student_name" required placeholder="Your full name">
+                </div>
+                
+                <div class="scholarship-form-group">
+                    <label>Official Email Address *</label>
+                    <input type="email" name="email" required placeholder="applicant@domain.com">
+                </div>
+                
+                <div class="scholarship-form-group">
+                    <label>Requested Academic Track *</label>
+                    <select name="academic_track" required>
+                        <option value="">-- Choose Objective Program --</option>
+                        <option value="Certificate Track">Certificate Track (4-8 Weeks)</option>
+                        <option value="Full Diploma Program">Full Diploma Program (3-6 Months)</option>
+                    </select>
+                </div>
+                
+                <div class="scholarship-form-group">
+                    <label>Statement of Intent & Financial Context *</label>
+                    <textarea rows="4" name="context_statement" required placeholder="Please briefly detail your background, why you wish to study with us, and your need for this tuition grant..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-scholarship-submit">
+                    Submit Scholarship Application <i class="fas fa-graduation-cap"></i>
+                </button>
+            </form>
+        </div>
+
     </div>
 </div>
 
+<style>
+    /* Fees & Financial Aid Specific Layout Tokens */
+    .financial-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .financial-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2rem;
+    }
+
+    .financial-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .financial-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Core Layout Strategy Split Grid Card Architecture */
+    .financial-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-top: 4px solid #0d233a;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+        .financial-card {
+            grid-template-columns: 1.2fr 1fr;
+        }
+    }
+
+    /* Left Side Segment Block Content Frame */
+    .financial-main-content {
+        padding: 3rem 2.5rem;
+    }
+
+    .financial-main-content h3 {
+        color: #0d233a;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .financial-main-content p {
+        color: #334155;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+    }
+
+    .financial-main-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Right Side Segment Highlight Metric Box Panel */
+    .financial-highlight-panel {
+        background: #f8fafc;
+        border-top: 1px solid #e2e8f0;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.75rem;
+    }
+
+    @media (min-width: 768px) {
+        .financial-highlight-panel {
+            border-top: none;
+            border-left: 1px solid #e2e8f0;
+        }
+    }
+
+    .financial-stat-block {
+        text-align: center;
+    }
+
+    .financial-stat-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #475569;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .financial-stat-value {
+        font-size: 1.85rem;
+        font-weight: 800;
+        color: #c5a059;
+    }
+
+    /* Channel Payment Badges Layout Grid */
+    .payment-channels-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 0.25rem;
+    }
+
+    .channel-badge {
+        background: #ffffff;
+        border: 1px solid #cbd5e1;
+        padding: 0.4rem 0.85rem;
+        border-radius: 6px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #0d233a;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    }
+</style>
+
+<!-- Unified Fees & Financial Aid Blueprint Dashboard Module -->
 <div id="section-fees" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Fees & Financial Aid</h2>
-        <div class="content-block">
-            <h3>The Pay-As-You-Gift Model</h3>
-            <p>Our courses remain entirely tuition-free. We use a faith-driven, collaborative support layout called the Pay-As-You-Gift model, allowing students to voluntarily support the platform backend if they have the means.</p>
-            <p><strong>Suggested Support Contribution:</strong> $10 - $50 per block. Accepted pathways include secure Credit Cards, PayPal, and local Mobile Money (MoMo).</p>
+    <div class="financial-container">
+        
+        <div class="financial-header">
+            <h2 class="section-title financial-title">Fees & Financial Aid</h2>
+            <p class="financial-sub">Dismantling institutional economic barriers through sustainable innovation models.</p>
+        </div>
+
+        <div class="financial-card">
+            
+            <!-- Left Column Component: Paradigm Narrative Details -->
+            <div class="financial-main-content">
+                <h3><i class="fas fa-hand-holding-heart"></i> The Pay-As-You-Gift Model</h3>
+                <p>
+                    Our core academic curriculum paths remain entirely tuition-free. We implement a faith-driven, highly collaborative operational system called the Pay-As-You-Gift baseline ecosystem.
+                </p>
+                <p>
+                    This structures an open pathway allowing students, alumni, and global partners to voluntarily support the cloud platform server arrays and background administration architecture purely if they have the active means to do so.
+                </p>
+            </div>
+
+            <!-- Right Column Component: Parameters Metric Highlighting -->
+            <div class="financial-highlight-panel">
+                
+                <div class="financial-stat-block">
+                    <div class="financial-stat-label">Suggested Block Support</div>
+                    <div class="financial-stat-value">$10 - $50</div>
+                </div>
+
+                <div class="financial-stat-block">
+                    <div class="financial-stat-label">Accepted Secure Pathways</div>
+                    <div class="payment-channels-wrapper">
+                        <span class="channel-badge"><i class="fas fa-credit-card"></i> Cards</span>
+                        <span class="channel-badge"><i class="fab fa-paypal"></i> PayPal</span>
+                        <span class="channel-badge"><i class="fas fa-mobile-alt"></i> MoMo</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<style>
+    /* Academic Tracks Framework Layout Tokens */
+    .tracks-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .track-header {
+        text-align: center;
+        margin-bottom: 3.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2.5rem;
+    }
+
+    .track-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .track-sub {
+        font-size: 1.1rem;
+        color: #c5a059; /* Brand Gold Accent */
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    /* Core Dynamic Program Presentation Panels */
+    .track-program-panel {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        border-top: 4px solid #0d233a;
+        padding: 3rem 2.5rem;
+        margin-bottom: 3rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .track-program-panel:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(13, 35, 58, 0.04);
+    }
+
+    .track-meta-title {
+        font-size: 1.85rem;
+        color: #0d233a;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .track-meta-title i {
+        color: #c5a059;
+        font-size: 1.65rem;
+    }
+
+    .track-meta-desc {
+        color: #475569;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        max-width: 800px;
+    }
+
+    /* Target Integration Inner Grid Dynamic Slots */
+    .program-slot-grid {
+        background: #f8fafc;
+        border: 1px dashed #cbd5e1;
+        border-radius: 8px;
+        min-height: 100px;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    /* Interactive Premium Action CTA Buttons */
+    .btn-track-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        background: #0d233a;
+        color: #ffffff !important;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        padding: 0.9rem 2rem;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(13, 35, 58, 0.15);
+        transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-track-action:hover {
+        background: #c5a059;
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25);
+        transform: translateY(-2px);
+    }
+</style>
+
+<!-- Unified Academic Tracks Core Module Configuration -->
+<div class="tracks-container">
+
+    <!-- SCHOOL 1: MINISTRY -->
+    <div id="section-ministry" class="app-section">
+        <div class="track-program-panel">
+            <h2 class="track-meta-title">
+                <i class="fas fa-bible"></i> School of Ministry
+            </h2>
+            <p class="track-meta-desc">
+                Acquire sound biblical foundations, deep system hermeneutics, and operational leadership principles intended to structure and manage healthy local communities.
+            </p>
+            
+            <!-- JavaScript Injection Dynamic Grid target container layout mount -->
+            <div id="grid-ministry-programs" class="program-slot-grid"></div>
+            
+            <button onclick="showSection('apply')" class="btn-track-action">
+                Apply for Ministry Track <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
     </div>
-</div>
 
-<div id="section-ministry" class="app-section">
-    <div class="container">
-        <h2 class="section-title">School of Ministry</h2>
-        <p class="section-sub">Acquire sound biblical foundations and leadership principles to lead healthy local communities.</p>
-        <div id="grid-ministry-programs"></div>
-        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Ministry Track</button>
+    <!-- SCHOOL 2: BUSINESS -->
+    <div id="section-business" class="app-section">
+        <div class="track-program-panel">
+            <h2 class="track-meta-title">
+                <i class="fas fa-chart-line"></i> School of Business
+            </h2>
+            <p class="track-meta-desc">
+                Master advanced corporate layouts, mathematical financial modeling, lean operational logistics, and scalable startup growth validation patterns.
+            </p>
+            
+            <!-- JavaScript Injection Dynamic Grid target container layout mount -->
+            <div id="grid-business-programs" class="program-slot-grid"></div>
+            
+            <button onclick="showSection('apply')" class="btn-track-action">
+                Apply for Business Track <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
-</div>
 
-<div id="section-business" class="app-section">
-    <div class="container">
-        <h2 class="section-title">School of Business</h2>
-        <p class="section-sub">Master business layouts, financial modeling, lean operational logistics, and startup growth patterns.</p>
-        <div id="grid-business-programs"></div>
-        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Business Track</button>
+    <!-- SCHOOL 3: DIGITAL & AI -->
+    <div id="section-tech" class="app-section">
+        <div class="track-program-panel">
+            <h2 class="track-meta-title">
+                <i class="fas fa-robot"></i> School of Digital & AI
+            </h2>
+            <p class="track-meta-desc">
+                Equip yourself with automated workflows across prompt setups, neural landscape interactions, responsive asset creations, and data systems management templates.
+            </p>
+            
+            <!-- JavaScript Injection Dynamic Grid target container layout mount -->
+            <div id="grid-tech-programs" class="program-slot-grid"></div>
+            
+            <button onclick="showSection('apply')" class="btn-track-action">
+                Apply for AI & Digital Track <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
-</div>
 
-<div id="section-tech" class="app-section">
-    <div class="container">
-        <h2 class="section-title">School of Digital & AI</h2>
-        <p class="section-sub">Equip yourself with practical workflows across engineering, responsive designs, and automated prompt setups.</p>
-        <div id="grid-tech-programs"></div>
-        <button onclick="showSection('apply')" class="btn-primary" style="margin:2rem auto; display:block;">Apply for Technology Track</button>
+    <!-- SCHOOL 4: ENGINEERING (NEW COHORT MODULE) -->
+    <div id="section-engineering" class="app-section">
+        <div class="track-program-panel">
+            <h2 class="track-meta-title">
+                <i class="fas fa-laptop-code"></i> School of Engineering
+            </h2>
+            <p class="track-meta-desc">
+                Build enterprise-grade software architecture blueprints, web systems pipelines, secure computing network models, and algorithm optimization frameworks.
+            </p>
+            
+            <!-- JavaScript Injection Dynamic Grid target container layout mount -->
+            <div id="grid-engineering-programs" class="program-slot-grid"></div>
+            
+            <button onclick="showSection('apply')" class="btn-track-action">
+                Apply for Engineering Track <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
+
 </div>
     
     <style>
