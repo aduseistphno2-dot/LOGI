@@ -177,146 +177,144 @@
 
 <div id="section-home" class="app-section active">
    <style>
-    /* Hero Section Master Blueprint Layout Tokens */
-    #section-home {
+    /* Isolated Container Modifiers */
+    .hero-container-standalone {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 5rem 2rem;
+        border-radius: 16px;
         position: relative;
-        min-height: 85vh;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        /* Dynamic GIF Background Configuration Link Slot */
+        text-align: center;
+        
+        /* Direct GIF Background Configuration Slot */
         background-image: url('https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif'); /* Replace with your specific custom GIF URL */
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 4rem 1rem;
     }
 
     /* Accessibility Overlay Mask safeguarding typography contrast levels */
-    #section-home::before {
+    .hero-container-standalone::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(13, 35, 58, 0.92) 0%, rgba(26, 58, 92, 0.85) 100%);
+        background: linear-gradient(135deg, rgba(13, 35, 58, 0.94) 0%, rgba(26, 58, 92, 0.88) 100%);
         z-index: 1;
     }
 
-    .hero-container-inner {
+    .hero-banner-standalone {
         position: relative;
-        z-index: 2; /* Forces text structure above the overlay mask */
-        max-width: 850px;
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .hero-banner {
+        z-index: 2; /* Forces content stacking above background mask layer */
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        width: 100%;
     }
 
-    /* Premium Underlined Typography Component Blueprint */
-    .hero-banner h1 {
-        font-size: 3rem;
+    /* Premium Underlined Typography Blueprint */
+    .hero-banner-standalone h1 {
+        font-size: 2.75rem;
         font-weight: 900;
         color: #ffffff;
-        letter-spacing: 1px;
         margin: 0;
-        padding-bottom: 1rem;
+        padding-bottom: 1.25rem;
         position: relative;
         display: inline-block;
+        letter-spacing: 0.5px;
         line-height: 1.2;
     }
 
     @media (min-width: 768px) {
-        .hero-banner h1 {
-            font-size: 4.25rem;
+        .hero-banner-standalone h1 {
+            font-size: 4rem;
         }
     }
 
-    /* Structured Custom Underline Element Accent */
-    .hero-banner h1::after {
+    /* Custom Geometric Gold Underline Accent Line */
+    .hero-banner-standalone h1::after {
         content: '';
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-        width: 120px; /* Width of the gold underline accent block */
-        height: 5px;   /* Thick profile size token */
+        width: 140px; /* Width size metric of gold underline path */
+        height: 5px;   /* Structural thickness token */
         background-color: #c5a059; /* Brand Gold Accent */
         border-radius: 4px;
     }
 
-    .hero-banner p {
-        font-size: 1.2rem;
+    .hero-banner-standalone p {
+        font-size: 1.15rem;
         color: #e2e8f0;
         max-width: 650px;
         line-height: 1.6;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 1.25rem 0;
         font-weight: 500;
     }
 
     @media (min-width: 768px) {
-        .hero-banner p {
-            font-size: 1.5rem;
+        .hero-banner-standalone p {
+            font-size: 1.45rem;
         }
     }
 
     /* Action Intent Activation Trigger CTA Button Component */
-    .btn-hero-action {
+    .btn-hero-standalone {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 0.75rem;
-        background: #c5a059; /* Brand Gold Accent */
+        background: #c5a059; /* Brand Gold */
         color: #ffffff !important;
         text-decoration: none;
         border: none;
         outline: none;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         font-weight: 700;
-        padding: 1.1rem 2.25rem;
+        padding: 1rem 2.25rem;
         border-radius: 8px;
         cursor: pointer;
         box-shadow: 0 4px 14px rgba(197, 160, 89, 0.3);
         transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .btn-hero-action:hover {
-        background: #0d233a; /* Swaps to Brand Navy on hover */
-        box-shadow: 0 6px 20px rgba(13, 35, 58, 0.4);
+    .btn-hero-standalone:hover {
+        background: #ffffff;
+        color: #0d233a !important; /* Inverts color schema elements seamlessly */
+        box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
         transform: translateY(-2px);
     }
 
-    .btn-hero-action i {
+    .btn-hero-standalone i {
         font-size: 1.1rem;
         transition: transform 0.25s ease;
     }
 
-    .btn-hero-action:hover i {
+    .btn-hero-standalone:hover i {
         transform: translateX(4px);
     }
 </style>
 
-<!-- Unified Immersive Background GIF Hero Entry Point Component -->
-<div id="section-home" class="app-section active">
-    <div class="container hero-container-inner">
-        <div class="hero-banner">
-            
-            <h1>QUALITY EDUCATION!</h1>
-            
-            <p>A perfect blend of Leadership, Business, Technology & Theology</p>
-            
-            <button onclick="showSection('apply')" class="btn-hero-action">
-                Apply Now - 100% Scholarship Provided <i class="fas fa-arrow-right"></i>
-            </button>
-            
-        </div>    
+<!-- Standalone Content Module Asset Wrapper -->
+<div class="container hero-container-standalone">
+    <div class="hero-banner-standalone">
+        
+        <h1>QUALITY EDUCATION!</h1>
+        
+        <p>A perfect blend of Leadership, Business, Technology & Theology</p>
+        
+        <button onclick="showSection('apply')" class="btn-hero-standalone">
+            Apply Now - 100% Scholarship Provided <i class="fas fa-arrow-right"></i>
+        </button>
+        
     </div>
 </div>
 
