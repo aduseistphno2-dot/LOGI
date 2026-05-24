@@ -201,9 +201,11 @@
         </div>
 
         <div class="award-card">
-            <h3>🏆 Christian College Award</h3>
-            <p>Recognized for instructional model excellence, The Living Oracles Global Institute beautifully integrates modern marketplace methodologies with timeless biblical principles. We build capable kingdom leaders who perform at high levels in corporate environments without compromising their Christian values.</p>
-            <button onclick="showSection('about')" class="btn-outline" style="margin-top: 1.5rem; border-color: var(--gold); color: var(--gold);">Read Full History</button>
+            <h3>Our Trusted Partners</h3>
+            <div class="partner-logo">
+            <img src="https://drive.google.com/thumbnail?id=1GnTtl9iBTOTIEoVcd-jvmMxkw0DjLCx6" alt="ADUSEI Foundation">               <img src="https://drive.google.com/thumbnail?id=18VL0BLOCPuDP3axH9s_UDamzAiScmOf6" alt="The Living Oracles of God Ministry">
+        </div>
+           <button onclick="showSection('about')" class="btn-outline" style="margin-top: 1.5rem; border-color: var(--gold); color: var(--gold);">Read More</button>
         </div>
 
         <div class="section-header">
@@ -229,13 +231,313 @@
     </div>
 </div>
 
+<style>
+    /* Styling Variable Palette */
+    :root {
+        --primary-color: #0d233a; /* Deep Navy from logo */
+        --accent-color: #c5a059;  /* Elegant Gold from logo */
+        --text-dark: #2c3e50;
+        --text-light: #606f7b;
+        --bg-light: #f8fafc;
+        --card-bg: #ffffff;
+        --radius: 12px;
+        --transition: all 0.3s ease;
+    }
+
+    .app-section {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 5rem 1.5rem;
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+    }
+
+    .container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .section-sub {
+        font-size: 1.15rem;
+        color: var(--accent-color);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+    }
+
+    /* Grid Layout for Partners */
+    .partner-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+    }
+
+    @media (min-width: 768px) {
+        .partner-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .partner-card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        padding: 2.5rem;
+        box-shadow: 0 10px 30px rgba(13, 35, 58, 0.05);
+        border-top: 4px solid var(--accent-color);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .partner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(13, 35, 58, 0.1);
+    }
+
+    /* Logo Wrapper Style */
+    .partner-logo-wrap {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .partner-logo-wrap img {
+        max-height: 100%;
+        max-width: 220px;
+        object-fit: contain;
+    }
+
+    .partner-card h3 {
+        color: var(--primary-color);
+        font-size: 1.6rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .partner-card p {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Styled Lists turning into Feature Items */
+    .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .feature-list li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+        line-height: 1.5;
+    }
+
+    .feature-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+
+    /* Impact/Vision Banner */
+    .vision-banner {
+        background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a5c 100%);
+        color: #ffffff;
+        border-radius: var(--radius);
+        padding: 3rem;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .vision-banner h3 {
+        color: var(--accent-color);
+        font-size: 1.8rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .vision-banner p {
+        color: #e2e8f0;
+        margin-bottom: 2rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .stat-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 3px solid var(--accent-color);
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        color: #cbd5e1;
+    }
+
+    /* Call to Action Section */
+    .cta-block {
+        text-align: center;
+        background: #ffffff;
+        border-radius: var(--radius);
+        padding: 3rem;
+        box-shadow: 0 10px 30px rgba(13, 35, 58, 0.05);
+    }
+
+    .cta-block h3 {
+        color: var(--primary-color);
+        font-size: 1.8rem;
+        margin-top: 0;
+    }
+
+    .cta-block p {
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 0 auto 2rem auto;
+        line-height: 1.6;
+    }
+
+    .email-highlight {
+        color: var(--primary-color);
+        font-weight: 600;
+        background: #f1f5f9;
+        padding: 0.25rem 0.7rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+
+    /* Beautiful Button */
+    .btn-primary {
+        background-color: var(--accent-color);
+        color: #ffffff;
+        border: none;
+        padding: 0.85rem 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+    }
+
+    .btn-primary:hover {
+        background-color: #b08d4b;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+    }
+</style>
+
 <div id="section-about" class="app-section">
     <div class="container">
-        <h2 class="section-title">Our Story</h2>
-        <div class="content-block">
-            <p>The Living Oracles Global Institute began as an inspired vision: to make high-quality, practical education accessible to Christians worldwide. We recognized that standard tuition architectures often prevent aspiring global leaders from expanding their knowledge base.</p>
-            <p>By blending core ministerial theology, business mechanics, and emerging digital systems, we built a comprehensive online ecosystem. Heavily supported by the <strong>ADUSEI Foundation</strong>, our key focus centers on empowering African youth, dismantling socio-economic bottlenecks, and fostering modern leadership skills through open-access education.</p>
+        
+        <div class="section-header">
+            <h2 class="section-title">Our Trusted Partners</h2>
+            <p class="section-sub">Collaborating for Quality Education Worldwide</p>
         </div>
+        
+        <!-- Twin Pillars Grid -->
+        <div class="partner-grid">
+            
+            <!-- Partner 1: ADUSEI -->
+            <div class="partner-card">
+                <div class="partner-logo-wrap">
+                    <img src="https://drive.google.com/thumbnail?id=1GnTtl9iBTOTIEoVcd-jvmMxkw0DjLCx6" alt="ADUSEI Foundation Logo">
+                </div>
+                <h3>ADUSEI Foundation</h3>
+                <p>The <strong>ADUSEI Foundation</strong> is our primary philanthropic partner and the backbone of our scholarship program. Founded with a mission to empower African youth through accessible education, the foundation provides foundational support to ensure no qualified student is turned away due to financial limitations.</p>
+                <ul class="feature-list">
+                    <li><strong>Full Tuition Scholarships</strong> — Every student at The Living Oracles Global Institute receives a full scholarship, removing financial barriers entirely.</li>
+                    <li><strong>Internet Data Bundles</strong> — Providing mobile data to underserved communities to ensure uninterrupted access to course materials.</li>
+                    <li><strong>Device Assistance</strong> — Helping provide tablets or smartphones to students without access to a computer in special cases.</li>
+                    <li><strong>Mentorship Programs</strong> — Connecting students with experienced professionals in ministry, business, and engineering fields.</li>
+                </ul>
+            </div>
+            
+            <!-- Partner 2: Living Oracles -->
+            <div class="partner-card">
+                <div class="partner-logo-wrap">
+                    <img src="https://drive.google.com/thumbnail?id=18VL0BLOCPuDP3axH9s_UDamzAiScmOf6" alt="The Living Oracles of God Ministry Logo">
+                </div>
+                <h3>The Living Oracles of God Ministry</h3>
+                <p>The <strong>Living Oracles of God Ministry</strong> is our founding spiritual covering and strategic partner. This ministry brings decades of experience in pastoral training, church planting, and Christian leadership development to cultivate faith-centered values.</p>
+                <ul class="feature-list">
+                    <li><strong>Biblical Curriculum Development</strong> — Ensuring all ministry courses are theologically sound and practically applicable.</li>
+                    <li><strong>Church Network Access</strong> — Graduates are connected to a network of partner churches for potential ministry placement.</li>
+                    <li><strong>Pastoral Mentorship</strong> — Students receive guidance from experienced pastors and ministry leaders.</li>
+                    <li><strong>Ordination Pathways</strong> — Providing a formal pathway toward ministerial recognition and ordination for qualified graduates.</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <!-- Shared Vision / Metrics Banner -->
+        <div class="vision-banner">
+            <h3>🌍 Our Shared Vision</h3>
+            <p>Together, the Living Oracles of God Ministry and the ADUSEI Foundation form the twin pillars supporting our global educational mission.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Students Trained across Africa, Europe, & NA</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Scholarship Rate (Tuition-Free Model)</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">18</span>
+                    <span class="stat-label">Certificate Programs Developed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">Global</span>
+                    <span class="stat-label">Vibrant Online Learning Community</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Join Us Call to Action -->
+        <div class="cta-block">
+            <h3>📢 Become a Partner</h3>
+            <p>We are always seeking new partners who share our vision of accessible, practical, faith-integrated education. If your organization would like to partner with us through financial support, curriculum development, or student placement, please reach out.</p>
+            <span class="email-highlight">partners@livingoraclesglobal.org</span>
+            <div style="margin-top: 2rem;">
+                <button onclick="showSection('contact')" class="btn-primary">Partner With Us →</button>
+            </div>
+        </div>
+
     </div>
 </div>
 
@@ -542,102 +844,346 @@
     </div>
 </div>
 
+<style>
+    /* Privacy Section Specific Tokens (Scoped via hierarchy) */
+    .privacy-container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .privacy-header {
+        text-align: center;
+        margin-bottom: 4rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 2.5rem;
+    }
+
+    .privacy-title {
+        font-size: 2.75rem;
+        color: #0d233a; /* Brand Navy */
+        margin-bottom: 0.5rem;
+        font-weight: 800;
+    }
+
+    .privacy-sub {
+        font-size: 1rem;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    /* Layout Split */
+    .privacy-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    @media (min-width: 992px) {
+        .privacy-layout {
+            grid-template-columns: 280px 1fr;
+        }
+    }
+
+    /* Sticky Sidebar Navigation */
+    .privacy-sidebar {
+        display: none;
+    }
+
+    @media (min-width: 992px) {
+        .privacy-sidebar {
+            display: block;
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(13, 35, 58, 0.03);
+            border-left: 3px solid #c5a059; /* Brand Gold */
+        }
+    }
+
+    .sidebar-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-menu li {
+        margin-bottom: 0.75rem;
+    }
+
+    .sidebar-menu a {
+        color: #64748b;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 6px;
+        transition: all 0.25s ease;
+    }
+
+    .sidebar-menu a:hover {
+        color: #0d233a;
+        background: #f8fafc;
+    }
+
+    /* Content Area */
+    .privacy-content {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .privacy-section {
+        background: #ffffff;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(13, 35, 58, 0.02);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        scroll-margin-top: 2rem;
+    }
+
+    .privacy-section h3 {
+        color: #0d233a;
+        font-size: 1.4rem;
+        margin-top: 0;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #f8fafc;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+
+    .privacy-section p {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* Custom Bullet Lists */
+    .privacy-list {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .privacy-list li {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        color: #334155;
+        line-height: 1.6;
+    }
+
+    .privacy-list li::before {
+        content: "•";
+        color: #c5a059;
+        font-weight: bold;
+        font-size: 1.3rem;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    /* Contact Card Custom Box */
+    .contact-card-box {
+        background: linear-gradient(135deg, #0d233a 0%, #1a3a5c 100%);
+        color: #ffffff !important;
+    }
+
+    .contact-card-box h3 {
+        color: #c5a059 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .contact-card-box p, .contact-card-box strong {
+        color: #e2e8f0 !important;
+    }
+
+    .contact-details {
+        margin-top: 1.5rem;
+        font-style: normal;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+    }
+</style>
+
+<!-- This matches your template system perfectly now -->
 <div id="section-privacy" class="app-section">
-    <div class="container">
-        <h2 class="section-title">Privacy Policy</h2>
-        <p class="section-sub">Last Updated: May 2026</p>
+    <div class="privacy-container">
         
-        <div class="content-block">
-            <h3>1. Information We Collect</h3>
-            <p>The Living Oracles Global Institute collects personal information that you voluntarily provide to us when you:</p>
-            <ul>
-                <li>Register for a course or program</li>
-                <li>Submit an application form</li>
-                <li>Contact our support team</li>
-                <li>Subscribe to our newsletter</li>
-                <li>Participate in our community forums or Telegram group</li>
-            </ul>
-            <p>This information may include your full name, email address, phone number, WhatsApp number, country of residence, educational background, and any additional information you choose to share with us.</p>
-
-            <h3>2. How We Use Your Information</h3>
-            <p>We use the information we collect for the following purposes:</p>
-            <ul>
-                <li>To process your registration and enrollment in courses</li>
-                <li>To provide you with access to our Moodle learning platform</li>
-                <li>To communicate with you about your courses, assignments, and progress</li>
-                <li>To respond to your inquiries and support requests</li>
-                <li>To send you important updates about the institute, new courses, or policy changes</li>
-                <li>To improve our website, courses, and student experience</li>
-                <li>To verify your identity when you request certificate verification</li>
-            </ul>
-
-            <h3>3. Information Sharing and Disclosure</h3>
-            <p><strong>We do not sell, rent, or trade your personal information to third parties.</strong> We only share your information in the following limited circumstances:</p>
-            <ul>
-                <li><strong>With your consent:</strong> When you explicitly authorize us to share your information.</li>
-                <li><strong>With service providers:</strong> We use trusted third-party platforms such as Moodle (for course delivery), Google Workspace (for email and document management), and Telegram (for student community). These providers have their own privacy policies and are contractually obligated to protect your data.</li>
-                <li><strong>For legal compliance:</strong> If required by law, regulation, or legal process, we may disclose your information to governmental authorities or law enforcement.</li>
-                <li><strong>To protect rights and safety:</strong> If necessary to protect the rights, property, or safety of The Living Oracles Global Institute, our students, or the public.</li>
-            </ul>
-
-            <h3>4. Data Security</h3>
-            <p>We take the security of your personal information seriously. We implement reasonable administrative, technical, and physical safeguards to protect your data from unauthorized access, use, alteration, or disclosure. These measures include:</p>
-            <ul>
-                <li>Encrypted data transmission using SSL/TLS technology</li>
-                <li>Secure password-protected access to our systems</li>
-                <li>Regular security reviews and updates</li>
-                <li>Limited access to personal data by authorized personnel only</li>
-            </ul>
-            <p>However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
-
-            <h3>5. Data Retention</h3>
-            <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. This includes:</p>
-            <ul>
-                <li>Course records and certificates: Indefinitely for verification purposes</li>
-                <li>Registration information: For the duration of your enrollment plus a reasonable period thereafter</li>
-                <li>Support communications: For up to 3 years after resolution</li>
-                <li>Newsletter subscriptions: Until you unsubscribe</li>
-            </ul>
-
-            <h3>6. Your Rights and Choices</h3>
-            <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
-            <ul>
-                <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
-                <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>
-                <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain exceptions (e.g., we may need to retain records for verification or legal compliance)</li>
-                <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time by clicking the "unsubscribe" link in our emails or contacting us directly</li>
-            </ul>
-            <p>To exercise any of these rights, please contact us at <strong>privacy@livingoraclesofgod.com</strong>.</p>
-
-            <h3>7. Cookies and Tracking Technologies</h3>
-            <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us understand how you use our site. You can control cookie preferences through your browser settings. However, disabling cookies may affect the functionality of certain features on our website.</p>
-            <p>We currently use:</p>
-            <ul>
-                <li>Essential cookies: Required for basic website operation</li>
-                <li>Analytics cookies: To understand how visitors interact with our site (e.g., Cloudflare Analytics)</li>
-            </ul>
-
-            <h3>8. Children's Privacy</h3>
-            <p>Our courses and services are intended for adults aged 18 years and older. We do not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately, and we will take steps to delete such information.</p>
-
-            <h3>9. International Data Transfers</h3>
-            <p>The Living Oracles Global Institute operates from Ghana, but our students are located worldwide. Your information may be transferred to, stored, and processed in countries outside your home country. We take appropriate safeguards to ensure that your data is protected in accordance with this Privacy Policy.</p>
-
-            <h3>10. Third-Party Links</h3>
-            <p>Our website may contain links to third-party websites, such as our Moodle platform, payment processors, or partner organizations. We are not responsible for the privacy practices or content of these external sites. We encourage you to read the privacy policies of any third-party websites you visit.</p>
-
-            <h3>11. Changes to This Privacy Policy</h3>
-            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on this page and updating the "Last Updated" date at the top. We encourage you to review this page periodically.</p>
-
-            <h3>12. Contact Us</h3>
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
-            <p>
-                <strong>The Living Oracles Global Institute</strong><br>
-                Email: thelivingoraclesofgod@gmail.com<br>
-                WhatsApp: +233 24 145 6581<br>
-                Address: Accra, Ghana
-            </p>
+        <div class="privacy-header">
+            <h2 class="privacy-title">Privacy Policy</h2>
+            <p class="privacy-sub">Last Updated: May 2026</p>
         </div>
+
+        <div class="privacy-layout">
+            
+            <!-- Quick Navigation Sidebar -->
+            <aside class="privacy-sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#p-collect">1. Information We Collect</a></li>
+                    <li><a href="#p-use">2. How We Use Data</a></li>
+                    <li><a href="#p-share">3. Sharing & Disclosure</a></li>
+                    <li><a href="#p-security">4. Data Security</a></li>
+                    <li><a href="#p-retention">5. Data Retention</a></li>
+                    <li><a href="#p-rights">6. Your Rights & Choices</a></li>
+                    <li><a href="#p-cookies">7. Cookies & Tracking</a></li>
+                    <li><a href="#p-children">8. Children's Privacy</a></li>
+                    <li><a href="#p-transfers">9. International Transfers</a></li>
+                    <li><a href="#p-links">10. Third-Party Links</a></li>
+                    <li><a href="#p-changes">11. Policy Changes</a></li>
+                    <li><a href="#p-contact">12. Contact Us</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Legal Content Block -->
+            <div class="privacy-content">
+                
+                <section id="p-collect" class="privacy-section">
+                    <h3>📋 1. Information We Collect</h3>
+                    <p>The Living Oracles Global Institute collects personal information that you voluntarily provide to us when you:</p>
+                    <ul class="privacy-list">
+                        <li>Register for a course or program</li>
+                        <li>Submit an application form</li>
+                        <li>Contact our support team</li>
+                        <li>Subscribe to our newsletter</li>
+                        <li>Participate in our community forums or Telegram group</li>
+                    </ul>
+                    <p>This information may include your full name, email address, phone number, WhatsApp number, country of residence, educational background, and any additional information you choose to share with us.</p>
+                </section>
+
+                <section id="p-use" class="privacy-section">
+                    <h3>⚙️ 2. How We Use Your Information</h3>
+                    <p>We use the information we collect for the following purposes:</p>
+                    <ul class="privacy-list">
+                        <li>To process your registration and enrollment in courses</li>
+                        <li>To provide you with access to our Moodle learning platform</li>
+                        <li>To communicate with you about your courses, assignments, and progress</li>
+                        <li>To respond to your inquiries and support requests</li>
+                        <li>To send you important updates about the institute, new courses, or policy changes</li>
+                        <li>To improve our website, courses, and student experience</li>
+                        <li>To verify your identity when you request certificate verification</li>
+                    </ul>
+                </section>
+
+                <section id="p-share" class="privacy-section">
+                    <h3>🤝 3. Information Sharing and Disclosure</h3>
+                    <p><strong>We do not sell, rent, or trade your personal information to third parties.</strong> We only share your information in the following limited circumstances:</p>
+                    <ul class="privacy-list">
+                        <li><strong>With your consent:</strong> When you explicitly authorize us to share your information.</li>
+                        <li><strong>With service providers:</strong> We use trusted third-party platforms such as Moodle (for course delivery), Google Workspace (for email and document management), and Telegram (for student community). These providers have their own privacy policies and are contractually obligated to protect your data.</li>
+                        <li><strong>For legal compliance:</strong> If required by law, regulation, or legal process, we may disclose your information to governmental authorities or law enforcement.</li>
+                        <li><strong>To protect rights and safety:</strong> If necessary to protect the rights, property, or safety of The Living Oracles Global Institute, our students, or the public.</li>
+                    </ul>
+                </section>
+
+                <section id="p-security" class="privacy-section">
+                    <h3>🔒 4. Data Security</h3>
+                    <p>We take the security of your personal information seriously. We implement reasonable administrative, technical, and physical safeguards to protect your data from unauthorized access, use, alteration, or disclosure. These measures include:</p>
+                    <ul class="privacy-list">
+                        <li>Encrypted data transmission using SSL/TLS technology</li>
+                        <li>Secure password-protected access to our systems</li>
+                        <li>Regular security reviews and updates</li>
+                        <li>Limited access to personal data by authorized personnel only</li>
+                    </ul>
+                    <p>However, please note that no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee its absolute security.</p>
+                </section>
+
+                <section id="p-retention" class="privacy-section">
+                    <h3>⏳ 5. Data Retention</h3>
+                    <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. This includes:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Course records and certificates:</strong> Indefinitely for verification purposes</li>
+                        <li><strong>Registration information:</strong> For the duration of your enrollment plus a reasonable period thereafter</li>
+                        <li><strong>Support communications:</strong> For up to 3 years after resolution</li>
+                        <li><strong>Newsletter subscriptions:</strong> Until you unsubscribe</li>
+                    </ul>
+                </section>
+
+                <section id="p-rights" class="privacy-section">
+                    <h3>⚖️ 6. Your Rights and Choices</h3>
+                    <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
+                        <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information</li>
+                        <li><strong>Deletion:</strong> Request that we delete your personal information, subject to certain exceptions (e.g., records kept for verification or legal compliance)</li>
+                        <li><strong>Opt-out:</strong> Unsubscribe from marketing communications at any time by clicking the "unsubscribe" link in our emails</li>
+                    </ul>
+                    <p>To exercise any of these rights, please contact us at <strong>privacy@livingoraclesofgod.com</strong>.</p>
+                </section>
+
+                <section id="p-cookies" class="privacy-section">
+                    <h3>🍪 7. Cookies and Tracking Technologies</h3>
+                    <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience. Cookies are small text files stored on your device that help us understand how you use our site. You can control cookie preferences through your browser settings.</p>
+                    <p>We currently use:</p>
+                    <ul class="privacy-list">
+                        <li><strong>Essential cookies:</strong> Required for basic website operation</li>
+                        <li><strong>Analytics cookies:</strong> To understand how visitors interact with our site (e.g., Cloudflare Analytics)</li>
+                    </ul>
+                </section>
+
+                <section id="p-children" class="privacy-section">
+                    <h3>👶 8. Children's Privacy</h3>
+                    <p>Our courses and services are intended for adults aged 18 years and older. We do not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us immediately, and we will take steps to delete such information.</p>
+                </section>
+
+                <section id="p-transfers" class="privacy-section">
+                    <h3>🌍 9. International Data Transfers</h3>
+                    <p>The Living Oracles Global Institute operates from Ghana, but our students are located worldwide. Your information may be transferred to, stored, and processed in countries outside your home country. We take appropriate safeguards to ensure that your data is protected in accordance with this Privacy Policy.</p>
+                </section>
+
+                <section id="p-links" class="privacy-section">
+                    <h3>🔗 10. Third-Party Links</h3>
+                    <p>Our website may contain links to third-party websites, such as our Moodle platform, payment processors, or partner organizations. We are not responsible for the privacy practices or content of these external sites. We encourage you to read the privacy policies of any third-party websites you visit.</p>
+                </section>
+
+                <section id="p-changes" class="privacy-section">
+                    <h3>📝 11. Changes to This Privacy Policy</h3>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the updated policy on this page and updating the "Last Updated" date at the top.</p>
+                </section>
+
+                <!-- Premium Styled Contact Block -->
+                <section id="p-contact" class="privacy-section contact-card-box">
+                    <h3>✉️ 12. Contact Us</h3>
+                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us:</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            🏢 <strong>The Living Oracles Global Institute</strong>
+                        </div>
+                        <div class="contact-item">
+                            📧 Email: thelivingoraclesofgod@gmail.com
+                        </div>
+                        <div class="contact-item">
+                            💬 WhatsApp: +233 24 145 6581
+                        </div>
+                        <div class="contact-item">
+                            📍 Address: Accra, Ghana
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
     </div>
 </div>
  
