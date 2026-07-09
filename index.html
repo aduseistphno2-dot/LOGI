@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
-    <title>Living Oracles Global Institute</title>
+    <title>Living Oracles Global Institute - Free Online Theological & Leadership Education</title>
+    <meta name="description" content="Living Oracles Global Institute (LOGI) offers tuition-free online theological, business, and leadership education. Join thousands of global leaders transforming their ministries and careers."/>
+    <meta name="keywords" content="free online theology courses, tuition-free bible college, online Christian education, leadership training, ministry training, theological seminary online, free biblical studies, online divinity degree, Christian leadership development, LOGI"/>
+    <link rel="canonical" href="https://livingoracles.org/"/>
+    <meta property="og:title" content="Living Oracles Global Institute - Free Online Theological Education"/>
+    <meta property="og:description" content="Join thousands of global leaders earning high-quality tuition-free education in theology, business, and leadership."/>
+    <meta property="og:type" content="website"/>
+    <meta name="robots" content="index, follow"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <style>
         /* ----- PREMIUM WORDPRESS RESET & BASE ----- */
@@ -261,6 +268,242 @@
             transform: translateY(-2px);
         }
 
+        /* ===== TESTIMONIALS SLIDER ===== */
+        .testimonials-section {
+            background: linear-gradient(135deg, #f7f5f0 0%, #edebe6 100%);
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(182, 139, 91, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .testimonials-section::after {
+            content: '\201C';
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            font-size: 15rem;
+            color: rgba(182, 139, 91, 0.06);
+            font-family: Georgia, serif;
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .testimonial-slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: slideFade 0.8s ease forwards;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes slideFade {
+            0% { opacity: 0; transform: scale(0.95) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .testimonial-avatar-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar-wrapper .ring {
+            position: absolute;
+            top: -6px;
+            left: -6px;
+            right: -6px;
+            bottom: -6px;
+            border-radius: 50%;
+            border: 3px solid #b68b5b;
+            animation: spin 8s linear infinite;
+        }
+
+        .testimonial-avatar-wrapper .ring2 {
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            right: -12px;
+            bottom: -12px;
+            border-radius: 50%;
+            border: 2px dashed rgba(182, 139, 91, 0.3);
+            animation: spin 12s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .testimonial-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: transform 0.5s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .testimonial-avatar:hover {
+            transform: scale(1.05) rotate(3deg);
+        }
+
+        .testimonial-stars {
+            color: #f6b93b;
+            font-size: 1.1rem;
+            letter-spacing: 3px;
+            margin: 0.5rem 0;
+        }
+
+        .testimonial-stars i {
+            margin: 0 2px;
+        }
+
+        .testimonial-quote {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #2d3748;
+            font-style: italic;
+            max-width: 650px;
+            margin: 0.5rem auto 1rem;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '\201C';
+            font-size: 2.5rem;
+            color: #b68b5b;
+            font-family: Georgia, serif;
+            position: absolute;
+            left: -10px;
+            top: -15px;
+            opacity: 0.5;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0c2340;
+            margin-top: 0.5rem;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #b68b5b;
+            font-weight: 500;
+        }
+
+        .testimonial-location {
+            font-size: 0.8rem;
+            color: #a0aec0;
+            margin-top: 0.2rem;
+        }
+
+        /* Slider Controls */
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .slider-btn {
+            background: #ffffff;
+            border: 2px solid #e2e8f0;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #0c2340;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .slider-btn:hover {
+            background: #b68b5b;
+            border-color: #b68b5b;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(182, 139, 91, 0.3);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 2px solid #b68b5b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .slider-dot.active {
+            background: #b68b5b;
+            transform: scale(1.15);
+            box-shadow: 0 0 20px rgba(182, 139, 91, 0.3);
+        }
+
+        .slider-dot:hover {
+            transform: scale(1.1);
+        }
+
+        /* Auto-play indicator */
+        .slider-timer {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            gap: 0.3rem;
+        }
+
+        .slider-timer span {
+            width: 30px;
+            height: 3px;
+            background: #e2e8f0;
+            border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        .slider-timer span.active {
+            background: #b68b5b;
+        }
+
         /* ----- WP GRID & SECTIONS ----- */
         .section {
             margin: 3rem 0;
@@ -332,25 +575,19 @@
             overflow: hidden;
         }
 
-        /* STEP 1 HARDCODE IMG */
         .bg-step-1 {
             background: linear-gradient(rgba(15, 28, 36, 0.88), rgba(15, 28, 36, 0.92)), 
                         url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
         }
-
-        /* STEP 2 HARDCODE IMG */
         .bg-step-2 {
             background: linear-gradient(rgba(15, 28, 36, 0.88), rgba(15, 28, 36, 0.92)), 
                         url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
         }
-
-        /* STEP 3 HARDCODE IMG */
         .bg-step-3 {
             background: linear-gradient(rgba(15, 28, 36, 0.88), rgba(15, 28, 36, 0.92)), 
                         url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
         }
 
-        /* PIPELINE ACTION HARDCODE IMG */
         .bg-pipeline-action {
             background: linear-gradient(rgba(23, 40, 51, 0.9), rgba(17, 30, 39, 0.95)), 
                         url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
@@ -477,6 +714,74 @@
         .benefit-item p {
             color: #4a5568;
             font-size: 0.9rem;
+        }
+
+        /* ===== FAQ SECTION ===== */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #b68b5b;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: #f7fafc;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #0c2340;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #edf2f7;
+        }
+
+        .faq-question .icon {
+            font-size: 1.2rem;
+            color: #b68b5b;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-question.active .icon {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-answer.open {
+            max-height: 500px;
+            padding: 1.2rem 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #4a5568;
+            line-height: 1.7;
+            margin: 0;
         }
 
         /* ----- REGISTRATION FORM STYLES ----- */
@@ -695,6 +1000,18 @@
             border: 1px solid #feb2b2;
         }
 
+        /* ----- SINGLE INDEPENDENT PAGE STYLING ----- */
+        .internal-page-header {
+            background: linear-gradient(rgba(30, 60, 79, 0.9), rgba(30, 60, 79, 0.95)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1470&auto=format&fit=crop') center/cover;
+            padding: 3.5rem 2rem;
+            text-align: center;
+            color: #fff;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+        }
+        .internal-page-header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; font-weight: 800; }
+        .internal-page-header p { font-size: 1rem; color: #d4c9b0; }
+
         /* ----- EXTENSIVE FOOTER ----- */
         footer {
             background: #111e27;
@@ -782,18 +1099,27 @@
             position: fixed;
             bottom: 1.5rem;
             right: 1.5rem;
-            background: #1e3c4f;
+            background: #25D366;
             color: #fff;
             border: none;
             padding: 0.8rem 1.4rem;
             border-radius: 50px;
             font-weight: 600;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
             cursor: pointer;
             z-index: 999;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .chat-float:hover { background: #b68b5b; transform: scale(1.05); }
+        .chat-float:hover { 
+            background: #1da851; 
+            transform: scale(1.05);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.5);
+        }
+        .chat-float i { font-size: 1.3rem; }
 
         /* ===== RESPONSIVE CONTEXT GRIDS ===== */
         @media (min-width: 640px) {
@@ -818,6 +1144,42 @@
             }
             .registration-container {
                 padding: 20px;
+            }
+            .faq-question {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+            .testimonial-quote {
+                font-size: 1rem;
+                padding: 0 0.5rem;
+            }
+            .testimonial-avatar {
+                width: 80px;
+                height: 80px;
+            }
+            .testimonials-section {
+                padding: 2.5rem 1rem;
+            }
+            .slider-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+            .section {
+                padding: 1.5rem 1rem;
+                margin: 1.5rem 0;
+            }
+            .content-text h3 {
+                font-size: 1.3rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -881,6 +1243,12 @@
                 </div>
             </div>
             <div class="mobile-item">
+                <button onclick="toggleMobileSub(this)">FAQ <i class="fas fa-chevron-down"></i></button>
+                <div class="mobile-sub">
+                    <button onclick="showPage('faq')">Frequently Asked Questions</button>
+                </div>
+            </div>
+            <div class="mobile-item">
                 <button onclick="toggleMobileSub(this)">Governance & Rules <i class="fas fa-chevron-down"></i></button>
                 <div class="mobile-sub">
                     <button onclick="showPage('integrity')">Academic Integrity</button>
@@ -917,7 +1285,137 @@
                 <button class="btn-apply" onclick="showPage('apply')">Get Started Today</button>
             </section>
 
-            <!-- DETAILED SECTION 1: ABOUT THE TUITION-FREE MODEL -->
+            <!-- ===== TESTIMONIALS SLIDER ===== -->
+            <section class="testimonials-section">
+                <h2 class="section-title" style="color: #0c2340;">What Our Students Say</h2>
+                <p class="section-sub" style="color: #718096;">Hear from graduates who transformed their lives through LOGI's tuition-free programs.</p>
+                
+                <div class="testimonial-slider-container">
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active" data-index="0">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=1" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "LOGI gave me the theological foundation I needed to lead my church effectively. The flexibility allowed me to study while pastoring. This program truly transformed my ministry and my life."
+                        </blockquote>
+                        <div class="testimonial-name">Pastor James M.</div>
+                        <div class="testimonial-role">Graduate 2025</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> Kenya</div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide" data-index="1">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=5" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "I never thought I could afford a theological education. LOGI's tuition-free model changed my life and ministry completely. The quality of teaching exceeded my expectations."
+                        </blockquote>
+                        <div class="testimonial-name">Sarah K.</div>
+                        <div class="testimonial-role">Current Student</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> Ghana</div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide" data-index="2">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=10" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "The integration of business and theology at LOGI prepared me to lead both in ministry and in the marketplace. I now run a successful organization with Kingdom values."
+                        </blockquote>
+                        <div class="testimonial-name">Dr. Michael O.</div>
+                        <div class="testimonial-role">Alumni 2024</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> Nigeria</div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="testimonial-slide" data-index="3">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "Studying at LOGI equipped me with practical leadership skills that I apply daily in my organization. The community support and mentorship are truly exceptional."
+                        </blockquote>
+                        <div class="testimonial-name">Ruth A.</div>
+                        <div class="testimonial-role">Graduate 2026</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> South Africa</div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="testimonial-slide" data-index="4">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=8" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "The community at LOGI is incredible. I've made connections with brothers and sisters from over 20 countries. The global perspective has enriched my understanding of ministry."
+                        </blockquote>
+                        <div class="testimonial-name">David W.</div>
+                        <div class="testimonial-role">Current Student</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> United Kingdom</div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="testimonial-slide" data-index="5">
+                        <div class="testimonial-avatar-wrapper">
+                            <div class="ring"></div>
+                            <div class="ring2"></div>
+                            <img src="https://i.pravatar.cc/150?img=20" alt="Student testimonial" class="testimonial-avatar">
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <blockquote class="testimonial-quote">
+                            "As a busy mother, I needed flexibility. LOGI provided that without compromising on academic quality. I was able to complete my degree while raising my children."
+                        </blockquote>
+                        <div class="testimonial-name">Mary B.</div>
+                        <div class="testimonial-role">Graduate 2026</div>
+                        <div class="testimonial-location"><i class="fas fa-map-marker-alt" style="color: #b68b5b;"></i> USA</div>
+                    </div>
+
+                    <!-- Slider Controls -->
+                    <div class="slider-controls">
+                        <button class="slider-btn" id="prevBtn" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="slider-dots" id="sliderDots"></div>
+                        <button class="slider-btn" id="nextBtn" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Timer Bar -->
+                    <div class="slider-timer" id="sliderTimer"></div>
+                </div>
+            </section>
+
+            <!-- ===== DETAILED SECTION 1: ABOUT THE TUITION-FREE MODEL ===== -->
             <section class="section">
                 <div class="content-row">
                     <div class="content-image">
@@ -933,7 +1431,7 @@
                 </div>
             </section>
 
-            <!-- ACADEMIC FRAMEWORKS GRID -->
+            <!-- ===== ACADEMIC FRAMEWORKS GRID ===== -->
             <section class="section">
                 <h2 class="section-title">Academic Frameworks</h2>
                 <p class="section-sub">Select a professionally structured learning pathway for business and ministry leadership advancement.</p>
@@ -970,7 +1468,7 @@
                 </div>
             </section>
 
-            <!-- SECTION 3: STRATEGIC LEARNING PILLARS MATRIX -->
+            <!-- ===== SECTION 3: STRATEGIC LEARNING PILLARS MATRIX ===== -->
             <section class="section">
                 <h2 class="section-title">Core Academic Infrastructure</h2>
                 <p class="section-sub">Engineered framework layers that ensure premium educational validation quality at zero cost footprint.</p>
@@ -994,7 +1492,7 @@
                 </div>
             </section>
 
-            <!-- DETAILED SECTION 4: GLOBAL COHORT STATS -->
+            <!-- ===== DETAILED SECTION 4: GLOBAL COHORT STATS ===== -->
             <section class="section">
                 <div class="content-row">
                     <div class="content-text">
@@ -1018,7 +1516,7 @@
                         <p>Tuition Charged</p>
                     </div>
                     <div class="stat-box">
-                        <h2>10+</h2>
+                        <h2>50+</h2>
                         <p>Countries Represented</p>
                     </div>
                     <div class="stat-box">
@@ -1028,27 +1526,24 @@
                 </div>
             </section>
 
-            <!-- DETAILED SECTION 5: ONBOARDING EXECUTION STRATEGY WITH INDEPENDENT PICTURE BACKGROUNDS -->
+            <!-- ===== DETAILED SECTION 5: ONBOARDING EXECUTION STRATEGY ===== -->
             <section class="section" style="border: none; background: transparent; padding: 0; box-shadow: none;">
                 <h2 class="section-title">Onboarding Execution Strategy</h2>
                 <p class="section-sub">How to launch your educational path file through our integrated processing engine loops.</p>
                 
                 <div class="steps-vertical-stack">
-                    <!-- SECTION 1 BACKGROUND -->
                     <div class="step-node-panel bg-step-1">
                         <div class="step-badge">1</div>
                         <h4>Submit Registry File</h4>
                         <p>Access our integrated form block to input your background and legal identification profiles smoothly.</p>
                     </div>
                     
-                    <!-- SECTION 2 BACKGROUND -->
                     <div class="step-node-panel bg-step-2">
                         <div class="step-badge">2</div>
                         <h4>Verification Check</h4>
                         <p>System architects process credentials and evaluate prerequisite milestones within standard routing intervals.</p>
                     </div>
                     
-                    <!-- SECTION 3 BACKGROUND -->
                     <div class="step-node-panel bg-step-3">
                         <div class="step-badge">3</div>
                         <h4>Initialize Campus Node</h4>
@@ -1056,7 +1551,6 @@
                     </div>
                 </div>
 
-                <!-- PIPELINE ACTION BACKGROUND -->
                 <div class="bg-pipeline-action">
                     <button class="btn-apply" onclick="showPage('apply')">Launch Application Pipeline Now</button>
                 </div>
@@ -1174,7 +1668,98 @@
             </section>
         </div>
 
-        <!-- ===== VIEW: ABOUT PAGES ===== -->
+        <!-- ===== VIEW: FAQ PAGE ===== -->
+        <div class="page-section" id="page-faq">
+            <div class="internal-page-header">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to the most common questions about LOGI's programs and admissions.</p>
+            </div>
+            <section class="section">
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is LOGI really tuition-free?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Living Oracles Global Institute is completely tuition-free. All core learning materials, system access, and standard instructional resources are provided at no cost. This is made possible through foundational educational grants and institutional sponsorship frameworks.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>What programs does LOGI offer?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>LOGI offers Master's Degrees, Bachelor's Degrees, Diploma Programs, and Certificate Sets in Ministry & Theology, Leadership & Administration, and Business & Digital Skills. Visit our <a href="#" onclick="showPage('programs')" style="color:#b68b5b; text-decoration:none;">Academic Programs</a> page for more details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>How long does it take to complete a program?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Most programs are self-paced, allowing you to study at your own speed. Certificate programs typically take 3-6 months, Diploma programs 6-12 months, and Degree programs 12-24 months depending on your pace and commitment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Is LOGI accredited?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>LOGI is a faith-based institution committed to academic excellence and spiritual formation. Our curriculum is designed to meet high academic standards and is reviewed by spiritual governance councils. We are actively pursuing accreditation to further validate our programs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Do I need to be a Christian to enroll?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>While LOGI is a faith-based institution with a Christian foundation, we welcome students from all backgrounds who are interested in studying theology, business, and leadership. Our programs are designed to equip learners with practical skills for ministry and professional growth.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>How do I apply to LOGI?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can apply directly through our online application form. Simply visit our <a href="#" onclick="showPage('apply')" style="color:#b68b5b; text-decoration:none;">Apply Page</a>, fill in your personal information, select your program, and upload your required documents. You'll receive a confirmation email upon submission.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>What documents do I need to apply?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You'll need to upload your National ID/Passport, your highest academic certificate, and your academic transcripts. All documents should be in PDF, PNG, or JPG format.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            <span>Will I receive a certificate upon completion?</span>
+                            <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Upon successful completion of your program, you will receive a verified digital certificate. For formal institutional certification, you may request an authenticated certificate for an administrative processing fee of $50.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===== VIEW: ABOUT PAGES (abbreviated for length) ===== -->
         <div class="page-section" id="page-profile">
             <div class="internal-page-header">
                 <h1>Institutional Profile</h1>
@@ -1208,7 +1793,7 @@
                 <p style="margin-bottom:1rem;">We exist to make quality education accessible, bridging the gap between spiritual formation and professional development in a modern digital learning environment.</p>
             </section>
         </div>
-        
+
         <div class="page-section" id="page-vision">
             <div class="internal-page-header">
                 <h1>Our Vision</h1>
@@ -1298,9 +1883,7 @@
                 <h3 style="margin-bottom:1rem;">Academic & Administrative Coordination</h3>
                 <p style="margin-bottom:1rem;">LOGI operates through a coordinated system of academic and administrative functions that support curriculum development, program delivery, and learner engagement. This structure ensures that all educational activities maintain consistency, quality standards, and alignment with the Institute's interdisciplinary focus on theology, business, and leadership.</p>
                 <h3 style="margin-bottom:1rem;">Advisory & Development Framework</h3>
-                <p style="margin-bottom:1rem;">To support continuous growth and institutional improvement, LOGI may engage advisory input from qualified professionals across theological, educational, and business disciplines. This developmental framework strengthens decision-making processes, enhances program relevance, and supports long-term institutional sustainability while maintaining the Founder's overarching leadership authority.</p>
-                
-                <p></p>    
+                <p style="margin-bottom:1rem;">To support continuous growth and institutional improvement, LOGI may engage advisory input from qualified professionals across theological, educational, and business disciplines. This developmental framework strengthens decision-making processes, enhances program relevance, and supports long-term institutional sustainability while maintaining the Founder's overarching leadership authority.</p>    
              </section>
         </div>
 
@@ -1767,11 +2350,12 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Connect Node</h4>
+                    <h4>Resources</h4>
                     <ul>
-                        <li><a href="mailto:office@livingoracles.org"><i class="fas fa-envelope"></i> Email Office</a></li>
-                        <li><a href="https://log.moodiy.org/login" target="_blank"><i class="fas fa-comments"></i> Admin Support</a></li>
-                        <li><a href="https://wa.me/233241456581"><i class="fas fa-message"></i> Whatsapp</a></li>
+                        <li><a onclick="showPage('faq')">FAQ</a></li>
+                        <li><a href="https://log.moodiy.org/login" target="_blank">Student Portal</a></li>
+                        <li><a href="mailto:office@livingoracles.org"><i class="fas fa-envelope"></i> Email Us</a></li>
+                        <li><a href="https://wa.me/233241456581"><i class="fas fa-message"></i> WhatsApp</a></li>
                         <li><p style="font-size:0.8rem; margin-top:0.5rem; color:#64748b;">System Tracking: v2026.4</p></li>
                     </ul>
                 </div>
@@ -1787,10 +2371,10 @@
         </div>
     </footer>
 
-    <!-- ===== CHAT CONTROLLER ===== -->
-    <button class="chat-float" onclick="alert('Initializing instant logic support communication link...')">
-        <i class="fas fa-headset"></i> Support Node
-    </button>
+    <!-- ===== CHAT CONTROLLER (WhatsApp) ===== -->
+    <a class="chat-float" href="https://wa.me/233241456581" target="_blank" aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i> Support
+    </a>
 
     <!-- ===== LOGIC ROUTING ARCHITECTURE ===== -->
     <script>
@@ -1849,6 +2433,116 @@
             }
         });
 
+        // ===== FAQ ACCORDION =====
+        window.toggleFaq = function(button) {
+            var answer = button.nextElementSibling;
+            var icon = button.querySelector('.icon i');
+            
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                button.classList.remove('active');
+                icon.className = 'fas fa-chevron-down';
+            } else {
+                document.querySelectorAll('.faq-answer.open').forEach(function(item) {
+                    item.classList.remove('open');
+                    item.previousElementSibling.classList.remove('active');
+                    item.previousElementSibling.querySelector('.icon i').className = 'fas fa-chevron-down';
+                });
+                
+                answer.classList.add('open');
+                button.classList.add('active');
+                icon.className = 'fas fa-chevron-up';
+            }
+        };
+
+        // ===== TESTIMONIALS SLIDER =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dotsContainer = document.getElementById('sliderDots');
+            const timerContainer = document.getElementById('sliderTimer');
+            let currentIndex = 0;
+            let slideInterval;
+
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot' + (index === 0 ? ' active' : '');
+                dot.dataset.index = index;
+                dot.addEventListener('click', function() {
+                    goToSlide(parseInt(this.dataset.index));
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            slides.forEach((_, index) => {
+                const bar = document.createElement('span');
+                bar.className = index === 0 ? 'active' : '';
+                timerContainer.appendChild(bar);
+            });
+
+            function goToSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+                currentIndex = index;
+
+                document.querySelectorAll('.slider-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                document.querySelectorAll('.slider-timer span').forEach((bar, i) => {
+                    bar.classList.toggle('active', i === index);
+                });
+            }
+
+            function nextSlide() {
+                const nextIndex = (currentIndex + 1) % slides.length;
+                goToSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                const prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                goToSlide(prevIndex);
+            }
+
+            document.getElementById('nextBtn').addEventListener('click', function() {
+                clearInterval(slideInterval);
+                nextSlide();
+                startAutoPlay();
+            });
+
+            document.getElementById('prevBtn').addEventListener('click', function() {
+                clearInterval(slideInterval);
+                prevSlide();
+                startAutoPlay();
+            });
+
+            function startAutoPlay() {
+                clearInterval(slideInterval);
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            const sliderContainer = document.querySelector('.testimonial-slider-container');
+            sliderContainer.addEventListener('mouseenter', function() {
+                clearInterval(slideInterval);
+            });
+            sliderContainer.addEventListener('mouseleave', function() {
+                startAutoPlay();
+            });
+
+            startAutoPlay();
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    clearInterval(slideInterval);
+                    nextSlide();
+                    startAutoPlay();
+                } else if (e.key === 'ArrowLeft') {
+                    clearInterval(slideInterval);
+                    prevSlide();
+                    startAutoPlay();
+                }
+            });
+        });
+
         // ===== PROGRAM MATRIX =====
         const programMatrix = {
             "Ministry & Theology": [
@@ -1864,7 +2558,6 @@
             ]
         };
 
-        // ===== UPDATE PROGRAMS DROPDOWN =====
         function updateProgramsDropdown() {
             const areaSelect = document.getElementById('programArea');
             const progSelect = document.getElementById('program');
@@ -1885,7 +2578,6 @@
             }
         }
 
-        // ===== FILE PROCESSING HELPER =====
         function processFileAsync(fileInput) {
             return new Promise((resolve) => {
                 const file = fileInput.files[0];
@@ -1904,7 +2596,6 @@
             });
         }
 
-        // ===== FORM SUBMISSION =====
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('registrationPipelineForm');
             if (!form) return;
@@ -1912,7 +2603,6 @@
             form.addEventListener('submit', async function(e) {
                 e.preventDefault();
                 
-                // IMPORTANT: Replace with your actual Apps Script Web App URL
                 const GATEWAY_URL = "https://script.google.com/macros/s/AKfycbwA2QdiWlAwfJLnrwoTV5v56CiuNY6jO5nguKZ3YJIxDPUnzX-LGrpUikNvdduErW0UZg/exec"; 
                 
                 const btn = document.getElementById('submitBtn');
@@ -1926,12 +2616,10 @@
                 alertBox.style.display = "block";
 
                 try {
-                    // Process files
                     const certObj = await processFileAsync(document.getElementById('certFile'));
                     const transObj = await processFileAsync(document.getElementById('transcriptFile'));
                     const nationalIdObj = await processFileAsync(document.getElementById('nationalIdFile'));
 
-                    // Build payload
                     const payload = {
                         firstName: document.getElementById('firstName').value.trim(),
                         surname: document.getElementById('surname').value.trim(),
@@ -1957,7 +2645,6 @@
                         nationalIdFileType: nationalIdObj.type
                     };
 
-                    // Submit to Google Apps Script
                     await fetch(GATEWAY_URL, {
                         method: "POST",
                         mode: "no-cors",
