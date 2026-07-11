@@ -225,48 +225,267 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* ----- HERO SECTION ----- */
-        .hero {
-            background: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), 
-                        url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
-            border-radius: 20px;
-            padding: 5rem 2rem;
-            text-align: center;
-            color: #fff;
-            margin: 1rem 0 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-            letter-spacing: -0.03em;
-        }
-        .hero .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 650px;
-            margin: 0 auto 2rem;
-        }
-        .hero .btn-apply {
-            background: #b68b5b;
-            color: #fff;
-            border: none;
-            padding: 0.9rem 2.5rem;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(182, 139, 91, 0.4);
-        }
-        .hero .btn-apply:hover {
-            background: #d4c9b0;
-            color: #1e3c4f;
-            transform: translateY(-2px);
-        }
+        /* ----- DYNAMIC HERO SHOWCASE SYSTEM ----- */
+.hero-slider-container {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    margin: 1rem 0 2.5rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hero-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 2.5rem;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+.hero-content {
+    max-width: 800px;
+    transform: translateY(25px);
+    transition: transform 0.8s ease;
+}
+
+.hero-slide.active .hero-content {
+    transform: translateY(0);
+}
+
+.hero-content h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 1.2rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.92;
+    max-width: 680px;
+    margin: 0 auto 2.2rem;
+    line-height: 1.6;
+}
+
+.hero-content .btn-apply {
+    background: #b68b5b;
+    color: #fff;
+    border: none;
+    padding: 1rem 2.8rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(182, 139, 91, 0.35);
+}
+
+.hero-content .btn-apply:hover {
+    background: #fff;
+    color: #1a2b38;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+.hero-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.hero-nav-btn:hover {
+    background: #b68b5b;
+    border-color: #b68b5b;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.hero-nav-btn.prev { left: 1.5rem; }
+.hero-nav-btn.next { right: 1.5rem; }
+
+.hero-dots {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6rem;
+    z-index: 10;
+}
+
+.hero-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-dot.active {
+    background: #b68b5b;
+    width: 28px;
+    border-radius: 10px;
+}
+
+/* ----- INSTITUTIONAL PARTNERSHIPS STYLE SYSTEM ----- */
+.institutional-partnerships-section {
+    padding: 3.5rem 2rem;
+    background: #f8fafc;
+    border-radius: 20px;
+    margin: 2rem 0;
+    border: 1px solid #e2e8f0;
+}
+
+.partnerships-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+}
+
+.partnerships-badge {
+    background: rgba(182, 139, 91, 0.1);
+    color: #b68b5b;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+}
+
+.partnerships-header h2 {
+    font-size: 2rem;
+    color: #1a2b38;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.partnerships-header p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.partnerships-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-card-premium {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 480px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(26, 43, 56, 0.08);
+}
+
+.partner-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #1a2b38;
+    color: #b68b5b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1.2rem;
+}
+
+.partner-card-premium h3 {
+    font-size: 1.4rem;
+    color: #1a2b38;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+.partner-type {
+    font-size: 0.85rem;
+    color: #b68b5b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.partner-divider {
+    height: 2px;
+    width: 40px;
+    background: #e2e8f0;
+    margin: 1.2rem auto;
+}
+
+.partner-description {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ----- MEDIA SCALING INJECTIONS ----- */
+@media (min-width: 768px) {
+    .hero-slider-container { height: 530px; }
+    .hero-content h1 { font-size: 3.4rem; }
+    .hero-content .subtitle { font-size: 1.25rem; }
+}
+
+@media (max-width: 640px) {
+    .hero-slider-container { height: 440px; border-radius: 14px; }
+    .hero-content h1 { font-size: 1.85rem; }
+    .hero-content .subtitle { font-size: 1rem; margin-bottom: 1.8rem; }
+    .hero-nav-btn { display: none; }
+    .institutional-partnerships-section { padding: 2rem 1rem; }
+}
 
         /* ===== TESTIMONIALS SLIDER ===== */
         .testimonials-section {
@@ -1277,13 +1496,96 @@
     <!-- ============================================================ -->
     <main class="page-content">
 
-        <!-- ===== VIEW: HOME PAGE ===== -->
-        <div class="page-section active" id="page-home">
-            <section class="hero">
+       <!-- ========================================== -->
+<!--     ENHANCED HOME PAGE CORE SECTIONS       -->
+<!-- ========================================== -->
+
+<!-- 1. DYNAMIC HERO SLIDESHOW SYSTEM -->
+<section class="hero-slider-container">
+    <div class="hero-slides">
+        
+        <!-- Slide 1: Welcome & Mission -->
+        <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
                 <h1>Earn a High-Quality Education</h1>
-                <p class="subtitle">Join thousands of global leaders accelerating their ministry and business with structured, professional academic programs.</p>
+                <p class="subtitle">Join thousands of global leaders accelerating their purpose with structured, professional academic programs.</p>
                 <button class="btn-apply" onclick="showPage('apply')">Get Started Today</button>
-            </section>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Church Administration -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
+                <h1>Certificate in Church Administration</h1>
+                <p class="subtitle">Master organizational management, dynamic leadership frameworks, and strategic operational compliance for modern ministry structures.</p>
+                <button class="btn-apply" onclick="showPage('apply')">Apply for This Program</button>
+            </div>
+        </div>
+
+        <!-- Slide 3: Tech Academy Framework -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
+                <h1>Global Tech Academy Matrix</h1>
+                <p class="subtitle">Dive into AI fundamentals, advanced data science modules, and digital innovation strategies built for global tech frontiers.</p>
+                <button class="btn-apply" onclick="showPage('apply')">Explore Tech Tracks</button>
+            </div>
+        </div>
+
+        <!-- Slide 4: Robotics Simulators -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
+                <h1>Virtual Robotics & Engineering</h1>
+                <p class="subtitle">Learn through immersive, browser-based simulator frameworks designed to cultivate hands-on development engineering talents.</p>
+                <button class="btn-apply" onclick="showPage('apply')">Start Coding Now</button>
+            </div>
+        </div>
+
+        <!-- Slide 5: Entrepreneurship -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
+                <h1>Digital Entrepreneurship Strategy</h1>
+                <p class="subtitle">Build, launch, and scale online ecosystems. Turn technical acumen into self-sustaining enterprises with global footprints.</p>
+                <button class="btn-apply" onclick="showPage('apply')">Begin Your Venture</button>
+            </div>
+        </div>
+
+        <!-- Slide 6: Tuition Model Paradigm -->
+        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
+            <div class="hero-content">
+                <h1>Tuition-Free Global Learning</h1>
+                <p class="subtitle">Empowering your divine purpose without the burden of financial debt models. Accessible learning infrastructure for everyone.</p>
+                <button class="btn-apply" onclick="showPage('apply')">Claim Your Scholarship</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+    <div class="hero-dots" id="heroDotsContainer"></div>
+</section>
+
+<!-- 2. NEW PROFESSIONAL PARTNERSHIPS SECTION -->
+<section class="institutional-partnerships-section">
+    <div class="partnerships-header">
+        <span class="partnerships-badge">Institutional Alliance</span>
+        <h2>Strategic Alliances & Foundations</h2>
+        <p>Our academic frameworks and global outreach infrastructures are backed and empowered by leading philanthropic networks committed to educational accessibility.</p>
+    </div>
+    
+    <div class="partnerships-grid">
+        <div class="partner-card-premium">
+            <div class="partner-icon-wrapper">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>ADUSEI Foundation</h3>
+            <p class="partner-type">Primary Institutional Partner</p>
+            <div class="partner-divider"></div>
+            <p class="partner-description">Driving resource capitalization, scholarship subsidies, and logistical support mapping to facilitate global tuition-free operational frameworks.</p>
+        </div>
+    </div>
+</section>
 
            
 
@@ -2672,6 +2974,68 @@
                 }
             });
         });
+
+        // ===== HERO CAROUSEL ENGINE CONTEXT INJECTION =====
+document.addEventListener('DOMContentLoaded', function() {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const dotsContainer = document.getElementById('heroDotsContainer');
+    const prevBtn = document.getElementById('heroPrevBtn');
+    const nextBtn = document.getElementById('heroNextBtn');
+    let currentHeroIndex = 0;
+    let heroInterval;
+
+    // Dynamically build structural tracking dots for all 6 slides
+    heroSlides.forEach((_, idx) => {
+        const dot = document.createElement('div');
+        dot.className = 'hero-dot' + (idx === 0 ? ' active' : '');
+        dot.addEventListener('click', () => {
+            clearInterval(heroInterval);
+            goToHeroSlide(idx);
+            startHeroAutoplay();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.hero-dot');
+
+    function goToHeroSlide(idx) {
+        heroSlides[currentHeroIndex].classList.remove('active');
+        dots[currentHeroIndex].classList.remove('active');
+        
+        currentHeroIndex = (idx + heroSlides.length) % heroSlides.length;
+        
+        heroSlides[currentHeroIndex].classList.add('active');
+        dots[currentHeroIndex].classList.add('active');
+    }
+
+    function nextHeroSlide() {
+        goToHeroSlide(currentHeroIndex + 1);
+    }
+
+    function prevHeroSlide() {
+        goToHeroSlide(currentHeroIndex - 1);
+    }
+
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', () => {
+            clearInterval(heroInterval);
+            nextHeroSlide();
+            startHeroAutoplay();
+        });
+        prevBtn.addEventListener('click', () => {
+            clearInterval(heroInterval);
+            prevHeroSlide();
+            startHeroAutoplay();
+        });
+    }
+
+    function startHeroAutoplay() {
+        // Runs seamless image loop cycles every 6 seconds
+        heroInterval = setInterval(nextHeroSlide, 6000);
+    }
+
+    startHeroAutoplay();
+});
     </script>
 </body>
 </html>
