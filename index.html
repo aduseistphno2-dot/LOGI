@@ -230,7 +230,7 @@
     position: relative;
     width: 100%;
     height: 480px;
-    margin: 1rem 0 2.5rem;
+    margin: 0 0 2.5rem;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -1496,98 +1496,97 @@
     <!-- ============================================================ -->
     <main class="page-content">
 
-       <!-- ========================================== -->
-<!--     ENHANCED HOME PAGE CORE SECTIONS       -->
-<!-- ========================================== -->
+        <!-- ========================================== -->
+        <!--     ENHANCED HOME PAGE CORE SECTIONS       -->
+        <!-- ========================================== -->
 
-<!-- 1. DYNAMIC HERO SLIDESHOW SYSTEM -->
-<section class="hero-slider-container">
-    <div class="hero-slides">
-        
-        <!-- Slide 1: Welcome & Mission -->
-        <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Earn a High-Quality Education</h1>
-                <p class="subtitle">Join thousands of global leaders accelerating their purpose with structured, professional academic programs.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Get Started Today</button>
-            </div>
-        </div>
-        
-        <!-- Slide 2: Church Administration -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Certificate in Church Administration</h1>
-                <p class="subtitle">Master organizational management, dynamic leadership frameworks, and strategic operational compliance for modern ministry structures.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Apply for This Program</button>
-            </div>
-        </div>
+        <!-- 1. DYNAMIC HERO SLIDESHOW SYSTEM -->
+        <div class="page-section active" id="page-home">
+            <section class="hero-slider-container">
+                <div class="hero-slides">
+                    
+                    <!-- Slide 1: Welcome & Mission -->
+                    <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Earn a High-Quality Education</h1>
+                            <p class="subtitle">Join thousands of global leaders accelerating their purpose with structured, professional academic programs.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Get Started Today</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2: Church Administration -->
+                    <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Certificate in Church Administration</h1>
+                            <p class="subtitle">Master organizational management, dynamic leadership frameworks, and strategic operational compliance for modern ministry structures.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Apply for This Program</button>
+                        </div>
+                    </div>
 
-        <!-- Slide 3: Tech Academy Framework -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Global Tech Academy Matrix</h1>
-                <p class="subtitle">Dive into AI fundamentals, advanced data science modules, and digital innovation strategies built for global tech frontiers.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Explore Tech Tracks</button>
-            </div>
-        </div>
+                    <!-- Slide 3: Tech Academy Framework -->
+                    <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Global Tech Academy Matrix</h1>
+                            <p class="subtitle">Dive into AI fundamentals, advanced data science modules, and digital innovation strategies built for global tech frontiers.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Explore Tech Tracks</button>
+                        </div>
+                    </div>
 
-        <!-- Slide 4: Robotics Simulators -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Virtual Robotics & Engineering</h1>
-                <p class="subtitle">Learn through immersive, browser-based simulator frameworks designed to cultivate hands-on development engineering talents.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Start Coding Now</button>
-            </div>
-        </div>
+                    <!-- Slide 4: Robotics Simulators -->
+                    <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Virtual Robotics & Engineering</h1>
+                            <p class="subtitle">Learn through immersive, browser-based simulator frameworks designed to cultivate hands-on development engineering talents.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Start Coding Now</button>
+                        </div>
+                    </div>
 
-        <!-- Slide 5: Entrepreneurship -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Digital Entrepreneurship Strategy</h1>
-                <p class="subtitle">Build, launch, and scale online ecosystems. Turn technical acumen into self-sustaining enterprises with global footprints.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Begin Your Venture</button>
-            </div>
-        </div>
+                    <!-- Slide 5: Entrepreneurship -->
+                    <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Digital Entrepreneurship Strategy</h1>
+                            <p class="subtitle">Build, launch, and scale online ecosystems. Turn technical acumen into self-sustaining enterprises with global footprints.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Begin Your Venture</button>
+                        </div>
+                    </div>
 
-        <!-- Slide 6: Tuition Model Paradigm -->
-        <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
-            <div class="hero-content">
-                <h1>Tuition-Free Global Learning</h1>
-                <p class="subtitle">Empowering your divine purpose without the burden of financial debt models. Accessible learning infrastructure for everyone.</p>
-                <button class="btn-apply" onclick="showPage('apply')">Claim Your Scholarship</button>
-            </div>
-        </div>
+                    <!-- Slide 6: Tuition Model Paradigm -->
+                    <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
+                        <div class="hero-content">
+                            <h1>Tuition-Free Global Learning</h1>
+                            <p class="subtitle">Empowering your divine purpose without the burden of financial debt models. Accessible learning infrastructure for everyone.</p>
+                            <button class="btn-apply" onclick="showPage('apply')">Claim Your Scholarship</button>
+                        </div>
+                    </div>
 
-    </div>
+                </div>
 
-    <!-- Controls -->
-    <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-    <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-    <div class="hero-dots" id="heroDotsContainer"></div>
-</section>
+                <!-- Controls -->
+                <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+                <div class="hero-dots" id="heroDotsContainer"></div>
+            </section>
 
-<!-- 2. NEW PROFESSIONAL PARTNERSHIPS SECTION -->
-<section class="institutional-partnerships-section">
-    <div class="partnerships-header">
-        <span class="partnerships-badge">Institutional Alliance</span>
-        <h2>Strategic Alliances & Foundations</h2>
-        <p>Our academic frameworks and global outreach infrastructures are backed and empowered by leading philanthropic networks committed to educational accessibility.</p>
-    </div>
-    
-    <div class="partnerships-grid">
-        <div class="partner-card-premium">
-            <div class="partner-icon-wrapper">
-                <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <h3>ADUSEI Foundation</h3>
-            <p class="partner-type">Primary Institutional Partner</p>
-            <div class="partner-divider"></div>
-            <p class="partner-description">Driving resource capitalization, scholarship subsidies, and logistical support mapping to facilitate global tuition-free operational frameworks.</p>
-        </div>
-    </div>
-</section>
-
-           
+            <!-- 2. NEW PROFESSIONAL PARTNERSHIPS SECTION -->
+            <section class="institutional-partnerships-section">
+                <div class="partnerships-header">
+                    <span class="partnerships-badge">Institutional Alliance</span>
+                    <h2>Strategic Alliances & Foundations</h2>
+                    <p>Our academic frameworks and global outreach infrastructures are backed and empowered by leading philanthropic networks committed to educational accessibility.</p>
+                </div>
+                
+                <div class="partnerships-grid">
+                    <div class="partner-card-premium">
+                        <div class="partner-icon-wrapper">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3>ADUSEI Foundation</h3>
+                        <p class="partner-type">Primary Institutional Partner</p>
+                        <div class="partner-divider"></div>
+                        <p class="partner-description">Driving resource capitalization, scholarship subsidies, and logistical support mapping to facilitate global tuition-free operational frameworks.</p>
+                    </div>
+                </div>
+            </section>
 
             <!-- ===== DETAILED SECTION 1: ABOUT THE TUITION-FREE MODEL ===== -->
             <section class="section">
@@ -1700,7 +1699,7 @@
                 </div>
             </section>
 
-             <!-- ===== TESTIMONIALS SLIDER ===== -->
+            <!-- ===== TESTIMONIALS SLIDER ===== -->
             <section class="testimonials-section">
                 <h2 class="section-title" style="color: #0c2340;">What Our Students Say</h2>
                 <p class="section-sub" style="color: #718096;">Hear from graduates who transformed their lives through LOGI's tuition-free programs.</p>
@@ -1830,7 +1829,6 @@
                 </div>
             </section>
 
-            
             <!-- ===== DETAILED SECTION 5: ONBOARDING EXECUTION STRATEGY ===== -->
             <section class="section" style="border: none; background: transparent; padding: 0; box-shadow: none;">
                 <h2 class="section-title">Onboarding Execution Strategy</h2>
@@ -2064,7 +2062,7 @@
             </section>
         </div>
 
-        <!-- ===== VIEW: ABOUT PAGES (abbreviated for length) ===== -->
+        <!-- ===== VIEW: ABOUT PAGES ===== -->
         <div class="page-section" id="page-profile">
             <div class="internal-page-header">
                 <h1>Institutional Profile</h1>
@@ -2976,66 +2974,66 @@
         });
 
         // ===== HERO CAROUSEL ENGINE CONTEXT INJECTION =====
-document.addEventListener('DOMContentLoaded', function() {
-    const heroSlides = document.querySelectorAll('.hero-slide');
-    const dotsContainer = document.getElementById('heroDotsContainer');
-    const prevBtn = document.getElementById('heroPrevBtn');
-    const nextBtn = document.getElementById('heroNextBtn');
-    let currentHeroIndex = 0;
-    let heroInterval;
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSlides = document.querySelectorAll('.hero-slide');
+            const dotsContainer = document.getElementById('heroDotsContainer');
+            const prevBtn = document.getElementById('heroPrevBtn');
+            const nextBtn = document.getElementById('heroNextBtn');
+            let currentHeroIndex = 0;
+            let heroInterval;
 
-    // Dynamically build structural tracking dots for all 6 slides
-    heroSlides.forEach((_, idx) => {
-        const dot = document.createElement('div');
-        dot.className = 'hero-dot' + (idx === 0 ? ' active' : '');
-        dot.addEventListener('click', () => {
-            clearInterval(heroInterval);
-            goToHeroSlide(idx);
+            // Dynamically build structural tracking dots for all 6 slides
+            heroSlides.forEach((_, idx) => {
+                const dot = document.createElement('div');
+                dot.className = 'hero-dot' + (idx === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    clearInterval(heroInterval);
+                    goToHeroSlide(idx);
+                    startHeroAutoplay();
+                });
+                dotsContainer.appendChild(dot);
+            });
+
+            const dots = document.querySelectorAll('.hero-dot');
+
+            function goToHeroSlide(idx) {
+                heroSlides[currentHeroIndex].classList.remove('active');
+                dots[currentHeroIndex].classList.remove('active');
+                
+                currentHeroIndex = (idx + heroSlides.length) % heroSlides.length;
+                
+                heroSlides[currentHeroIndex].classList.add('active');
+                dots[currentHeroIndex].classList.add('active');
+            }
+
+            function nextHeroSlide() {
+                goToHeroSlide(currentHeroIndex + 1);
+            }
+
+            function prevHeroSlide() {
+                goToHeroSlide(currentHeroIndex - 1);
+            }
+
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    clearInterval(heroInterval);
+                    nextHeroSlide();
+                    startHeroAutoplay();
+                });
+                prevBtn.addEventListener('click', () => {
+                    clearInterval(heroInterval);
+                    prevHeroSlide();
+                    startHeroAutoplay();
+                });
+            }
+
+            function startHeroAutoplay() {
+                // Runs seamless image loop cycles every 6 seconds
+                heroInterval = setInterval(nextHeroSlide, 6000);
+            }
+
             startHeroAutoplay();
         });
-        dotsContainer.appendChild(dot);
-    });
-
-    const dots = document.querySelectorAll('.hero-dot');
-
-    function goToHeroSlide(idx) {
-        heroSlides[currentHeroIndex].classList.remove('active');
-        dots[currentHeroIndex].classList.remove('active');
-        
-        currentHeroIndex = (idx + heroSlides.length) % heroSlides.length;
-        
-        heroSlides[currentHeroIndex].classList.add('active');
-        dots[currentHeroIndex].classList.add('active');
-    }
-
-    function nextHeroSlide() {
-        goToHeroSlide(currentHeroIndex + 1);
-    }
-
-    function prevHeroSlide() {
-        goToHeroSlide(currentHeroIndex - 1);
-    }
-
-    if (nextBtn && prevBtn) {
-        nextBtn.addEventListener('click', () => {
-            clearInterval(heroInterval);
-            nextHeroSlide();
-            startHeroAutoplay();
-        });
-        prevBtn.addEventListener('click', () => {
-            clearInterval(heroInterval);
-            prevHeroSlide();
-            startHeroAutoplay();
-        });
-    }
-
-    function startHeroAutoplay() {
-        // Runs seamless image loop cycles every 6 seconds
-        heroInterval = setInterval(nextHeroSlide, 6000);
-    }
-
-    startHeroAutoplay();
-});
     </script>
 </body>
 </html>
