@@ -2658,19 +2658,19 @@
                         <li><a onclick="showPage('faq')">FAQ</a></li>
                         <li><a href="https://log.moodiy.org/login" target="_blank">Student Portal</a></li>
                         <li><a href="mailto:office@livingoracles.org"><i class="fas fa-envelope"></i> Email Us</a></li>
-                        <li><a href="https://wa.me/233241456581"><i class="fas fa-message"></i> WhatsApp</a></li>
+                        <li><a href="https://wa.me/233241456581"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
                         <li><p style="font-size:0.8rem; margin-top:0.5rem; color:#64748b;">System Tracking: v2026.4</p></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-disclosure">
-                <strong>Institutional Disclosure Notice:</strong> Living Oracles Global Institute is a philanthropic, tuition-free theological education initiative. All digital coursework text modules, standard system matrices, and examination frameworks are designed and administered asynchronously to alleviate financial dependencies. Operational expenses are balanced through localized, non-profit donor systems.
+                <strong>Institutional Disclosure Notice:</strong> LOGI is a philanthropic, tuition-free online education initiative providing ministry, leadership, business, and digital skills programs, supported through non-profit donor contributions.
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 The Living Oracles Global Institute. All engineering parameters securely configured.</p>
+            <p>&copy; <span id="currentYear"></span> Living Oracles Global Institute (LOGI). All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -3035,5 +3035,9 @@
             startHeroAutoplay();
         });
     </script>
+    <script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
