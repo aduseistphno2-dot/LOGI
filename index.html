@@ -31,7 +31,7 @@
             background-color: #ffffff;
             color: #334155;
             line-height: 1.5;
-            padding-top: 100px; /* Crucial padding offset to clear the fixed sticky header */
+            padding-top: 20px;
         }
 
         .container-wrapper {
@@ -41,22 +41,51 @@
         }
 
         /* ========================================== */
-        /*    FIXED SCREEN STICKY NAVIGATION BAR      */
+        /*   DYNAMIC CONTEXTUAL HERO WITH FIXED NAV   */
         /* ========================================== */
-        .fixed-navigation-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .hero-view-container {
+            position: relative;
             width: 100%;
-            height: 100px;
-            background: #1a2b38;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Homepage Slide Sizing Frame */
+        .hero-view-container.homepage-mode {
+            height: 620px;
+        }
+
+        /* Reduced Dynamic Subpage Sizing Frame */
+        .hero-view-container.subpage-mode {
+            height: 320px;
+            background-image: linear-gradient(135deg, #1a2b38 0%, #111e27 100%);
+            border-bottom: 4px solid #b68b5b;
+        }
+
+        /* ========================================== */
+        /*  INTEGRATED NAVIGATION LAYER (INSIDE HERO) */
+        /* ========================================== */
+        .hero-integrated-nav {
+            position: relative;
+            width: 100%;
+            height: 110px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 2.5rem;
-            z-index: 2000;
-            border-bottom: 2px solid #b68b5b;
+            z-index: 100;
+            background: rgba(26, 43, 56, 0.4);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Enforce a consistent solid dark look when in subpage mode */
+        .subpage-mode .hero-integrated-nav {
+            background: rgba(17, 30, 39, 0.6);
         }
 
         .nav-logo-stack {
@@ -69,7 +98,7 @@
         }
 
         .nav-logo-stack img {
-            height: 48px;
+            height: 52px;
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -81,7 +110,7 @@
 
         .nav-logo-title {
             color: #ffffff;
-            font-size: 0.72rem;
+            font-size: 0.75rem;
             font-weight: 700;
             letter-spacing: 0.06em;
             text-transform: uppercase;
@@ -188,40 +217,20 @@
         }
 
         /* ========================================== */
-        /*        DYNAMIC CONTEXTUAL HERO SYSTEM      */
+        /*        DYNAMIC INTERACTIVE BODY TRACKER    */
         /* ========================================== */
-        .hero-view-container {
-            position: relative;
-            width: 100%;
-            margin: 1rem 0 2.5rem;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
-        }
-
-        /* Homepage Slide Sizing Frame */
-        .hero-view-container.homepage-mode {
-            height: 520px;
-        }
-
-        /* Reduced Dynamic Subpage Sizing Frame */
-        .hero-view-container.subpage-mode {
-            height: 200px;
-            background-image: linear-gradient(135deg, #1a2b38 0%, #111e27 100%);
-            border-bottom: 4px solid #b68b5b;
-        }
-
+        
         /* SUBPAGE CONTEXTUAL BOX STYLING */
         .subpage-hero-content {
             display: none;
             width: 100%;
-            height: 100%;
+            flex-grow: 1;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: #ffffff;
+            padding-bottom: 1.5rem;
             animation: fadeIn 0.4s ease;
         }
 
@@ -257,9 +266,12 @@
         /*        DYNAMIC HERO SLIDER MECHANICS       */
         /* ========================================== */
         .hero-slides {
-            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            z-index: 1;
         }
 
         .hero-view-container.subpage-mode .hero-slides,
@@ -285,20 +297,19 @@
             justify-content: center;
             text-align: center;
             color: #fff;
-            padding: 2rem;
-            z-index: 1;
+            padding: 8rem 2rem 2rem; /* Added high top padding to avoid heading clash with nav */
         }
 
         .hero-slide.active {
             opacity: 1;
             visibility: visible;
-            z-index: 2;
         }
 
         .hero-content {
             max-width: 800px;
             transform: translateY(25px);
             transition: transform 0.8s ease;
+            z-index: 5;
         }
 
         .hero-slide.active .hero-content {
@@ -343,7 +354,7 @@
 
         .hero-nav-btn {
             position: absolute;
-            top: 50%;
+            top: 55%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.12);
             backdrop-filter: blur(5px);
@@ -402,7 +413,7 @@
             padding: 3rem 2rem;
             background: #ffffff;
             border-radius: 20px;
-            margin: 1rem 0 2rem;
+            margin: 2.5rem 0 2rem;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
@@ -471,7 +482,7 @@
             padding: 3.5rem 2rem;
             background: #f8fafc;
             border-radius: 20px;
-            margin: 1rem 0 4rem;
+            margin: 2rem 0 4rem;
             border: 1px solid #e2e8f0;
         }
 
@@ -710,14 +721,12 @@
         /*   ADAPTIVE RESPONSIVE VIEWPORT INJECTIONS  */
         /* ========================================== */
         @media (min-width: 1025px) {
-            .hero-view-container.homepage-mode { height: 600px; }
+            .hero-view-container.homepage-mode { height: 650px; }
             .hero-content h1 { font-size: 3.4rem; }
             .hero-content .subtitle { font-size: 1.25rem; }
         }
 
         @media (max-width: 1024px) {
-            body { padding-top: 110px; }
-            .fixed-navigation-bar { height: 110px; padding: 0 1.5rem; }
             .mobile-menu-trigger { display: block; }
 
             .nav-menu-links {
@@ -771,7 +780,8 @@
         }
 
         @media (max-width: 640px) {
-            .hero-view-container.homepage-mode { height: 500px; border-radius: 14px; }
+            .hero-view-container.homepage-mode { height: 580px; border-radius: 14px; }
+            .hero-integrated-nav { padding: 0 1rem; }
             .subpage-title-display { font-size: 1.6rem; }
             .hero-content h1 { font-size: 1.85rem; }
             .hero-content .subtitle { font-size: 1rem; margin-bottom: 1.8rem; }
@@ -784,85 +794,85 @@
 </head>
 <body>
 
-    <!-- SCREEN FIXED MASTER HEADER OVERLAY -->
-    <header class="fixed-navigation-bar">
-        <a href="#" class="nav-logo-stack" onclick="showPage('home')">
-            <img src="https://i.imgur.com/kkE49KM.png" alt="Living Oracles Global Institute Logo">
-            <span class="nav-logo-title">Living Oracles Global Institute</span>
-        </a>
-        
-        <button class="mobile-menu-trigger" id="mobileMenuBtn" aria-label="Toggle Layout Menu">
-            <i class="fas fa-bars"></i>
-        </button>
-
-        <ul class="nav-menu-links" id="navMenuLinks">
-            <li><a href="#" onclick="showPage('home')">Home</a></li>
-            
-            <!-- About Dropdown -->
-            <li class="nav-dropdown">
-                <a href="#" class="dropdown-trigger">About Us <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="showPage('about', 'About Us')">About Us</a></li>
-                    <li><a href="#" onclick="showPage('faith', 'Statement of Faith')">Statement of Faith</a></li>
-                    <li><a href="#" onclick="showPage('integrity', 'Institutional Integrity Statement')">Institutional Integrity</a></li>
-                    <li><a href="#" onclick="showPage('difference', 'Our Difference')">Our Difference</a></li>
-                    <li><a href="#" onclick="showPage('accreditation', 'Accreditation & Partnership')">Accreditation</a></li>
-                    <li><a href="#" onclick="showPage('testimonials', 'Student Testimonials')">Student Testimonials</a></li>
-                    <li><a href="#" onclick="showPage('awards', 'Awards')">Awards</a></li>
-                </ul>
-            </li>
-
-            <!-- Apply Now Dropdown -->
-            <li class="nav-dropdown">
-                <a href="#" class="dropdown-trigger btn-nav-apply">Apply Now! <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="showPage('apply', 'Main Application Form')">Main Application Form</a></li>
-                    <li><a href="#" onclick="showPage('pmca-apply', 'PMCA Application Form')">PMCA Application Form</a></li>
-                    <li><a href="#" onclick="showPage('rccg-apply', 'RCCG MOCM Application Form')">RCCG MOCM Form</a></li>
-                    <li><a href="#" onclick="showPage('doctorate-apply', 'Doctorate Application Form')">Doctorate Form</a></li>
-                    <li><a href="#" onclick="showPage('financial-aid', 'Financial Aid Matrix')">Financial Aid Matrix</a></li>
-                </ul>
-            </li>
-
-            <!-- Our Programs Dropdown -->
-            <li class="nav-dropdown">
-                <a href="#" class="dropdown-trigger">Our Programs <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" onclick="showPage('programs', 'All Programs Catalog')">All Programs</a></li>
-                    <li><a href="#" onclick="showPage('cert-courses', 'Certificate Courses')">Certificate Courses</a></li>
-                    <li><a href="#" onclick="showPage('church-admin', 'Certificate in Church Administration')">Church Administration</a></li>
-                    <li><a href="#" onclick="showPage('business-admin', 'Certificate in Business Administration-BOLT')">Business Admin (BOLT)</a></li>
-                    <li><a href="#" onclick="showPage('digital-ministry', 'Certificate in Digital Ministry- MOCM')">Digital Ministry (MOCM)</a></li>
-                    <li><a href="#" onclick="showPage('oil-gas', 'Oil & Gas Finance')">Oil & Gas Finance</a></li>
-                    <li><a href="#" onclick="showPage('intro-ai', 'Introduction to AI')">Introduction to AI</a></li>
-                    <li><a href="#" onclick="showPage('certifications', 'Certifications')">Certifications</a></li>
-                    <li><a href="#" onclick="showPage('faith-foundations', 'Faith Foundations')">Faith Foundations</a></li>
-                    <li><a href="#" onclick="showPage('associate', 'Associate Programs')">Associate Programs</a></li>
-                    <li><a href="#" onclick="showPage('masters', 'Masters Programs')">Masters Programs</a></li>
-                    <li><a href="#" onclick="showPage('doctorate', 'Doctorate Programs')">Doctorate Programs</a></li>
-                </ul>
-            </li>
-
-            <li><a href="#" onclick="showPage('contact', 'Contact Support')">Contact</a></li>
-
-            <!-- Dashboard Dropdown -->
-            <li class="nav-dropdown">
-                <a href="#" class="dropdown-trigger"><i class="fas fa-user-graduate"></i> Dashboard <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
-                    <li><a href="https://log.moodiy.org" target="_blank">Moodle Login</a></li>
-                    <li><a href="#" onclick="showPage('moodle-nav', 'Moodle Navigation Guide')">Moodle Navigation</a></li>
-                    <li><a href="#" onclick="showPage('moodle-mobile', 'Moodle Mobile App Settings')">Moodle Mobile</a></li>
-                    <li><a href="#" onclick="showPage('student-dashboard', 'Student Dashboard Hub')">Student Dashboard</a></li>
-                </ul>
-            </li>
-        </ul>
-    </header>
-
     <main class="container-wrapper">
         
-        <!-- CONTEXTUAL DYNAMIC HERO VIEWPORT LAYER -->
+        <!-- CONTEXTUAL DYNAMIC HERO VIEWPORT LAYER (NAV INTEGRATED INSIDE) -->
         <section class="hero-view-container homepage-mode" id="dynamicHeroContainer">
             
+            <!-- FIXED HEADER EMBEDDED DIRECTLY INSIDE HERO WINDOW -->
+            <header class="hero-integrated-nav">
+                <a href="#" class="nav-logo-stack" onclick="showPage('home')">
+                    <img src="https://i.imgur.com/kkE49KM.png" alt="Living Oracles Global Institute Logo">
+                    <span class="nav-logo-title">Living Oracles Global Institute</span>
+                </a>
+                
+                <button class="mobile-menu-trigger" id="mobileMenuBtn" aria-label="Toggle Layout Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <ul class="nav-menu-links" id="navMenuLinks">
+                    <li><a href="#" onclick="showPage('home')">Home</a></li>
+                    
+                    <!-- About Dropdown -->
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-trigger">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showPage('about', 'About Us')">About Us</a></li>
+                            <li><a href="#" onclick="showPage('faith', 'Statement of Faith')">Statement of Faith</a></li>
+                            <li><a href="#" onclick="showPage('integrity', 'Institutional Integrity Statement')">Institutional Integrity</a></li>
+                            <li><a href="#" onclick="showPage('difference', 'Our Difference')">Our Difference</a></li>
+                            <li><a href="#" onclick="showPage('accreditation', 'Accreditation & Partnership')">Accreditation</a></li>
+                            <li><a href="#" onclick="showPage('testimonials', 'Student Testimonials')">Student Testimonials</a></li>
+                            <li><a href="#" onclick="showPage('awards', 'Awards')">Awards</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Apply Now Dropdown -->
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-trigger btn-nav-apply">Apply Now! <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showPage('apply', 'Main Application Form')">Main Application Form</a></li>
+                            <li><a href="#" onclick="showPage('pmca-apply', 'PMCA Application Form')">PMCA Application Form</a></li>
+                            <li><a href="#" onclick="showPage('rccg-apply', 'RCCG MOCM Application Form')">RCCG MOCM Form</a></li>
+                            <li><a href="#" onclick="showPage('doctorate-apply', 'Doctorate Application Form')">Doctorate Form</a></li>
+                            <li><a href="#" onclick="showPage('financial-aid', 'Financial Aid Matrix')">Financial Aid Matrix</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Our Programs Dropdown -->
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-trigger">Our Programs <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" onclick="showPage('programs', 'All Programs Catalog')">All Programs</a></li>
+                            <li><a href="#" onclick="showPage('cert-courses', 'Certificate Courses')">Certificate Courses</a></li>
+                            <li><a href="#" onclick="showPage('church-admin', 'Certificate in Church Administration')">Church Administration</a></li>
+                            <li><a href="#" onclick="showPage('business-admin', 'Certificate in Business Administration-BOLT')">Business Admin (BOLT)</a></li>
+                            <li><a href="#" onclick="showPage('digital-ministry', 'Certificate in Digital Ministry- MOCM')">Digital Ministry (MOCM)</a></li>
+                            <li><a href="#" onclick="showPage('oil-gas', 'Oil & Gas Finance')">Oil & Gas Finance</a></li>
+                            <li><a href="#" onclick="showPage('intro-ai', 'Introduction to AI')">Introduction to AI</a></li>
+                            <li><a href="#" onclick="showPage('certifications', 'Certifications')">Certifications</a></li>
+                            <li><a href="#" onclick="showPage('faith-foundations', 'Faith Foundations')">Faith Foundations</a></li>
+                            <li><a href="#" onclick="showPage('associate', 'Associate Programs')">Associate Programs</a></li>
+                            <li><a href="#" onclick="showPage('masters', 'Masters Programs')">Masters Programs</a></li>
+                            <li><a href="#" onclick="showPage('doctorate', 'Doctorate Programs')">Doctorate Programs</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#" onclick="showPage('contact', 'Contact Support')">Contact</a></li>
+
+                    <!-- Dashboard Dropdown -->
+                    <li class="nav-dropdown">
+                        <a href="#" class="dropdown-trigger"><i class="fas fa-user-graduate"></i> Dashboard <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://log.moodiy.org" target="_blank">Moodle Login</a></li>
+                            <li><a href="#" onclick="showPage('moodle-nav', 'Moodle Navigation Guide')">Moodle Navigation</a></li>
+                            <li><a href="#" onclick="showPage('moodle-mobile', 'Moodle Mobile App Settings')">Moodle Mobile</a></li>
+                            <li><a href="#" onclick="showPage('student-dashboard', 'Student Dashboard Hub')">Student Dashboard</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </header>
+
             <!-- SUBPAGE DYNAMIC INTERFACE HEADER SLAG -->
             <div class="subpage-hero-content" id="subpageHeroContent">
                 <h1 class="subpage-title-display" id="subpageHeroTitle">Page Title</h1>
@@ -1179,7 +1189,6 @@
             }
 
             const heroContainer = document.getElementById('dynamicHeroContainer');
-            const subpageHeroContent = document.getElementById('subpageHeroContent');
             const subpageHeroTitle = document.getElementById('subpageHeroTitle');
             const homeMainAdditions = document.getElementById('homeMainAdditions');
             const targetPage = document.getElementById('page-' + pageId);
@@ -1201,7 +1210,6 @@
                 if(pageTitleText) {
                     subpageHeroTitle.innerText = pageTitleText;
                 } else {
-                    // Quick fallback formatting formatting if parameter is missed
                     subpageHeroTitle.innerText = pageId.charAt(0).toUpperCase() + pageId.slice(1);
                 }
 
