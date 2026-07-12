@@ -36,7 +36,7 @@
         .hero-slider-container {
             position: relative;
             width: 100%;
-            height: 580px; /* Increased slightly to beautifully house the header overlay */
+            height: 580px;
             margin: 1rem 0 2.5rem;
             border-radius: 20px;
             overflow: hidden;
@@ -53,8 +53,8 @@
             justify-content: space-between;
             align-items: center;
             padding: 1.5rem 2.5rem;
-            z-index: 100; /* Stays securely on top of sliding content */
-            background: linear-gradient(to bottom, rgba(26, 43, 56, 0.8), rgba(26, 43, 56, 0));
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0));
         }
 
         .nav-logo a {
@@ -194,7 +194,7 @@
             justify-content: center;
             text-align: center;
             color: #fff;
-            padding: 6rem 2.5rem 0; /* Extra top padding shifts text down below header overlay */
+            padding: 6rem 2.5rem 0;
             z-index: 1;
         }
 
@@ -304,10 +304,106 @@
         }
 
         /* ========================================== */
+        /*      DYNAMIC APP VIEWPORT STATE HOOKS      */
+        /* ========================================== */
+        .dynamic-view-section {
+            padding: 3rem 1.5rem;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            min-height: 350px;
+        }
+
+        .dynamic-view-section h2 {
+            font-size: 2.2rem;
+            color: #1a2b38;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            border-left: 5px solid #b68b5b;
+            padding-left: 1rem;
+        }
+
+        .dynamic-view-section h3 {
+            font-size: 1.4rem;
+            color: #1a2b38;
+            margin: 1.5rem 0 0.5rem 0;
+            font-weight: 700;
+        }
+
+        .dynamic-view-section p {
+            color: #475569;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+
+        .dynamic-view-section ul, .dynamic-view-section ol {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #475569;
+        }
+
+        .dynamic-view-section li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .content-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .content-inner-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+        .content-inner-card:hover {
+            transform: translateY(-3px);
+            border-color: #b68b5b;
+        }
+
+        /* Form Controls styling for generic layouts */
+        .app-form-group {
+            margin-bottom: 1.2rem;
+        }
+        .app-form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: #1a2b38;
+        }
+        .app-form-group input, .app-form-group select, .app-form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .app-form-submit {
+            background: #b68b5b;
+            color: #fff;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .app-form-submit:hover {
+            background: #1a2b38;
+        }
+
+        /* ========================================== */
         /*   INSTITUTIONAL PARTNERSHIPS STYLE SYSTEM  */
         /* ========================================== */
         .institutional-partnerships-section {
-            padding: 3.5rem 2rem;
+            padding: 3rem 2rem;
             background: #f8fafc;
             border-radius: 20px;
             margin: 2rem 0 4rem;
@@ -317,7 +413,7 @@
         .partnerships-header {
             text-align: center;
             max-width: 700px;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 2rem;
         }
 
         .partnerships-badge {
@@ -334,15 +430,15 @@
         }
 
         .partnerships-header h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #1a2b38;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             font-weight: 800;
         }
 
         .partnerships-header p {
             color: #64748b;
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
         }
 
@@ -356,68 +452,62 @@
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             text-align: center;
             max-width: 480px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .partner-card-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(26, 43, 56, 0.08);
         }
 
         .partner-icon-wrapper {
-            width: 60px;
-            height: 60px;
+            width: 54px;
+            height: 54px;
             background: #1a2b38;
             color: #b68b5b;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            margin: 0 auto 1.2rem;
+            font-size: 1.4rem;
+            margin: 0 auto 1rem;
         }
 
         .partner-card-premium h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: #1a2b38;
             margin-bottom: 0.3rem;
             font-weight: 700;
         }
 
         .partner-type {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #b68b5b;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.03em;
         }
 
         .partner-divider {
             height: 2px;
             width: 40px;
             background: #e2e8f0;
-            margin: 1.2rem auto;
+            margin: 1rem auto;
         }
 
         .partner-description {
             color: #475569;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             line-height: 1.6;
         }
 
         /* ========================================== */
-        /*        INSTITUTIONAL FOOTER SYSTEMS        */
+        /*   REDUCED COMPACT FOOTER DESIGN MATRIX     */
         /* ========================================== */
         .institutional-footer {
             background: #111e27;
             color: #94a3b8;
-            padding: 4rem 2rem 2rem;
+            padding: 3rem 1.5rem 1.5rem;
             margin-top: 4rem;
             border-top: 3px solid #b68b5b;
+            font-size: 0.82rem; /* Reduced Global Base Footer Font Size */
         }
 
         .footer-grid-container {
@@ -425,36 +515,36 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr repeat(5, 1fr);
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .footer-column h3 {
             color: #ffffff;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.15rem; /* Proportionally optimized down */
+            margin-bottom: 0.8rem;
             font-weight: 800;
         }
 
         .footer-column h4 {
             color: #f8fafc;
-            font-size: 0.95rem;
+            font-size: 0.8rem; /* Reduced typography footprint */
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
             font-weight: 700;
         }
 
         .brand-info p {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 1.2rem;
+            font-size: 0.82rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
         }
 
         .partner-alliance-tag {
             background: rgba(255,255,255,0.04);
             border-left: 3px solid #b68b5b;
-            padding: 0.6rem 1rem;
-            font-size: 0.85rem;
+            padding: 0.5rem 0.8rem;
+            font-size: 0.78rem;
             color: #e2e8f0;
             border-radius: 0 6px 6px 0;
         }
@@ -466,39 +556,39 @@
         }
 
         .footer-column ul li {
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.5rem;
         }
 
         .footer-column ul li a {
             color: #94a3b8;
             text-decoration: none;
-            font-size: 0.88rem;
-            transition: all 0.25s ease;
+            font-size: 0.8rem; /* Scaled down for high performance legibility */
+            transition: all 0.2s ease;
         }
 
         .footer-column ul li a:hover {
             color: #b68b5b;
-            padding-left: 4px;
+            padding-left: 2px;
         }
 
         .footer-bottom-bar {
             max-width: 1300px;
-            margin: 3rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(148,163,184,0.12);
+            margin: 2.5rem auto 0;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(148,163,184,0.1);
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.2rem;
         }
 
         .footer-legal-links a {
             color: #64748b;
             text-decoration: none;
-            font-size: 0.85rem;
-            margin-right: 1.5rem;
-            transition: color 0.3s ease;
+            font-size: 0.78rem;
+            margin-right: 1.2rem;
+            transition: color 0.2s ease;
         }
 
         .footer-legal-links a:hover {
@@ -508,20 +598,21 @@
         .footer-social-channels {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            font-size: 0.85rem;
+            gap: 0.8rem;
+            font-size: 0.78rem;
         }
 
         .footer-social-channels a {
             color: #94a3b8;
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             background: rgba(255,255,255,0.05);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
+            font-size: 0.75rem;
         }
 
         .footer-social-channels a:hover {
@@ -533,9 +624,9 @@
         .footer-copyright {
             width: 100%;
             text-align: center;
-            font-size: 0.82rem;
+            font-size: 0.75rem;
             color: #475569;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
 
         /* ========================================== */
@@ -547,10 +638,9 @@
             .hero-content .subtitle { font-size: 1.25rem; }
         }
 
-        /* Layout Switch Rule for Tablet/Mobile Viewports */
         @media (max-width: 1024px) {
             .mobile-menu-trigger {
-                display: block; /* Shows three line menu icon on mobile viewports */
+                display: block;
             }
 
             .hero-header-overlay {
@@ -561,7 +651,6 @@
                 font-size: 1.1rem;
             }
 
-            /* Transforms top navigation links list into interactive vertical panel drawer */
             .nav-menu-links {
                 position: fixed;
                 top: 0;
@@ -579,7 +668,6 @@
                 z-index: 105;
             }
 
-            /* When active via drawer class target updates */
             .nav-menu-links.mobile-open {
                 right: 0;
             }
@@ -596,7 +684,6 @@
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             }
 
-            /* Adjust mobile layout behavior for dropdown configurations */
             .dropdown-menu {
                 position: static;
                 opacity: 1;
@@ -606,7 +693,7 @@
                 box-shadow: none;
                 margin-top: 0.5rem;
                 padding: 0.2rem 0;
-                display: none; /* Controlled dynamically via tracking script */
+                display: none;
             }
 
             .dropdown-menu li a {
@@ -626,7 +713,7 @@
         @media (max-width: 992px) {
             .footer-grid-container {
                 grid-template-columns: 1fr 1fr;
-                gap: 2.5rem;
+                gap: 2rem;
             }
             .footer-column.brand-info {
                 grid-column: span 2;
@@ -637,11 +724,11 @@
             .hero-slider-container { height: 490px; border-radius: 14px; }
             .hero-content h1 { font-size: 1.85rem; }
             .hero-content .subtitle { font-size: 1rem; margin-bottom: 1.8rem; }
-            .hero-nav-btn { display: none; } /* Kept clean on smaller viewports */
+            .hero-nav-btn { display: none; }
             .institutional-partnerships-section { padding: 2rem 1rem; }
             .footer-grid-container {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             .footer-column.brand-info {
                 grid-column: span 1;
@@ -651,28 +738,25 @@
                 text-align: center;
             }
             .footer-legal-links a {
-                margin: 0 0.7rem;
+                margin: 0 0.5rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ========================================== -->
-    <!--           CORE LAYOUT CONTAINER            -->
-    <!-- ========================================== -->
     <main class="container-wrapper">
         
-        <!-- DYNAMIC HERO SLIDESHOW SYSTEM (Nav and Logo housed cleanly directly inside) -->
+        <!-- ========================================== -->
+        <!--  HERO BANNER MODULE + NAV OVERLAY INJECTION -->
+        <!-- ========================================== -->
         <section class="hero-slider-container">
             
-            <!-- OVERLAY HEADER HOUSING TOP NAV AND LOGO TOGETHER -->
             <header class="hero-header-overlay">
                 <div class="nav-logo">
                     <a href="#" onclick="showPage('home')">The Living Oracles Global Institute</a>
                 </div>
                 
-                <!-- Hamburger Trigger Button (Three lines icon) for mobile device viewports -->
                 <button class="mobile-menu-trigger" id="mobileMenuBtn" aria-label="Toggle Menu Layout">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -680,7 +764,6 @@
                 <ul class="nav-menu-links" id="navMenuLinks">
                     <li><a href="#" onclick="showPage('home')">Home</a></li>
                     
-                    <!-- About Dropdown -->
                     <li class="nav-dropdown">
                         <a href="#" class="dropdown-trigger">About Us <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -694,7 +777,6 @@
                         </ul>
                     </li>
 
-                    <!-- Apply Now Dropdown -->
                     <li class="nav-dropdown">
                         <a href="#" class="dropdown-trigger btn-nav-apply">Apply Now! <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -706,7 +788,6 @@
                         </ul>
                     </li>
 
-                    <!-- Our Programs Dropdown -->
                     <li class="nav-dropdown">
                         <a href="#" class="dropdown-trigger">Our Programs <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -727,7 +808,6 @@
 
                     <li><a href="#" onclick="showPage('contact')">Contact</a></li>
 
-                    <!-- Dashboard Dropdown -->
                     <li class="nav-dropdown">
                         <a href="#" class="dropdown-trigger nav-dashboard-link"><i class="fas fa-user-graduate"></i> Dashboard <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
@@ -740,10 +820,7 @@
                 </ul>
             </header>
 
-            <!-- Slides Canvas Container Wrapper -->
             <div class="hero-slides">
-                
-                <!-- Slide 1: Welcome & Mission -->
                 <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Earn a High-Quality Education</h1>
@@ -751,68 +828,62 @@
                         <button class="btn-apply" onclick="showPage('apply')">Get Started Today</button>
                     </div>
                 </div>
-                
-                <!-- Slide 2: Church Administration -->
                 <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Certificate in Church Administration</h1>
                         <p class="subtitle">Master organizational management, dynamic leadership frameworks, and strategic operational compliance for modern ministry structures.</p>
-                        <button class="btn-apply" onclick="showPage('apply')">Apply for This Program</button>
+                        <button class="btn-apply" onclick="showPage('church-admin')">Apply for This Program</button>
                     </div>
                 </div>
-
-                <!-- Slide 3: Tech Academy Framework -->
                 <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Global Tech Academy Matrix</h1>
                         <p class="subtitle">Dive into AI fundamentals, advanced data science modules, and digital innovation strategies built for global tech frontiers.</p>
-                        <button class="btn-apply" onclick="showPage('apply')">Explore Tech Tracks</button>
+                        <button class="btn-apply" onclick="showPage('intro-ai')">Explore Tech Tracks</button>
                     </div>
                 </div>
-
-                <!-- Slide 4: Robotics Simulators -->
                 <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Virtual Robotics & Engineering</h1>
                         <p class="subtitle">Learn through immersive, browser-based simulator frameworks designed to cultivate hands-on development engineering talents.</p>
-                        <button class="btn-apply" onclick="showPage('apply')">Start Coding Now</button>
+                        <button class="btn-apply" onclick="showPage('programs')">Start Coding Now</button>
                     </div>
                 </div>
-
-                <!-- Slide 5: Entrepreneurship -->
                 <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Digital Entrepreneurship Strategy</h1>
                         <p class="subtitle">Build, launch, and scale online ecosystems. Turn technical acumen into self-sustaining enterprises with global footprints.</p>
-                        <button class="btn-apply" onclick="showPage('apply')">Begin Your Venture</button>
+                        <button class="btn-apply" onclick="showPage('business-admin')">Begin Your Venture</button>
                     </div>
                 </div>
-
-                <!-- Slide 6: Tuition Model Paradigm -->
                 <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Tuition-Free Global Learning</h1>
                         <p class="subtitle">Empowering your divine purpose without the burden of financial debt models. Accessible learning infrastructure for everyone.</p>
-                        <button class="btn-apply" onclick="showPage('apply')">Claim Your Scholarship</button>
+                        <button class="btn-apply" onclick="showPage('financial-aid')">Claim Your Scholarship</button>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Carousel Tracking Controls Buttons -->
             <button class="hero-nav-btn prev" id="heroPrevBtn" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
             <button class="hero-nav-btn next" id="heroNextBtn" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
             <div class="hero-dots" id="heroDotsContainer"></div>
         </section>
 
-        <!-- INSTITUTIONAL PARTNERSHIPS TRUST BANNER SECTION -->
+        <!-- ========================================== -->
+        <!--  DYNAMIC ROUTER TARGET (DOM REPLACEMENT)   -->
+        <!-- ========================================== -->
+        <section id="dynamicAppContentContainer" class="dynamic-view-section">
+            <!-- JavaScript prints current active page view template matrices directly here -->
+        </section>
+
+        <!-- INSTITUTIONAL PARTNERSHIPS BANNER -->
         <section class="institutional-partnerships-section">
             <div class="partnerships-header">
                 <span class="partnerships-badge">Institutional Alliance</span>
                 <h2>Strategic Alliances & Foundations</h2>
                 <p>Our academic frameworks and global outreach infrastructures are backed and empowered by leading philanthropic networks committed to educational accessibility.</p>
             </div>
-            
             <div class="partnerships-grid">
                 <div class="partner-card-premium">
                     <div class="partner-icon-wrapper">
@@ -829,12 +900,11 @@
     </main>
 
     <!-- ========================================== -->
-    <!--        STRUCTURED INSTITUTIONAL FOOTER      -->
+    <!--  OPTIMIZED COMPACT FOOTER SYSTEM MATRIX   -->
     <!-- ========================================== -->
     <footer class="institutional-footer">
         <div class="footer-grid-container">
             
-            <!-- Column 1: Institutional Core Info -->
             <div class="footer-column brand-info">
                 <h3>The Living Oracles Global Institute</h3>
                 <p class="brand-tagline">Empowering global leaders via advanced asynchronous academic matrix models.</p>
@@ -843,7 +913,6 @@
                 </div>
             </div>
 
-            <!-- Column 2: Governance & About -->
             <div class="footer-column">
                 <h4>Institutional Governance</h4>
                 <ul>
@@ -856,7 +925,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3: Academics & Admissions -->
             <div class="footer-column">
                 <h4>Academics & Entry</h4>
                 <ul>
@@ -864,13 +932,11 @@
                     <li><a href="#" onclick="showPage('catalog')">Academic Catalog</a></li>
                     <li><a href="#" onclick="showPage('prospectus')">Prospectus</a></li>
                     <li><a href="#" onclick="showPage('programs')">Our Programs</a></li>
-                    <li><a href="#" onclick="showPage('apply')">Apply Now</a></li>
                     <li><a href="#" onclick="showPage('handbook')">Student Handbook</a></li>
                     <li><a href="#" onclick="showPage('rubric')">Grading Rubric</a></li>
                 </ul>
             </div>
 
-            <!-- Column 4: Infrastructure & Learning Resources -->
             <div class="footer-column">
                 <h4>Digital Infrastructure</h4>
                 <ul>
@@ -884,7 +950,6 @@
                 </ul>
             </div>
 
-            <!-- Column 5: Verification, Fees & Affiliation -->
             <div class="footer-column">
                 <h4>Verification & Capital</h4>
                 <ul>
@@ -897,7 +962,6 @@
                 </ul>
             </div>
 
-            <!-- Column 6: Continuing Education Frameworks -->
             <div class="footer-column">
                 <h4>Continuing Tracks</h4>
                 <ul>
@@ -910,7 +974,6 @@
 
         </div>
 
-        <!-- Bottom Legal Row & Social Channels -->
         <div class="footer-bottom-bar">
             <div class="footer-legal-links">
                 <a href="#" onclick="showPage('terms')">Terms</a>
@@ -934,25 +997,308 @@
     </footer>
 
     <!-- ========================================== -->
-    <!--            JAVASCRIPT CONTROLLERS          -->
+    <!--     ROUTER CONTENT MATRIX CLIENT JAVASCRIPT -->
     <!-- ========================================== -->
     <script>
-        // Placeholder router logic for handling menu target destinations
+        // Dictionary mapping for all 35 operational views
+        const PAGE_CONTENT_REGISTRY = {
+            home: `
+                <h2>Welcome to The Living Oracles Global Institute</h2>
+                <p>We provide advanced academic structures built to cultivate exceptional global leaders, developers, administrators, and ministers. Through our partnership models, we are empowering student potentials on an unprecedented scale.</p>
+                <div class="content-card-grid">
+                    <div class="content-inner-card">
+                        <h3><i class="fas fa-graduation-cap" style="color:#b68b5b;"></i> Elite Academics</h3>
+                        <p>Fully conceptualized asynchronous framework curriculum tracking standard academic paradigms.</p>
+                    </div>
+                    <div class="content-inner-card">
+                        <h3><i class="fas fa-globe" style="color:#b68b5b;"></i> Global Alliance</h3>
+                        <p>Backed entirely by international foundation pipelines to eliminate student financial roadblocks.</p>
+                    </div>
+                </div>
+            `,
+            about: `
+                <h2>About Our Institute</h2>
+                <p>The Living Oracles Global Institute stands as a premier educational establishment geared towards equipping the modern student for immediate community and corporate impact. Combining theological precision with technological and vocational brilliance, we empower visionaries across all continents.</p>
+                <h3>Our Vision Matrix</h3>
+                <p>To deliver flawless, borderless digital academic pathways that foster values, develop administrative talents, and establish profound domain-specific expertise without crushing student financial capability.</p>
+            `,
+            faith: `
+                <h2>Statement of Faith</h2>
+                <p>Our foundation rests securely upon universal, time-tested biblical directives. We actively promote spiritual growth alongside unparalleled academic excellence.</p>
+                <ul>
+                    <li>The complete inspiration and infallibility of Sacred Scripture.</li>
+                    <li>The divine Trinity manifesting as Father, Son, and Holy Ghost.</li>
+                    <li>The optimization of individual purpose through faithful service, moral discipline, and intellectual advancement.</li>
+                </ul>
+            `,
+            integrity: `
+                <h2>Institutional Integrity Statement</h2>
+                <p>Academic rigor demands the absolute enforcement of ethical protocols. The Living Oracles Global Institute mandates transparent research methodologies, independent evaluation matrix designs, and complete compliance regarding professional development tracking models.</p>
+                <blockquote>Plagiarism, misrepresentation, and operational bad faith are completely irreconcilable with our institution's charter.</blockquote>
+            `,
+            difference: `
+                <h2>Our Difference</h2>
+                <p>Unlike classic structural systems burdened with heavy corporate operational debt overheads passed on to students, our entire global learning engine operates under specialized donor capitalization structures.</p>
+                <ul>
+                    <li><strong>Zero-Tuition Pipelines:</strong> Access world-class certifications without premium bills.</li>
+                    <li><strong>Flexible Frameworks:</strong> Completely asynchronous modules designed for full-time working professionals.</li>
+                </ul>
+            `,
+            accreditation: `
+                <h2>Accreditation & Partnership</h2>
+                <p>We are validated through strategic collaborative linkages with international governing commissions, cross-border religious validation panels, and technology alliances. Our credentials represent global proof of competence.</p>
+                <p>Backed heavily by the <strong>ADUSEI Foundation</strong>, our educational deliverables scale directly into institutional validity pathways across both corporate and ministerial domains.</p>
+            `,
+            testimonials: `
+                <h2>Our Student’s Testimonial</h2>
+                <div class="content-card-grid">
+                    <div class="content-inner-card">
+                        <p>"The Church Administration track completely re-architected my organizational mindset. Our operational output expanded exponentially."</p>
+                        <strong>- Pastor E. Mensah</strong>
+                    </div>
+                    <div class="content-inner-card">
+                        <p>"Studying data science and AI through the virtual sandbox frameworks gave me instant competitive advantage in tech."</p>
+                        <strong>- Dr. Sarah O.</strong>
+                    </div>
+                </div>
+            `,
+            awards: `
+                <h2>Awards & Institutional Laurels</h2>
+                <p>Our commitment to borderless digital pedagogy has earned accolades from global education networks and philanthropic oversight syndicates alike.</p>
+                <ul>
+                    <li>Excellence in Asynchronous Learning Infrastructure Award (2025)</li>
+                    <li>Global Humanitarian Education Subsidization Laurel (2026)</li>
+                </ul>
+            `,
+            apply: `
+                <h2>Main Application Form</h2>
+                <p>Take the definitive leap towards realizing your higher potential. Please supply accurate bio-data details below to request portfolio review.</p>
+                <form onsubmit="event.preventDefault(); alert('Application Received securely into verification pipeline.');">
+                    <div class="app-form-group">
+                        <label>Full Legal Name</label>
+                        <input type="text" placeholder="John Doe" required />
+                    </div>
+                    <div class="app-form-group">
+                        <label>Select Target Track</label>
+                        <select>
+                            <option>Certificate in Church Administration</option>
+                            <option>Introduction to Artificial Intelligence</option>
+                            <option>Advanced Pastoral Leadership Matrix</option>
+                        </select>
+                    </div>
+                    <button class="app-form-submit">Transmit Portfolio Details</button>
+                </form>
+            `,
+            'pmca-apply': `
+                <h2>PMCA Application Form</h2>
+                <p>Specialized entrance portal intended exclusively for applicants seeking admittance into the Professional Ministry Care Certification Track.</p>
+                <div class="app-form-group"><label>Current Ministerial Affiliation</label><input type="text" /></div>
+                <button class="app-form-submit">Submit PMCA Request</button>
+            `,
+            'rccg-apply': `
+                <h2>RCCG MOCM Application Form</h2>
+                <p>Dedicated application pathway synchronized directly with the Redeemed Christian Church of God Digital Ministry Matrix Initiatives.</p>
+                <div class="app-form-group"><label>Parish / Province Code</label><input type="text" /></div>
+                <button class="app-form-submit">Validate Entry Credentials</button>
+            `,
+            'doctorate-apply': `
+                <h2>Doctorate Application Form</h2>
+                <p>Advanced entry framework requiring academic portfolios, letters of commendation, and structured thesis proposal briefs.</p>
+                <div class="app-form-group"><label>Prior Master's Degree Title</label><input type="text" /></div>
+                <button class="app-form-submit">Initiate Doctoral Review</button>
+            `,
+            'financial-aid': `
+                <h2>Financial Aid & Scholarship Subsidies</h2>
+                <p>Through our operational alliance with the <strong>ADUSEI Foundation</strong>, standard tuition allocations are covered completely. Students may explore the structural guidelines for incidental technology infrastructure provisioning allowances here.</p>
+            `,
+            programs: `
+                <h2>All Programs</h2>
+                <p>Explore our extensive list of academic opportunities, bridging theological, administrative, and technological domains.</p>
+                <div class="content-card-grid">
+                    <div class="content-inner-card"><h3>Ministry Tracks</h3><p>Comprehensive Biblical studies, pastoral care, and church governance modules.</p></div>
+                    <div class="content-inner-card"><h3>Business & Tech</h3><p>AI integrations, data literacy, and organizational administration maps.</p></div>
+                </div>
+            `,
+            'cert-courses': `
+                <h2>Certificate Courses</h2>
+                <p>Rapid deployment competencies built to provide certified masteries in specific industrial, technical, and operational sub-sectors within short evaluation timelines.</p>
+            `,
+            'church-admin': `
+                <h2>Certificate in Church Administration</h2>
+                <p>Master the underlying operational metrics governing church assets, staffing layouts, compliance paradigms, and cross-border expansion infrastructure management frameworks.</p>
+            `,
+            'business-admin': `
+                <h2>Certificate in Business Administration - BOLT Track</h2>
+                <p>Business Operations Leadership & Technology (BOLT) equips modern entrepreneurs with foundational enterprise management toolkits, supply chain metrics, and modern analytics strategies.</p>
+            `,
+            'digital-ministry': `
+                <h2>Certificate in Digital Ministry - MOCM</h2>
+                <p>A cutting-edge program focused on digital brand projection, global communication design, media ecosystem management, and remote congregation community care paradigms.</p>
+            `,
+            'oil-gas': `
+                <h2>Oil & Gas Finance Matrix</h2>
+                <p>Advanced resource monetization studies, compliance frameworks, exploration funding modeling, and capital management guidelines in the modern energy landscape.</p>
+            `,
+            'intro-ai': `
+                <h2>Introduction to Artificial Intelligence</h2>
+                <p>Demystifying complex computing parameters. Students explore neural networks, large language model implementations, prompt mechanics, and professional data workflows.</p>
+            `,
+            certifications: `
+                <h2>Professional Certifications</h2>
+                <p>Rigorous, milestone-driven technical validation processes confirming industrial domain capability across organizational governance frameworks.</p>
+            `,
+            'faith-foundations': `
+                <h2>Faith Foundations</h2>
+                <p>Essential theological modules detailing deep doctrinal architecture, history of apologetics, and spiritual path development tracking.</p>
+            `,
+            associate: `
+                <h2>Associate Programs</h2>
+                <p>Two-year comprehensive foundational pathways mapping out academic research frameworks across a wide variety of interdisciplinary fields.</p>
+            `,
+            masters: `
+                <h2>Masters Programs</h2>
+                <p>Advanced postgraduate leadership studies designed to build deep research capability, organizational mastery, and field analysis competencies.</p>
+            `,
+            doctorate: `
+                <h2>Doctorate Programs</h2>
+                <p>Our highest echelon of academic distinction. Demands high-level strategic research, global defense matrices, and extensive peer-reviewed dissertation execution.</p>
+            `,
+            contact: `
+                <h2>Contact Our Support Network</h2>
+                <p>Our international communication desk stays constantly prepared to address your operational and administrative inquiries.</p>
+                <p><strong>Email Communications:</strong> registrar@livingoraclesinstitute.edu</p>
+                <p><strong>Support Ticket Dispatch:</strong> Expect answers within standard 24-hour windows.</p>
+            `,
+            'moodle-nav': `
+                <h2>Moodle Navigation Framework</h2>
+                <p>Maximize your learning throughput by understanding our asynchronous virtual architecture. Learn to track your modules, post to forums, and upload assignment files cleanly.</p>
+            `,
+            'moodle-mobile': `
+                <h2>Moodle Mobile Learning Suite</h2>
+                <p>Take your education with you anywhere. Download the official student app, target our server endpoint configurations, and download complete coursework for offline completion.</p>
+            `,
+            'student-dashboard': `
+                <h2>Student Profile Dashboard Portal</h2>
+                <p>Secure administrative check-in module allowing real-time tracking of cumulative grade-point metrics, registration milestones, and structural tracking histories.</p>
+            `,
+            achievement: `
+                <h2>Student Achievement Report</h2>
+                <p>Our comprehensive metrics tracking system monitors institutional outcomes, highlighting student completion velocities, career placements, and ministerial fruitfulness metrics.</p>
+            `,
+            catalog: `
+                <h2>Academic Catalog</h2>
+                <p>Detailed institutional roadmap itemizing full credit-hour mappings, course prerequisite trees, and descriptive syllabi for all registered pathways.</p>
+            `,
+            prospectus: `
+                <h2>Institutional Prospectus</h2>
+                <p>A comprehensive overview of campus culture, operational expectations, strategic goals, and standard program tracking timelines for prospective students.</p>
+            `,
+            handbook: `
+                <h2>Student Handbook</h2>
+                <p>The definitive regulatory guidebook outlining student behavioral covenants, standard honor codes, examination procedures, and grievance pathways.</p>
+            `,
+            rubric: `
+                <h2>Grading Rubric Matrix</h2>
+                <p>Clear criteria maps defining qualitative performance indicators across written research essays, practical code execution, and theological defense arguments.</p>
+            `,
+            library: `
+                <h2>Online Digital Library Core</h2>
+                <p>A world-class digital repository offering instant access to thousands of theological journals, data science publications, and business leadership e-books.</p>
+            `,
+            calendar: `
+                <h2>Academic Calendar</h2>
+                <p>Stay aligned with active term starting points, assignment drop deadlines, semester intermissions, and formal virtual convocation windows.</p>
+            `,
+            'tech-req': `
+                <h2>Technology Requirements</h2>
+                <p>To access our asynchronous platform seamlessly, students require modern internet browsers, minimum network speeds, and basic document formatting tools.</p>
+            `,
+            'how-to-learn': `
+                <h2>How to Learn Successfully</h2>
+                <p>Tips for mastering self-paced education: schedule dedicated study slots, participate in discussion boards, and implement systematic study breaks.</p>
+            `,
+            assessment: `
+                <h2>Purpose Assessment Portal</h2>
+                <p>An interactive screening diagnostic designed to align your innate talents and long-term career goals with the optimal academic path.</p>
+            `,
+            blog: `
+                <h2>Institutional Blog</h2>
+                <p>Stay informed with fresh editorial essays, research roundups, and special announcements straight from our faculty leadership.</p>
+            `,
+            faq: `
+                <h2>FAQ Portal</h2>
+                <p>Clear, direct answers regarding registration pathways, certification timeframes, and platform technical issues.</p>
+            `,
+            verify: `
+                <h2>Verify Certificate Validity</h2>
+                <p>Enter any digital credential serial number to instantly cross-reference our global database ledger for security confirmation.</p>
+            `,
+            payments: `
+                <h2>Payments Gateways</h2>
+                <p>Secure configurations for managing processing fees associated with special printed graduation items, physical transcript delivery, and optional certifications.</p>
+            `,
+            fees: `
+                <h2>Fees Structural Maps</h2>
+                <p>A completely transparent breakdown confirming our zero-tuition guarantee, alongside standard costs for premium physical documentation options.</p>
+            `,
+            partnering: `
+                <h2>Partner Affiliation Plans</h2>
+                <p>Explore opportunities for local churches, tech corporate offices, and global ministries to establish accredited learning nodes within our system.</p>
+            `,
+            'agent-form': `
+                <h2>Marketing Agent Form</h2>
+                <p>Apply to serve as an accredited regional institutional representative, helping to expand access to high-quality education within your community.</p>
+            `,
+            'webinar-certs': `
+                <h2>Google Webinar Certificates</h2>
+                <p>Integration tracks pathing student webinar attendance histories into specialized credential configurations across multiple operational fields.</p>
+            `,
+            'usd-certs': `
+                <h2>USD Sample Certificates</h2>
+                <p>Review standard physical presentation layouts, official watermarks, and verification markers used on our formal international certificate printings.</p>
+            `,
+            'pmi-pdus': `
+                <h2>PMI PDUs Tracks</h2>
+                <p>Earn standard Professional Development Units aligned with international Project Management Institute continuous education guidelines.</p>
+            `,
+            others: `
+                <h2>Other Frameworks</h2>
+                <p>Additional interdisciplinary partnerships, non-traditional educational pathways, and community engagement models currently supported by our global network.</p>
+            `,
+            terms: `<h2>Terms of Service</h2><p>Legal parameters regulating the use of our educational systems, intellectual asset property, and institutional services.</p>`,
+            disclaimer: `<h2>Disclaimer</h2><p>Official notice confirming operational boundaries, external program linkages, and independent employment placement expectations.</p>`,
+            privacy: `<h2>Privacy Policy</h2><p>Complete data security frameworks detailing how user profiles, performance metrics, and transaction details are securely processed.</p>`,
+            'terms-conditions': `<h2>Terms and Conditions</h2><p>The definitive contract parameters binding student enrolment actions to official institutional performance tracks.</p>`
+        };
+
+        // Render target engine hook
         function showPage(pageId) {
-            console.log("Navigating framework target destination container location to:", pageId);
-            // If smartphone navigation panel is open, close it instantly after a link is tapped
+            const container = document.getElementById('dynamicAppContentContainer');
+            if (PAGE_CONTENT_REGISTRY[pageId]) {
+                container.innerHTML = PAGE_CONTENT_REGISTRY[pageId];
+                console.log("Dynamically rendered view frame location:", pageId);
+            } else {
+                container.innerHTML = `<h2>View Structure Error</h2><p>Target content mapping layout parameter template missing inside active registry.</p>`;
+            }
+            
+            // Auto close mobile drawer if open
             const navMenuLinks = document.getElementById('navMenuLinks');
-            if (navMenuLinks.classList.contains('mobile-open')) {
+            if (navMenuLinks && navMenuLinks.classList.contains('mobile-open')) {
                 navMenuLinks.classList.remove('mobile-open');
             }
+            
+            // Scroll neatly to view window
+            container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         // ===== INTERACTIVE DEVICE DRAWER TOGGLE ENGINE =====
         document.addEventListener('DOMContentLoaded', function() {
+            // Render home view by default on load
+            showPage('home');
+
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const navMenuLinks = document.getElementById('navMenuLinks');
             
-            // Intercept three-line menu toggle interaction event 
             if (mobileMenuBtn && navMenuLinks) {
                 mobileMenuBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
@@ -960,7 +1306,6 @@
                 });
             }
 
-            // Expand submenus when tapped in mobile portrait viewport mode
             const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
             dropdownTriggers.forEach(trigger => {
                 trigger.addEventListener('click', function(e) {
@@ -973,7 +1318,6 @@
                 });
             });
 
-            // Auto close mobile tracking overlay panel if body space clicked outside drawer boundaries
             document.addEventListener('click', function() {
                 if (navMenuLinks && navMenuLinks.classList.contains('mobile-open')) {
                     navMenuLinks.classList.remove('mobile-open');
@@ -981,7 +1325,7 @@
             });
         });
 
-        // ===== HERO CAROUSEL ENGINE CONTEXT INJECTION =====
+        // ===== HERO CAROUSEL ENGINE MECHANICS =====
         document.addEventListener('DOMContentLoaded', function() {
             const heroSlides = document.querySelectorAll('.hero-slide');
             const dotsContainer = document.getElementById('heroDotsContainer');
@@ -990,7 +1334,6 @@
             let currentHeroIndex = 0;
             let heroInterval;
 
-            // Dynamically build structural tracking dots for all 6 slides
             heroSlides.forEach((_, idx) => {
                 const dot = document.createElement('div');
                 dot.className = 'hero-dot' + (idx === 0 ? ' active' : '');
@@ -1007,39 +1350,20 @@
             function goToHeroSlide(idx) {
                 heroSlides[currentHeroIndex].classList.remove('active');
                 dots[currentHeroIndex].classList.remove('active');
-                
                 currentHeroIndex = (idx + heroSlides.length) % heroSlides.length;
-                
                 heroSlides[currentHeroIndex].classList.add('active');
                 dots[currentHeroIndex].classList.add('active');
             }
 
-            function nextHeroSlide() {
-                goToHeroSlide(currentHeroIndex + 1);
-            }
-
-            function prevHeroSlide() {
-                goToHeroSlide(currentHeroIndex - 1);
-            }
+            function nextHeroSlide() { goToHeroSlide(currentHeroIndex + 1); }
+            function prevHeroSlide() { goToHeroSlide(currentHeroIndex - 1); }
 
             if (nextBtn && prevBtn) {
-                nextBtn.addEventListener('click', () => {
-                    clearInterval(heroInterval);
-                    nextHeroSlide();
-                    startHeroAutoplay();
-                });
-                prevBtn.addEventListener('click', () => {
-                    clearInterval(heroInterval);
-                    prevHeroSlide();
-                    startHeroAutoplay();
-                });
+                nextBtn.addEventListener('click', () => { clearInterval(heroInterval); nextHeroSlide(); startHeroAutoplay(); });
+                prevBtn.addEventListener('click', () => { clearInterval(heroInterval); prevHeroSlide(); startHeroAutoplay(); });
             }
 
-            function startHeroAutoplay() {
-                // Runs seamless image loop cycles every 6 seconds
-                heroInterval = setInterval(nextHeroSlide, 6000);
-            }
-
+            function startHeroAutoplay() { heroInterval = setInterval(nextHeroSlide, 6000); }
             startHeroAutoplay();
         });
     </script>
