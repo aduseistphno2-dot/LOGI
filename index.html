@@ -41,7 +41,7 @@
         }
 
         /* ========================================== */
-        /*   DYNAMIC CONTEXTUAL HERO WITH FIXED NAV   */
+        /*   DYNAMIC CONTEXTUAL HERO WITH INTEGRATED NAV */
         /* ========================================== */
         .hero-view-container {
             position: relative;
@@ -56,7 +56,7 @@
 
         /* Homepage Slide Sizing Frame */
         .hero-view-container.homepage-mode {
-            height: 620px;
+            height: 650px;
         }
 
         /* Reduced Dynamic Subpage Sizing Frame */
@@ -67,38 +67,30 @@
         }
 
         /* ========================================== */
-        /*  INTEGRATED NAVIGATION LAYER (INSIDE HERO) */
+        /*  INTEGRATED NAVIGATION LAYER (PREVIOUS LOOK)*/
         /* ========================================== */
         .hero-integrated-nav {
             position: relative;
             width: 100%;
-            height: 110px;
+            height: 90px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2.5rem;
+            padding: 0 2rem;
             z-index: 100;
-            background: rgba(26, 43, 56, 0.4);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Enforce a consistent solid dark look when in subpage mode */
-        .subpage-mode .hero-integrated-nav {
-            background: rgba(17, 30, 39, 0.6);
+            background: transparent; /* Removed the heavy backdrop blur box look */
         }
 
         .nav-logo-stack {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: center; /* Inline horizontal row layout like original top bar */
+            gap: 0.8rem;
             text-decoration: none;
             padding: 0.2rem 0;
         }
 
         .nav-logo-stack img {
-            height: 52px;
+            height: 50px;
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -110,12 +102,11 @@
 
         .nav-logo-title {
             color: #ffffff;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            margin-top: 0.3rem;
-            text-align: center;
+            font-size: 1.15rem; /* Matches the original layout's presentation style */
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            text-transform: none;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .nav-menu-links {
@@ -128,12 +119,13 @@
         }
 
         .nav-menu-links > li > a {
-            color: #cbd5e1;
+            color: #ffffff; /* Clean bright text contrasting against backgrounds */
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
             transition: color 0.3s ease;
             padding: 0.5rem 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .nav-menu-links > li > a:hover {
@@ -163,7 +155,8 @@
         .dropdown-menu {
             position: absolute;
             top: 100%;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
             background: #ffffff;
             box-shadow: 0 10px 25px rgba(0,0,0,0.15);
             border-radius: 8px;
@@ -173,7 +166,6 @@
             min-width: 280px;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(10px);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -185,6 +177,7 @@
             font-size: 0.9rem;
             font-weight: 500;
             transition: all 0.25s ease;
+            text-shadow: none !important;
         }
 
         .dropdown-menu li a:hover {
@@ -197,7 +190,7 @@
             .nav-dropdown:hover .dropdown-menu {
                 opacity: 1;
                 visibility: visible;
-                transform: translateY(0);
+                transform: translateX(-50%) translateY(0);
             }
             .nav-dropdown:hover .dropdown-trigger i {
                 transform: rotate(180deg);
@@ -210,6 +203,7 @@
             padding: 0.5rem 1.2rem !important;
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(182,139,91,0.25);
+            text-shadow: none !important;
         }
         .btn-nav-apply:hover {
             background: #fff !important;
@@ -219,8 +213,6 @@
         /* ========================================== */
         /*        DYNAMIC INTERACTIVE BODY TRACKER    */
         /* ========================================== */
-        
-        /* SUBPAGE CONTEXTUAL BOX STYLING */
         .subpage-hero-content {
             display: none;
             width: 100%;
@@ -230,7 +222,7 @@
             justify-content: center;
             text-align: center;
             color: #ffffff;
-            padding-bottom: 1.5rem;
+            padding-bottom: 2rem;
             animation: fadeIn 0.4s ease;
         }
 
@@ -297,7 +289,7 @@
             justify-content: center;
             text-align: center;
             color: #fff;
-            padding: 8rem 2rem 2rem; /* Added high top padding to avoid heading clash with nav */
+            padding: 7rem 2rem 2rem; 
         }
 
         .hero-slide.active {
@@ -317,7 +309,7 @@
         }
 
         .hero-content h1 {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1.2rem;
             line-height: 1.25;
@@ -325,7 +317,7 @@
         }
 
         .hero-content .subtitle {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             opacity: 0.92;
             max-width: 680px;
             margin: 0 auto 2.2rem;
@@ -755,6 +747,7 @@
                 font-size: 1.1rem;
                 padding: 0.6rem 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                text-shadow: none !important;
             }
 
             .dropdown-menu {
@@ -782,6 +775,7 @@
         @media (max-width: 640px) {
             .hero-view-container.homepage-mode { height: 580px; border-radius: 14px; }
             .hero-integrated-nav { padding: 0 1rem; }
+            .nav-logo-title { font-size: 0.95rem; }
             .subpage-title-display { font-size: 1.6rem; }
             .hero-content h1 { font-size: 1.85rem; }
             .hero-content .subtitle { font-size: 1rem; margin-bottom: 1.8rem; }
@@ -796,10 +790,10 @@
 
     <main class="container-wrapper">
         
-        <!-- CONTEXTUAL DYNAMIC HERO VIEWPORT LAYER (NAV INTEGRATED INSIDE) -->
+        <!-- CONTEXTUAL DYNAMIC HERO VIEWPORT LAYER -->
         <section class="hero-view-container homepage-mode" id="dynamicHeroContainer">
             
-            <!-- FIXED HEADER EMBEDDED DIRECTLY INSIDE HERO WINDOW -->
+            <!-- CLEAN, SPACED OUT NAV EMBEDDED STRUCTURALLY DIRECTLY INSIDE THE HERO WINDOW -->
             <header class="hero-integrated-nav">
                 <a href="#" class="nav-logo-stack" onclick="showPage('home')">
                     <img src="https://i.imgur.com/kkE49KM.png" alt="Living Oracles Global Institute Logo">
@@ -884,7 +878,7 @@
             <!-- HOMEPAGE SLIDESHOW ENGINE -->
             <div class="hero-slides" id="homepageSlidesWrapper">
                 <!-- Slide 1 -->
-                <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide active" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Earn a High-Quality Education</h1>
                         <p class="subtitle">Join thousands of global leaders accelerating their purpose with structured, professional academic programs.</p>
@@ -892,7 +886,7 @@
                     </div>
                 </div>
                 <!-- Slide 2 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1431540015161-0bf868a2d407?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Certificate in Church Administration</h1>
                         <p class="subtitle">Master organizational management, dynamic leadership frameworks, and strategic operational compliance for modern ministry structures.</p>
@@ -900,7 +894,7 @@
                     </div>
                 </div>
                 <!-- Slide 3 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Global Tech Academy Matrix</h1>
                         <p class="subtitle">Dive into AI fundamentals, advanced data science modules, and digital innovation strategies built for global tech frontiers.</p>
@@ -908,7 +902,7 @@
                     </div>
                 </div>
                 <!-- Slide 4 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Virtual Robotics & Engineering</h1>
                         <p class="subtitle">Learn through immersive, browser-based simulator frameworks designed to cultivate hands-on development engineering talents.</p>
@@ -916,7 +910,7 @@
                     </div>
                 </div>
                 <!-- Slide 5 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Digital Entrepreneurship Strategy</h1>
                         <p class="subtitle">Build, launch, and scale online ecosystems. Turn technical acumen into self-sustaining enterprises with global footprints.</p>
@@ -924,7 +918,7 @@
                     </div>
                 </div>
                 <!-- Slide 6 -->
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
+                <div class="hero-slide" style="background-image: linear-gradient(rgba(26, 43, 56, 0.82), rgba(26, 43, 56, 0.88)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop');">
                     <div class="hero-content">
                         <h1>Tuition-Free Global Learning</h1>
                         <p class="subtitle">Empowering your divine purpose without the burden of financial debt models. Accessible learning infrastructure for everyone.</p>
@@ -1198,12 +1192,10 @@
             allDynamicPages.forEach(page => page.classList.remove('page-active'));
 
             if (pageId === 'home') {
-                // Revert hero container settings back to home carousel styles
                 heroContainer.className = "hero-view-container homepage-mode";
                 homeMainAdditions.style.display = 'block';
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } else {
-                // Transform hero system box into the custom dynamic reduced title bar
                 heroContainer.className = "hero-view-container subpage-mode";
                 homeMainAdditions.style.display = 'none';
                 
