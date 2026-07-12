@@ -1,1278 +1,962 @@
 <!DOCTYPE html>
-<html class="html" lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Oracles Global Institute - Free Online Theological & Leadership Education</title>
+    <meta name="description" content="Living Oracles Global Institute (LOGI) offers tuition-free online theological, business, and leadership education.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Living Oracles Global Institute - Free Online Theological & Leadership Education</title>
-	<meta name="description" content="Living Oracles Global Institute (LOGI) offers tuition-free online theological, business, and leadership education. Join thousands of global leaders transforming their ministries and careers." />
-	<link rel="canonical" href="https://livingoracles.org/" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Living Oracles Global Institute - Free Online Theological Education" />
-	<meta property="og:description" content="Join thousands of global leaders earning high-quality tuition-free education in theology, business, and leadership." />
-	<meta property="og:url" content="https://livingoracles.org/" />
-	<meta property="og:site_name" content="Living Oracles Global Institute" />
-	<meta property="article:modified_time" content="2026-01-22T19:09:24+00:00" />
-	<meta property="og:image" content="/wp-content/uploads/2020/08/faith_leadership_university-768x512.png" />
-	<meta name="twitter:card" content="summary_large_image" />
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #fcfbfa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
 
-	<link rel='dns-prefetch' href='//static.addtoany.com' />
-	<link rel='dns-prefetch' href='//translate.google.com' />
-	<link rel='dns-prefetch' href='//www.googletagmanager.com' />
-	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-	<link rel="alternate" type="application/rss+xml" title="Living Oracles Global Institute &raquo; Feed" href="/feed/" />
-	<link rel="alternate" type="application/rss+xml" title="Living Oracles Global Institute &raquo; Comments Feed" href="/comments/feed/" />
+        /* HEADER */
+        .header {
+            background: #1a2b38;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-	<style id="wp-img-auto-sizes-contain-inline-css">
-		img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
-	</style>
-	
-	<link rel='stylesheet' id='embedpress-css-css' href='/wp-content/plugins/embedpress/assets/css/embedpress.css?ver=1781694950' media='all' />
-	<link rel='stylesheet' id='embedpress-blocks-style-css' href='/wp-content/plugins/embedpress/assets/css/blocks.build.css?ver=1781694950' media='all' />
-	
-	<style id="wp-emoji-styles-inline-css">
-		img.wp-smiley, img.emoji {
-			display: inline !important;
-			border: none !important;
-			box-shadow: none !important;
-			height: 1em !important;
-			width: 1em !important;
-			margin: 0 0.07em !important;
-			vertical-align: -0.1em !important;
-			background: none !important;
-			padding: 0 !important;
-		}
-	</style>
-	
-	<style id="classic-theme-styles-inline-css">
-		.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-	</style>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
 
-	<link rel='stylesheet' id='dashicons-css' href='/wp-includes/css/dashicons.min.css?ver=7.0.1' media='all' />
-	<link rel='stylesheet' id='font-awesome-css' href='/wp-content/themes/oceanwp/assets/fonts/fontawesome/css/all.min.css?ver=6.7.2' media='all' />
-	<link rel='stylesheet' id='simple-line-icons-css' href='/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' media='all' />
-	<link rel='stylesheet' id='oceanwp-style-css' href='/wp-content/themes/oceanwp/assets/css/style.min.css?ver=4.1.6' media='all' />
-	
-	<style id="oceanwp-style-inline-css">
-		div.wpforms-container-full .wpforms-form input[type=submit]:hover,
-		div.wpforms-container-full .wpforms-form input[type=submit]:focus,
-		div.wpforms-container-full .wpforms-form input[type=submit]:active,
-		div.wpforms-container-full .wpforms-form button[type=submit]:hover,
-		div.wpforms-container-full .wpforms-form button[type=submit]:focus,
-		div.wpforms-container-full .wpforms-form button[type=submit]:active,
-		div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
-		div.wpforms-container-full .wpforms-form .wpforms-page-button:active,
-		div.wpforms-container-full .wpforms-form .wpforms-page-button:focus {
-			border: none;
-		}
-	</style>
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: #b68b5b;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 800;
+            color: #fff;
+        }
 
-	<link rel='stylesheet' id='oceanwp-google-font-roboto-css' href='//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&#038;subset=latin&#038;display=swap&#038;ver=7.0.1' media='all' />
-	<link rel='stylesheet' id='oceanwp-google-font-oswald-css' href='//fonts.googleapis.com/css?family=Oswald:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&#038;subset=latin&#038;display=swap&#038;ver=7.0.1' media='all' />
+        .logo-text {
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+        }
 
-	<link rel='stylesheet' id='elementor-frontend-css' href='/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-heading-css' href='/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-icon-list-css' href='/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='elementor-icons-css' href='/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.49.0' media='all' />
-	<link rel='stylesheet' id='elementor-post-213-css' href='/wp-content/uploads/elementor/css/post-213.css?ver=1783549824' media='all' />
-	<link rel='stylesheet' id='font-awesome-5-all-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='font-awesome-4-shim-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='e-animation-slideInLeft-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-divider-css' href='/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='e-animation-zoomInLeft-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/zoomInLeft.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='e-animation-zoomIn-css' href='/wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='swiper-css' href='/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
-	<link rel='stylesheet' id='e-swiper-css' href='/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-image-css' href='/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-spacer-css' href='/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='widget-icon-box-css' href='/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=4.1.3' media='all' />
-	<link rel='stylesheet' id='elementor-post-12-css' href='/wp-content/uploads/elementor/css/post-12.css?ver=1783549824' media='all' />
-	<link rel='stylesheet' id='elementor-post-28032-css' href='/wp-content/uploads/elementor/css/post-28032.css?ver=1783549824' media='all' />
+        .logo-text span {
+            color: #b68b5b;
+            display: block;
+            font-size: 12px;
+            font-weight: 400;
+        }
 
-	<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1743209018' media='all' />
-	<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1743209002' media='all' />
-	<link rel='stylesheet' id='elementor-icons-shared-0-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' media='all' />
-	<link rel='stylesheet' id='elementor-icons-fa-regular-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' media='all' />
-	<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' media='all' />
-	<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' media='all' />
-	<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=3.10.01' media='all' />
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-	<style id="pmpro_colors">
-		:root {
-			--pmpro--color--base: #ffffff;
-			--pmpro--color--contrast: #222222;
-			--pmpro--color--accent: #0c3d54;
-			--pmpro--color--accent--variation: hsl(199,75%,28.5%);
-			--pmpro--color--border--variation: hsl(0,0%,91%);
-		}
-	</style>
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
 
-	<noscript>
-		<style>.woocommerce-product-gallery{ opacity: 1 !important; }</style>
-	</noscript>
+        .nav-links a:hover {
+            color: #b68b5b;
+        }
 
-	<meta name="generator" content="Elementor 4.1.3; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+        .btn-apply {
+            background: #b68b5b;
+            color: #fff !important;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
 
-	<style>
-		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
-		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
-			background-image: none !important;
-		}
-		@media screen and (max-height: 1024px) {
-			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
-				background-image: none !important;
-			}
-		}
-		@media screen and (max-height: 640px) {
-			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
-			.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
-				background-image: none !important;
-			}
-		}
-	</style>
+        .btn-apply:hover {
+            background: #8f6e47 !important;
+        }
 
-	<link rel="icon" href="/wp-content/uploads/2020/07/cropped-Favicon-Faith-32x32.png" sizes="32x32" />
-	<link rel="icon" href="/wp-content/uploads/2020/07/cropped-Favicon-Faith-192x192.png" sizes="192x192" />
-	<link rel="apple-touch-icon" href="/wp-content/uploads/2020/07/cropped-Favicon-Faith-180x180.png" />
-	<meta name="msapplication-TileImage" content="/wp-content/uploads/2020/07/cropped-Favicon-Faith-270x270.png" />
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
 
-	<style id="wp-custom-css">
-		button#wpforms-submit-4{max-width:100%;width:100%}
-		button#wpforms-submit-4:hover{border:none}
-		.menu-highlight{color:#ffffff;background:#b68b5b;border-color:#b68b5b;border-style:solid;border-width:2px;border-radius:5px;padding:0 0;transition:all 0.2s linear;line-height:115x}
-		.menu-highlight a{color:#b68b5b}
-		.menu-highlight:hover{color:#ffffff;background:#b68b5b;border-color:#1a2b38}
-		li.menu-highlight:hover a{color:#b68b5b}
-		.menu-highlight:active{border-radius:22px}
-		#menu-footer-1,#menu-footer,#menu-footer-3{list-style:none}
-		#main>.tutor-wrap,#main .tutor-courses-wrap{padding-left:7%;padding-right:7%}
-		.pg-col{min-height:200px}
-		.tutor-fs-6.tutor-color-secondary{font-size:16px}
-		li.tutor-dashboard-menu-item.tutor-dashboard-menu-wishlist{display:none}
-		.tutor-fs-5{font-size:16px}
-		.tutor-fs-6{font-size:16px}
-		.tutor-fs-7{font-size:16px}
-		.tutor-alert.tutor-warning.tutor-mt-28{display:none}
-		.tutor-col-lg-6.tutor-col-xl-4.tutor-mb-16.tutor-mb-lg-32:nth-child(6){display:none}
-		.wpmtst-testimonial-heading.testimonial-heading{display:none}
-		#menu-main-menu >li.woo-menu-icon.wcmenucart-toggle-drop_down.bag-style.toggle-cart-widget{display:none !important}
-		#content >article >div >div >div.cart-collaterals >div >div >a{color:#ffffff !important}
-		#site-header-inner >div.oceanwp-mobile-menu-icon.clr.mobile-right >a.wcmenucart >span.wcmenucart-total,
-		#site-header-inner >div.oceanwp-mobile-menu-icon.clr.mobile-right >a.wcmenucart >span.wcmenucart-cart-icon{display:none !important}
-	</style>
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #fff;
+            border-radius: 2px;
+        }
 
-	<style id="sccss">
-		.tutor-assignment-evaluate-row .tutor-option-field input {
-			border: 1px solid #dcdfe5;
-			height: 50px;
-			padding: 0 0px;
-			border-radius: 4px;
-			width: 100px;
-			background-color: #fff;
-		}
-		.tutor-dashboard .tutor-dashboard-left-menu .tutor-dashboard-permalinks li.active a {
-			background-color: var(--tutor-color-primary);
-			color: #e76868;
-		}
-		#tutor-registration-wrap {
-			width: 100%;
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-			background: #f9f9f9;
-			border-radius: 8px;
-		}
-		.tutor-form-row {
-			display: flex;
-			justify-content: space-between;
-			margin-bottom: 15px;
-		}
-		.tutor-form-col-6 {
-			width: 48%;
-			display: flex;
-			flex-direction: column;
-		}
-		.tutor-form-col-12 {
-			width: 100%;
-		}
-		.tutor-form-group label {
-			font-weight: bold;
-			margin-bottom: 5px;
-		}
-		.tutor-form-group input,
-		.tutor-form-group select,
-		.tutor-form-group textarea {
-			width: 100%;
-			padding: 10px;
-			font-size: 16px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-		}
-		.tutor-btn-block {
-			width: 100%;
-			padding: 10px;
-			font-size: 16px;
-			font-weight: bold;
-			color: #fff;
-			background: #b68b5b;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-		}
-		.tutor-btn-block:hover {
-			background: #1a2b38;
-		}
-		@media (max-width: 768px) {
-			.tutor-form-row {
-				flex-direction: column;
-			}
-			.tutor-form-col-6 {
-				width: 100%;
-			}
-		}
-		#tutor-pro-social-authentication {
-			order: -1;
-			margin-bottom: 20px;
-		}
-		#tutor-registration-wrap {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-		}
-		#tutor-pro-social-authentication iframe {
-			width: 100% !important;
-			max-width: 300px;
-		}
-		#tutor-pro-social-authentication .tutor-d-flex {
-			justify-content: center;
-		}
-		.tutor-btn-google, 
-		.tutor-btn-twitter, 
-		.tutor-btn-facebook {
-			width: 100%;
-			max-width: 300px;
-			text-align: center;
-			margin-bottom: 10px;
-		}
-		.tutor-dc-button-group {
-			position: absolute;
-			right: 20px;
-			top: 410px;
-		}
-	</style>
+        /* MOBILE MENU */
+        .mobile-menu {
+            display: none;
+            background: #1a2b38;
+            padding: 20px 30px;
+            flex-direction: column;
+            gap: 12px;
+            border-top: 1px solid #2a3b48;
+        }
 
-	<style type="text/css">
-		.background-image-page-header-overlay{opacity:0.7;background-color:#b68b5b}
-		
-		/* Colors */
-		.woocommerce-MyAccount-navigation ul li a:before,
-		.woocommerce-checkout .woocommerce-info a,
-		.woocommerce-checkout #payment ul.payment_methods .wc_payment_method>input[type=radio]:first-child:checked+label:before,
-		.woocommerce-checkout #payment .payment_method_paypal .about_paypal,
-		.woocommerce ul.products li.product li.category a:hover,
-		.woocommerce ul.products li.product .button:hover,
-		.woocommerce ul.products li.product .product-inner .added_to_cart:hover,
-		.product_meta .posted_in a:hover,
-		.product_meta .tagged_as a:hover,
-		.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover,
-		.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
-		.woocommerce .oceanwp-grid-list a.active,
-		.woocommerce .oceanwp-grid-list a:hover,
-		.woocommerce .oceanwp-off-canvas-filter:hover,
-		.widget_shopping_cart ul.cart_list li .owp-grid-wrap .owp-grid a.remove:hover,
-		.widget_product_categories li a:hover ~ .count,
-		.widget_layered_nav li a:hover ~ .count,
-		.woocommerce ul.products li.product:not(.product-category) .woo-entry-buttons li a:hover,
-		a:hover,a.light:hover,
-		.theme-heading .text::before,
-		.theme-heading .text::after,
-		#top-bar-content >a:hover,
-		#top-bar-social li.oceanwp-email a:hover,
-		#site-navigation-wrap .dropdown-menu >li >a:hover,
-		#site-header.medium-header #medium-searchform button:hover,
-		.oceanwp-mobile-menu-icon a:hover,
-		.blog-entry.post .blog-entry-header .entry-title a:hover,
-		.blog-entry.post .blog-entry-readmore a:hover,
-		.blog-entry.thumbnail-entry .blog-entry-category a,
-		ul.meta li a:hover,
-		.dropcap,
-		.single nav.post-navigation .nav-links .title,
-		body .related-post-title a:hover,
-		body #wp-calendar caption,
-		body .contact-info-widget.default i,
-		body .contact-info-widget.big-icons i,
-		body .custom-links-widget .oceanwp-custom-links li a:hover,
-		body .custom-links-widget .oceanwp-custom-links li a:hover:before,
-		body .posts-thumbnails-widget li a:hover,
-		body .social-widget li.oceanwp-email a:hover,
-		.comment-author .comment-meta .comment-reply-link,
-		#respond #cancel-comment-reply-link:hover,
-		#footer-widgets .footer-box a:hover,
-		#footer-bottom a:hover,
-		#footer-bottom #footer-bottom-menu a:hover,
-		.sidr a:hover,
-		.sidr-class-dropdown-toggle:hover,
-		.sidr-class-menu-item-has-children.active >a,
-		.sidr-class-menu-item-has-children.active >a >.sidr-class-dropdown-toggle,
-		input[type=checkbox]:checked:before{color:#b68b5b}
-		
-		.woocommerce .oceanwp-grid-list a.active .owp-icon use,
-		.woocommerce .oceanwp-grid-list a:hover .owp-icon use,
-		.single nav.post-navigation .nav-links .title .owp-icon use,
-		.blog-entry.post .blog-entry-readmore a:hover .owp-icon use,
-		body .contact-info-widget.default .owp-icon use,
-		body .contact-info-widget.big-icons .owp-icon use{stroke:#b68b5b}
-		
-		.woocommerce div.product div.images .open-image,
-		.wcmenucart-details.count,
-		.woocommerce-message a,
-		.woocommerce-error a,
-		.woocommerce-info a,
-		.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
-		.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
-		.owp-product-nav li a.owp-nav-link:hover,
-		.woocommerce div.product.owp-tabs-layout-vertical .woocommerce-tabs ul.tabs li a:after,
-		.woocommerce .widget_product_categories li.current-cat >a ~ .count,
-		.woocommerce .widget_product_categories li.current-cat >a:before,
-		.woocommerce .widget_layered_nav li.chosen a ~ .count,
-		.woocommerce .widget_layered_nav li.chosen a:before,
-		#owp-checkout-timeline .active .timeline-wrapper,
-		.bag-style:hover .wcmenucart-cart-icon .wcmenucart-count,
-		.show-cart .wcmenucart-cart-icon .wcmenucart-count,
-		.woocommerce ul.products li.product:not(.product-category) .image-wrap .button,
-		input[type="button"],
-		input[type="reset"],
-		input[type="submit"],
-		button[type="submit"],
-		.button,
-		#site-navigation-wrap .dropdown-menu >li.btn >a >span,
-		.thumbnail:hover i,
-		.thumbnail:hover .link-post-svg-icon,
-		.post-quote-content,
-		.omw-modal .omw-close-modal,
-		body .contact-info-widget.big-icons li:hover i,
-		body .contact-info-widget.big-icons li:hover .owp-icon,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button,
-		.woocommerce-cart .wp-element-button,
-		.woocommerce-checkout .wp-element-button,
-		.wp-block-button__link{background-color:#b68b5b}
-		
-		.current-shop-items-dropdown{border-top-color:#b68b5b}
-		.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{border-bottom-color:#b68b5b}
-		.wcmenucart-details.count:before{border-color:#b68b5b}
-		
-		.woocommerce ul.products li.product .button:hover{border-color:#b68b5b}
-		.woocommerce ul.products li.product .product-inner .added_to_cart:hover{border-color:#b68b5b}
-		.woocommerce div.product .woocommerce-tabs ul.tabs li.active a{border-color:#b68b5b}
-		.woocommerce .oceanwp-grid-list a.active{border-color:#b68b5b}
-		.woocommerce .oceanwp-grid-list a:hover{border-color:#b68b5b}
-		.woocommerce .oceanwp-off-canvas-filter:hover{border-color:#b68b5b}
-		.owp-product-nav li a.owp-nav-link:hover{border-color:#b68b5b}
-		
-		.widget_shopping_cart_content .buttons .button:first-child:hover{border-color:#b68b5b}
-		.widget_shopping_cart ul.cart_list li .owp-grid-wrap .owp-grid a.remove:hover{border-color:#b68b5b}
-		.widget_product_categories li a:hover ~ .count{border-color:#b68b5b}
-		.woocommerce .widget_product_categories li.current-cat >a ~ .count{border-color:#b68b5b}
-		.woocommerce .widget_product_categories li.current-cat >a:before{border-color:#b68b5b}
-		.widget_layered_nav li a:hover ~ .count{border-color:#b68b5b}
-		.woocommerce .widget_layered_nav li.chosen a ~ .count{border-color:#b68b5b}
-		.woocommerce .widget_layered_nav li.chosen a:before{border-color:#b68b5b}
-		
-		#owp-checkout-timeline.arrow .active .timeline-wrapper:before{border-top-color:#b68b5b;border-bottom-color:#b68b5b}
-		#owp-checkout-timeline.arrow .active .timeline-wrapper:after{border-left-color:#b68b5b;border-right-color:#b68b5b}
-		
-		.bag-style:hover .wcmenucart-cart-icon .wcmenucart-count{border-color:#b68b5b}
-		.bag-style:hover .wcmenucart-cart-icon .wcmenucart-count:after{border-color:#b68b5b}
-		.show-cart .wcmenucart-cart-icon .wcmenucart-count{border-color:#b68b5b}
-		.show-cart .wcmenucart-cart-icon .wcmenucart-count:after{border-color:#b68b5b}
-		
-		.woocommerce ul.products li.product:not(.product-category) .woo-product-gallery .active a{border-color:#b68b5b}
-		.woocommerce ul.products li.product:not(.product-category) .woo-product-gallery a:hover{border-color:#b68b5b}
-		
-		.widget-title{border-color:#b68b5b}
-		blockquote{border-color:#b68b5b}
-		.wp-block-quote{border-color:#b68b5b}
-		#searchform-dropdown{border-color:#b68b5b}
-		.dropdown-menu .sub-menu{border-color:#b68b5b}
-		
-		.blog-entry.large-entry .blog-entry-readmore a:hover{border-color:#b68b5b}
-		.oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#b68b5b}
-		.social-widget li.oceanwp-email a:hover{border-color:#b68b5b}
-		#respond #cancel-comment-reply-link:hover{border-color:#b68b5b}
-		body .contact-info-widget.big-icons li:hover i{border-color:#b68b5b}
-		body .contact-info-widget.big-icons li:hover .owp-icon{border-color:#b68b5b}
-		#footer-widgets .oceanwp-newsletter-form-wrap input[type="email"]:focus{border-color:#b68b5b}
-		
-		.woocommerce div.product div.images .open-image:hover,
-		.woocommerce-error a:hover,
-		.woocommerce-info a:hover,
-		.woocommerce-message a:hover,
-		.woocommerce-message a:focus,
-		.woocommerce .button:focus,
-		.woocommerce ul.products li.product:not(.product-category) .image-wrap .button:hover,
-		input[type="button"]:hover,
-		input[type="reset"]:hover,
-		input[type="submit"]:hover,
-		button[type="submit"]:hover,
-		input[type="button"]:focus,
-		input[type="reset"]:focus,
-		input[type="submit"]:focus,
-		button[type="submit"]:focus,
-		.button:hover,
-		.button:focus,
-		#site-navigation-wrap .dropdown-menu >li.btn >a:hover >span,
-		.post-quote-author,
-		.omw-modal .omw-close-modal:hover,
-		body div.wpforms-container-full .wpforms-form input[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form button[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
-		.woocommerce-cart .wp-element-button:hover,
-		.woocommerce-checkout .wp-element-button:hover,
-		.wp-block-button__link:hover{background-color:#1a2b38}
-		
-		a:hover{color:#b68b5b}
-		a:hover .owp-icon use{stroke:#b68b5b}
-		
-		body .theme-button,
-		body input[type="submit"],
-		body button[type="submit"],
-		body button,
-		body .button,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button,
-		.woocommerce-cart .wp-element-button,
-		.woocommerce-checkout .wp-element-button,
-		.wp-block-button__link{border-color:#ffffff}
-		
-		body .theme-button:hover,
-		body input[type="submit"]:hover,
-		body button[type="submit"]:hover,
-		body button:hover,
-		body .button:hover,
-		body div.wpforms-container-full .wpforms-form input[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form input[type=submit]:active,
-		body div.wpforms-container-full .wpforms-form button[type=submit]:hover,
-		body div.wpforms-container-full .wpforms-form button[type=submit]:active,
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button:active,
-		.woocommerce-cart .wp-element-button:hover,
-		.woocommerce-checkout .wp-element-button:hover,
-		.wp-block-button__link:hover{border-color:#ffffff}
-		
-		.theme-button,input[type="submit"],button[type="submit"],button,.button,
-		body div.wpforms-container-full .wpforms-form input[type=submit],
-		body div.wpforms-container-full .wpforms-form button[type=submit],
-		body div.wpforms-container-full .wpforms-form .wpforms-page-button{border-style:solid;border-width:1px}
-		
-		form input[type="text"],form input[type="password"],form input[type="email"],
-		form input[type="url"],form input[type="date"],form input[type="month"],
-		form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],
-		form input[type="week"],form input[type="number"],form input[type="search"],
-		form input[type="tel"],form input[type="color"],form select,form textarea,
-		.woocommerce .woocommerce-checkout .select2-container--default .select2-selection--single{border-style:solid}
-		
-		form input[type="text"],form input[type="password"],form input[type="email"],
-		form input[type="url"],form input[type="date"],form input[type="month"],
-		form input[type="time"],form input[type="datetime"],form input[type="datetime-local"],
-		form input[type="week"],form input[type="number"],form input[type="search"],
-		form input[type="tel"],form input[type="color"],form select,form textarea{border-radius:3px}
-		
-		#scroll-top{width:47px;height:47px;line-height:47px;background-color:#b68b5b}
-		#scroll-top:hover{background-color:#1a2b38}
-		
-		#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}
-		
-		#site-logo #site-logo-inner a img,
-		#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:103px}
-		@media (max-width:480px){
-			#site-logo #site-logo-inner a img,
-			#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:80px}
-		}
-		#site-header #site-logo #site-logo-inner a img,
-		#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:179px}
-		
-		#site-navigation-wrap .dropdown-menu >li >a,
-		.oceanwp-mobile-menu-icon a,
-		#searchform-header-replace-close{color:#ffffff}
-		#site-navigation-wrap .dropdown-menu >li >a .owp-icon use,
-		.oceanwp-mobile-menu-icon a .owp-icon use,
-		#searchform-header-replace-close .owp-icon use{stroke:#ffffff}
-		
-		#site-navigation-wrap .dropdown-menu >li >a:hover,
-		.oceanwp-mobile-menu-icon a:hover,
-		#searchform-header-replace-close:hover{color:#dddddd}
-		#site-navigation-wrap .dropdown-menu >li >a:hover .owp-icon use,
-		.oceanwp-mobile-menu-icon a:hover .owp-icon use,
-		#searchform-header-replace-close:hover .owp-icon use{stroke:#dddddd}
-		
-		#footer-widgets{padding:0;background-color:#140900}
-		#footer-widgets,#footer-widgets p,#footer-widgets li a:before,
-		#footer-widgets .contact-info-widget span.oceanwp-contact-title,
-		#footer-widgets .recent-posts-date,#footer-widgets .recent-posts-comments,
-		#footer-widgets .widget-recent-posts-icons li .fa{color:#b68b5b}
-		#footer-widgets .footer-box a,#footer-widgets a{color:#b68b5b}
-		#footer-widgets .footer-box a:hover,#footer-widgets a:hover{color:#f2f2f2}
-		
-		#footer-bottom{background-color:#1e1300}
-		
-		.wcmenucart-cart-icon .wcmenucart-count{border-color:#ffffff}
-		.wcmenucart-cart-icon .wcmenucart-count:after{border-color:#ffffff}
-		.wcmenucart-cart-icon .wcmenucart-count,.woo-menu-icon .wcmenucart-total span{color:#ffffff}
-		
-		#owp-checkout-timeline .timeline-step{color:#cccccc;border-color:#cccccc}
-		
-		body{font-family:Roboto;font-size:16px;line-height:1.8;font-weight:400}
-		h1,h2,h3,h4,h5,h6,.theme-heading,.widget-title,
-		.oceanwp-widget-recent-posts-title,.comment-reply-title,
-		.entry-title,.sidebar-box .widget-title{font-family:Oswald;line-height:1.4}
-		h1{font-size:23px;line-height:1.4}
-		h2{font-size:20px;line-height:1.4}
-		h3{font-size:18px;line-height:1.4}
-		h4{font-size:17px;line-height:1.4}
-		h5{font-size:14px;line-height:1.4}
-		h6{font-size:15px;line-height:1.4}
-		.page-header .page-header-title,
-		.page-header.background-image-page-header .page-header-title{font-size:32px;line-height:1.4}
-		.page-header .page-subheading,
-		.page-header.background-image-page-header .page-subheading{font-size:15px;line-height:1.8}
-		.site-breadcrumbs,.site-breadcrumbs a{font-size:13px;line-height:1.4}
-		#top-bar-content,#top-bar-social-alt{font-size:12px;line-height:1.8}
-		#site-logo a.site-logo-text{font-size:24px;line-height:1.8}
-		#site-navigation-wrap .dropdown-menu >li >a,
-		#site-header.full_screen-header .fs-dropdown-menu >li >a,
-		#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,
-		#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,
-		#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,
-		.oceanwp-mobile-menu-icon a{font-size:14px}
-		.dropdown-menu ul li a.menu-link,
-		#site-header.full_screen-header .fs-dropdown-menu ul.sub-menu li a{font-size:12px;line-height:1.2;letter-spacing:.6px}
-		.sidr-class-dropdown-menu li a,a.sidr-class-toggle-sidr-close,
-		#mobile-dropdown ul li a,body #mobile-fullscreen ul li a{font-size:15px;line-height:1.8}
-		.blog-entry.post .blog-entry-header .entry-title a{font-size:24px;line-height:1.4}
-		.ocean-single-post-header .single-post-title{font-size:34px;line-height:1.4;letter-spacing:.6px}
-		.ocean-single-post-header ul.meta-item li,
-		.ocean-single-post-header ul.meta-item li a{font-size:13px;line-height:1.4;letter-spacing:.6px}
-		.ocean-single-post-header .post-author-name,
-		.ocean-single-post-header .post-author-name a{font-size:14px;line-height:1.4;letter-spacing:.6px}
-		.ocean-single-post-header .post-author-description{font-size:12px;line-height:1.4;letter-spacing:.6px}
-		.single-post .entry-title{line-height:1.4;letter-spacing:.6px}
-		.single-post ul.meta li,.single-post ul.meta li a{font-size:14px;line-height:1.4;letter-spacing:.6px}
-		.sidebar-box .widget-title,.sidebar-box.widget_block .wp-block-heading{font-size:13px;line-height:1;letter-spacing:1px}
-		#footer-widgets .footer-box .widget-title{font-size:13px;line-height:1;letter-spacing:1px}
-		#footer-bottom #copyright{font-size:12px;line-height:1}
-		#footer-bottom #footer-bottom-menu{font-size:12px;line-height:1}
-		.woocommerce-store-notice.demo_store{line-height:2;letter-spacing:1.5px}
-		.demo_store .woocommerce-store-notice__dismiss-link{line-height:2;letter-spacing:1.5px}
-		.woocommerce ul.products li.product li.title h2,
-		.woocommerce ul.products li.product li.title a{font-size:14px;line-height:1.5}
-		.woocommerce ul.products li.product li.category,
-		.woocommerce ul.products li.product li.category a{font-size:12px;line-height:1}
-		.woocommerce ul.products li.product .price{font-size:18px;line-height:1}
-		.woocommerce ul.products li.product .button,
-		.woocommerce ul.products li.product .product-inner .added_to_cart{font-size:12px;line-height:1.5;letter-spacing:1px}
-		.woocommerce ul.products li.owp-woo-cond-notice span,
-		.woocommerce ul.products li.owp-woo-cond-notice a{font-size:16px;line-height:1;letter-spacing:1px;font-weight:600;text-transform:capitalize}
-		.woocommerce div.product .product_title{font-size:24px;line-height:1.4;letter-spacing:.6px}
-		.woocommerce div.product p.price{font-size:36px;line-height:1}
-		.woocommerce .owp-btn-normal .summary form button.button,
-		.woocommerce .owp-btn-big .summary form button.button,
-		.woocommerce .owp-btn-very-big .summary form button.button{font-size:12px;line-height:1.5;letter-spacing:1px;text-transform:uppercase}
-		.woocommerce div.owp-woo-single-cond-notice span,
-		.woocommerce div.owp-woo-single-cond-notice a{font-size:18px;line-height:2;letter-spacing:1.5px;font-weight:600;text-transform:capitalize}
-		.ocean-preloader--active .preloader-after-content{font-size:20px;line-height:1.8;letter-spacing:.6px}
-	</style>
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+            padding: 8px 0;
+            border-bottom: 1px solid #2a3b48;
+        }
+
+        .mobile-menu a:hover {
+            color: #b68b5b;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(26, 43, 56, 0.85), rgba(26, 43, 56, 0.9)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect fill="%23b68b5b" opacity="0.05" width="100" height="100"/%3E%3C/svg%3E');
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #d4c9b0;
+        }
+
+        .hero .btn-hero {
+            background: #b68b5b;
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .hero .btn-hero:hover {
+            background: #fff;
+            color: #1a2b38;
+            transform: translateY(-3px);
+        }
+
+        /* SECTIONS */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: #1a2b38;
+            margin-bottom: 15px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 1.05rem;
+        }
+
+        /* 3 COLUMN GRID */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border-top: 4px solid #b68b5b;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: #b68b5b;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            color: #1a2b38;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+
+        /* 2 COLUMN */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .grid-2 img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .grid-2 h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            color: #1a2b38;
+            margin-bottom: 15px;
+        }
+
+        .grid-2 p {
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .btn-secondary {
+            background: #1a2b38;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #b68b5b;
+        }
+
+        /* STATS */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: #f7f5f0;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stats h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            color: #1a2b38;
+        }
+
+        .stats p {
+            color: #b68b5b;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            background: linear-gradient(135deg, #f7f5f0, #edebe6);
+            padding: 60px 20px;
+            border-radius: 16px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .testimonial {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #b68b5b;
+            margin-bottom: 15px;
+        }
+
+        .testimonial blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #2d3748;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .testimonial .name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1a2b38;
+        }
+
+        .testimonial .role {
+            color: #b68b5b;
+            font-size: 0.9rem;
+        }
+
+        /* STEPS */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .step {
+            background: linear-gradient(rgba(26, 43, 56, 0.88), rgba(26, 43, 56, 0.92)), url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"%3E%3Crect fill="%23b68b5b" opacity="0.03" width="100" height="100"/%3E%3C/svg%3E');
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .step .number {
+            width: 50px;
+            height: 50px;
+            background: #b68b5b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin: 0 auto 15px;
+        }
+
+        .step h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        /* PARTNERSHIPS */
+        .partnerships {
+            background: #f8fafc;
+            padding: 50px 20px;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .partnerships .badge {
+            background: rgba(182, 139, 91, 0.1);
+            color: #b68b5b;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .partnerships .partner-box {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .partner-box .icon {
+            font-size: 2.5rem;
+            color: #b68b5b;
+            margin-bottom: 10px;
+        }
+
+        .partner-box h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #1a2b38;
+        }
+
+        .partner-box .type {
+            color: #b68b5b;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .partner-box .divider {
+            width: 40px;
+            height: 2px;
+            background: #e2e8f0;
+            margin: 12px auto;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #111e27;
+            color: #a3b8cc;
+            padding: 50px 20px 20px;
+            border-top: 6px solid #b68b5b;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer h4 {
+            color: #fff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            border-left: 3px solid #b68b5b;
+            padding-left: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer ul li a:hover {
+            color: #b68b5b;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 30px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #1e3240;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .grid-3, .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .grid-3, .steps, .stats {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 12px 16px;
+            }
+            .hero {
+                padding: 50px 16px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .section {
+                padding: 30px 0;
+            }
+        }
+    </style>
 </head>
+<body>
 
-<body class="pmpro-variation_1 home wp-singular page-template-default page page-id-12 wp-custom-logo wp-embed-responsive wp-theme-oceanwp theme-oceanwp pmpro-body-has-access tutor-lms woocommerce-no-js oceanwp-theme dropdown-mobile has-transparent-header no-header-border default-breakpoint content-full-screen page-with-background-title page-header-disabled has-breadcrumbs has-grid-list account-original-style no-margins elementor-default elementor-kit-213 elementor-page elementor-page-12" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">
+            <div class="logo-icon">LOGI</div>
+            <div class="logo-text">LIVING ORACLES<br><span>Global Institute</span></div>
+        </a>
 
-	<div id="outer-wrap" class="site clr">
-		<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#apply" class="btn-apply">Apply Now</a>
+        </nav>
 
-		<div id="wrap" class="clr">
-			<div id="transparent-header-wrap" class="clr">
-				<header id="site-header" class="transparent-header clr" data-height="74" itemscope="itemscope" itemtype="https://schema.org/WPHeader" role="banner">
-					<div id="site-header-inner" class="clr container">
-						<div id="site-logo" class="clr" itemscope itemtype="https://schema.org/Brand">
-							<div id="site-logo-inner" class="clr">
-								<a href="/" class="custom-logo-link" rel="home" aria-current="page">
-									<img width="200" height="149" src="/wp-content/uploads/2024/08/cropped-Logo.png" class="custom-logo" alt="Living Oracles Global Institute" decoding="async" />
-								</a>
-							</div>
-						</div>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-						<div id="site-navigation-wrap" class="clr">
-							<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" role="navigation">
-								<ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu">
-									<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-144">
-										<a href="/" onClick="return true" class="menu-link"><span class="text-wrap">Home</span></a>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-210">
-										<a href="/about/" onClick="return true" class="menu-link"><span class="text-wrap">About LOGI<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800">
-												<a href="/about/vision/" onClick="return true" class="menu-link"><span class="text-wrap">Our Vision</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29563">
-												<a href="/about/mission/" onClick="return true" class="menu-link"><span class="text-wrap">Our Mission</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202">
-												<a href="/about/values/" onClick="return true" class="menu-link"><span class="text-wrap">Our Core Values</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14459">
-												<a href="/about/history/" onClick="return true" class="menu-link"><span class="text-wrap">Institutional History</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410">
-												<a href="/about/leadership/" onClick="return true" class="menu-link"><span class="text-wrap">Leadership & Board</span></a>
-											</li>
-										</ul>
-									</li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-1052">
-										<a href="/apply/" onClick="return true" class="menu-link"><span class="text-wrap">Apply Now!<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12040">
-												<a href="/apply/" onClick="return true" class="menu-link"><span class="text-wrap">Application Form</span></a>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29918">
-												<a href="/apply/scholarship/" onClick="return true" class="menu-link"><span class="text-wrap">Scholarship Information</span></a>
-											</li>
-										</ul>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-15115">
-										<a href="/programs/" onClick="return true" class="menu-link"><span class="text-wrap">Our Programs<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33597">
-												<a href="/programs/" onClick="return true" class="menu-link"><span class="text-wrap">All Programs</span></a>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35615">
-												<a href="/programs/certificate/" onClick="return true" class="menu-link"><span class="text-wrap">Certificate Programs</span></a>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35616">
-												<a href="/programs/diploma/" onClick="return true" class="menu-link"><span class="text-wrap">Diploma Programs</span></a>
-											</li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35617">
-												<a href="/programs/degree/" onClick="return true" class="menu-link"><span class="text-wrap">Degree Programs</span></a>
-											</li>
-										</ul>
-									</li>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511">
-										<a href="/contact/" onClick="return true" class="menu-link"><span class="text-wrap">Contact</span></a>
-									</li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-238">
-										<a onClick="return true" class="menu-link"><span class="text-wrap">Dashboard<i class="nav-arrow fa fa-angle-down" aria-hidden="true" role="img"></i></span></a>
-										<ul class="sub-menu">
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28901">
-												<a target="_blank" href="https://log.moodiy.org/login" onClick="return true" class="menu-link"><span class="text-wrap">Student Portal</span></a>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
-						</div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#">Home</a>
+        <a href="#about">About LOGI</a>
+        <a href="#programs">Programs</a>
+        <a href="#apply">Apply Now</a>
+        <a href="#contact">Contact</a>
+    </div>
 
-						<div class="oceanwp-mobile-menu-icon clr mobile-right">
-							<a href="/#mobile-menu-toggle" class="mobile-menu" aria-label="Mobile Menu">
-								<i class="fa fa-bars" aria-hidden="true"></i>
-								<span class="oceanwp-text">Menu</span>
-								<span class="oceanwp-close-text">Close</span>
-							</a>
-						</div>
-					</div>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Tuition-Free Education</h1>
+            <p>A perfect blend of Leadership, Business, Technology &amp; Theology. Join thousands of global leaders transforming their ministries and careers.</p>
+            <button class="btn-hero" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now - 100% Tuition-Free</button>
+        </div>
+    </section>
 
-					<div id="mobile-dropdown" class="clr">
-						<nav class="clr" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
-							<ul id="menu-main-menu-1" class="menu">
-								<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-144">
-									<a href="/" aria-current="page" onClick="return true">Home</a>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-210">
-									<a href="/about/" onClick="return true">About LOGI</a>
-									<ul class="sub-menu">
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-800">
-											<a href="/about/vision/" onClick="return true">Our Vision</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29563">
-											<a href="/about/mission/" onClick="return true">Our Mission</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1202">
-											<a href="/about/values/" onClick="return true">Our Core Values</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14459">
-											<a href="/about/history/" onClick="return true">Institutional History</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-410">
-											<a href="/about/leadership/" onClick="return true">Leadership & Board</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1052">
-									<a href="/apply/" onClick="return true">Apply Now!</a>
-									<ul class="sub-menu">
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12040">
-											<a href="/apply/" onClick="return true">Application Form</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29918">
-											<a href="/apply/scholarship/" onClick="return true">Scholarship Information</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-15115">
-									<a href="/programs/" onClick="return true">Our Programs</a>
-									<ul class="sub-menu">
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33597">
-											<a href="/programs/" onClick="return true">All Programs</a>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35615">
-											<a href="/programs/certificate/" onClick="return true">Certificate Programs</a>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35616">
-											<a href="/programs/diploma/" onClick="return true">Diploma Programs</a>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35617">
-											<a href="/programs/degree/" onClick="return true">Degree Programs</a>
-										</li>
-									</ul>
-								</li>
-								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-511">
-									<a href="/contact/" onClick="return true">Contact</a>
-								</li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-238">
-									<a onClick="return true">Dashboard</a>
-									<ul class="sub-menu">
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28901">
-											<a target="_blank" href="https://log.moodiy.org/login" onClick="return true">Student Portal</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</header>
-			</div>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2>Who We Are</h2>
+                    <p><strong>Living Oracles Global Institute (LOGI)</strong> is a faith-based institution offering tuition-free education. Our courses are 100% online, collaborative, and practical.</p>
+                    <p>We believe that world-class vocational, professional, and ministerial education should be accessible to everyone, regardless of location or financial status.</p>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Students studying">
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<main id="main" class="site-main clr" role="main">
-				<div id="content-wrap" class="container clr">
-					<div id="primary" class="content-area clr">
-						<div id="content" class="site-content clr">
-							<article class="single-page-article clr">
-								<div class="entry clr" itemprop="text">
-									<div data-elementor-type="wp-post" data-elementor-id="12" class="elementor elementor-12" data-elementor-post-type="page">
-										
-										<!-- HERO SECTION -->
-										<section class="elementor-section elementor-top-section elementor-element elementor-element-4d0e691e elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section-items-middle" data-id="4d0e691e" data-element_type="section" data-settings='{"background_background":"slideshow","background_slideshow_gallery":[{"id":24006,"url":"\/wp-content\/uploads\/2021\/08\/how-to-learn.jpg"},{"id":26059,"url":"\/wp-content\/uploads\/2023\/02\/Flu-student-scaled.jpg"}],"background_slideshow_slide_transition":"slide_left","background_slideshow_loop":"yes","background_slideshow_slide_duration":5000,"background_slideshow_transition_duration":500}'>
-											<div class="elementor-background-overlay"></div>
-											<div class="elementor-container elementor-column-gap-no">
-												<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-706230dc" data-id="706230dc" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-1e69ed5d animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="1e69ed5d" data-element_type="widget" data-settings='{"_animation":"slideInLeft"}' data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h1 class="elementor-heading-title elementor-size-large">TUITION-FREE EDUCATION!</h1>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5546b1a2 elementor-widget-divider--view-line elementor-invisible elementor-widget elementor-widget-divider" data-id="5546b1a2" data-element_type="widget" data-settings='{"_animation":"slideInLeft"}' data-widget_type="divider.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-divider">
-																	<span class="elementor-divider-separator"></span>
-																</div>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-1a594a3d animated-slow elementor-invisible elementor-widget elementor-widget-heading" data-id="1a594a3d" data-element_type="widget" data-settings='{"_animation":"zoomInLeft"}' data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h2 class="elementor-heading-title elementor-size-default">A perfect blend of Leadership, Business, Technology &amp; Theology</h2>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5cf55667 elementor-button-info elementor-align-center elementor-mobile-align-center animated-slow elementor-invisible elementor-widget elementor-widget-button" data-id="5cf55667" data-element_type="widget" data-settings='{"_animation":"zoomIn","_animation_delay":300}' data-widget_type="button.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-button-wrapper">
-																	<a class="elementor-button elementor-button-link elementor-size-md" href="/apply/">
-																		<span class="elementor-button-content-wrapper">
-																			<span class="elementor-button-icon">
-																				<i aria-hidden="true" class="far fa-edit"></i>
-																			</span>
-																			<span class="elementor-button-text">Apply Now - 100% Tuition-Free</span>
-																		</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</section>
+    <!-- PROGRAMS -->
+    <section id="programs" class="section" style="background:#f9f8f6;">
+        <div class="container">
+            <h2 class="section-title">Our Programs</h2>
+            <p class="section-sub">Select a professionally structured learning pathway for business and ministry leadership advancement.</p>
 
-										<!-- ABOUT SECTION -->
-										<section class="elementor-section elementor-top-section elementor-element elementor-element-da9cf60 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="da9cf60" data-element_type="section">
-											<div class="elementor-container elementor-column-gap-default">
-												<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-53897dc5" data-id="53897dc5" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-74bbb4f2 elementor-widget elementor-widget-heading" data-id="74bbb4f2" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h3 class="elementor-heading-title elementor-size-small">WHO WE ARE</h3>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-83bfd85 elementor-widget elementor-widget-heading" data-id="83bfd85" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h1 class="elementor-heading-title elementor-size-default">Our Story</h1>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-e8c8602 elementor-widget elementor-widget-image" data-id="e8c8602" data-element_type="widget" data-widget_type="image.default">
-															<div class="elementor-widget-container">
-																<img fetchpriority="high" decoding="async" width="768" height="512" src="/wp-content/uploads/2020/08/faith_leadership_university-768x512.png" class="attachment-medium_large size-medium_large wp-image-465" alt="Living Oracles Global Institute - Tuition-Free Theological Education" />
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-3623cccf elementor-widget elementor-widget-text-editor" data-id="3623cccf" data-element_type="widget" data-widget_type="text-editor.default">
-															<div class="elementor-widget-container">
-																<p><strong>Living Oracles Global Institute (LOGI)</strong> is a faith-based institution offering tuition-free education. Our courses are 100% online. Our approach is collaborative and practical.</p>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-28c0b5c1 elementor-button-info elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="28c0b5c1" data-element_type="widget" data-widget_type="button.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-button-wrapper">
-																	<a class="elementor-button elementor-button-link elementor-size-xs" href="/about/">
-																		<span class="elementor-button-content-wrapper">
-																			<span class="elementor-button-icon">
-																				<i aria-hidden="true" class="fab fa-readme"></i>
-																			</span>
-																			<span class="elementor-button-text">Read More</span>
-																		</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1792738c" data-id="1792738c" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-52813168 elementor-widget elementor-widget-heading" data-id="52813168" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h3 class="elementor-heading-title elementor-size-small">EMPOWER YOURSELF</h3>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5f899326 elementor-widget elementor-widget-heading" data-id="5f899326" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h1 class="elementor-heading-title elementor-size-default">Our Programs</h1>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-4f7c1131 elementor-widget elementor-widget-image" data-id="4f7c1131" data-element_type="widget" data-widget_type="image.default">
-															<div class="elementor-widget-container">
-																<img decoding="async" width="675" height="450" src="/wp-content/uploads/2021/08/Our-Programs2-min.png" class="attachment-medium_large size-medium_large wp-image-24036" alt="Living Oracles Global Institute Programs" />
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-41f8598e elementor-widget elementor-widget-text-editor" data-id="41f8598e" data-element_type="widget" data-widget_type="text-editor.default">
-															<div class="elementor-widget-container">
-																<p>Welcome! We build leaders who make an impact. We are a faith-based institution offering a perfect blend of Leadership, Business, Technology &amp; Theology. Please click below to see our programs:</p>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5888677 elementor-button-info elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5888677" data-element_type="widget" data-widget_type="button.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-button-wrapper">
-																	<a class="elementor-button elementor-button-link elementor-size-xs" href="/programs/">
-																		<span class="elementor-button-content-wrapper">
-																			<span class="elementor-button-icon">
-																				<i aria-hidden="true" class="fab fa-readme"></i>
-																			</span>
-																			<span class="elementor-button-text">Read More</span>
-																		</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6b847a59" data-id="6b847a59" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-54fca737 elementor-widget elementor-widget-heading" data-id="54fca737" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h3 class="elementor-heading-title elementor-size-small">FAITH-BASED EDUCATION</h3>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-2b8334c2 elementor-widget elementor-widget-heading" data-id="2b8334c2" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h1 class="elementor-heading-title elementor-size-default">Our Mission</h1>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-6c8eecc8 elementor-widget elementor-widget-image" data-id="6c8eecc8" data-element_type="widget" data-widget_type="image.default">
-															<div class="elementor-widget-container">
-																<img decoding="async" src="/wp-content/uploads/elementor/thumbs/Faith-Leads-University_Award-logo-scaled-qskk6judq6xw0ysr9m82ny0hbyax8kvwbkmx651opg.jpg" title="Living Oracles Global Institute" alt="Living Oracles Global Institute" loading="lazy" />
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5dc2f683 elementor-widget elementor-widget-text-editor" data-id="5dc2f683" data-element_type="widget" data-widget_type="text-editor.default">
-															<div class="elementor-widget-container">
-																<p>We offer a distinctive educational model that integrates secular learning with Christian principles to develop well-rounded leaders.</p>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-5ac3b9d9 elementor-button-info elementor-align-left elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5ac3b9d9" data-element_type="widget" data-widget_type="button.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-button-wrapper">
-																	<a class="elementor-button elementor-button-link elementor-size-xs" href="/about/mission/">
-																		<span class="elementor-button-content-wrapper">
-																			<span class="elementor-button-icon">
-																				<i aria-hidden="true" class="fab fa-readme"></i>
-																			</span>
-																			<span class="elementor-button-text">Read More</span>
-																		</span>
-																	</a>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</section>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Master's Degrees</h3>
+                    <p>Advanced structural theology &amp; institutional governance tracks.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Bachelor's Degrees</h3>
+                    <p>Foundational structural execution models for deep research.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-award"></i></div>
+                    <h3>Diploma Programs</h3>
+                    <p>Fast-track structural operations and specialized leadership.</p>
+                </div>
+            </div>
 
-										<!-- WHY STUDY WITH US -->
-										<section class="elementor-section elementor-top-section elementor-element elementor-element-b51db05 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b51db05" data-element_type="section">
-											<div class="elementor-container elementor-column-gap-default">
-												<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-eefb11f" data-id="eefb11f" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-f27a59a elementor-widget elementor-widget-heading" data-id="f27a59a" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h1 class="elementor-heading-title elementor-size-xl">WHY STUDY WITH US?</h1>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</section>
+            <div class="grid-3" style="margin-top:20px;">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>Certificate in Church Administration</h3>
+                    <p>Equip ministry leaders with operational expertise and practical administration methods.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Certificate in Leadership Development</h3>
+                    <p>Build mindset, behavioral competencies, and practical leadership skills.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Certificate in Business Administration</h3>
+                    <p>Operational knowledge, decision-making frameworks, and practical business methods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-										<section class="elementor-section elementor-top-section elementor-element elementor-element-49e3e58 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="49e3e58" data-element_type="section">
-											<div class="elementor-container elementor-column-gap-default">
-												<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-ed8f647" data-id="ed8f647" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-e7ff172 elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="e7ff172" data-element_type="widget" data-widget_type="icon-box.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-icon-box-wrapper">
-																	<div class="elementor-icon-box-icon">
-																		<span class="elementor-icon">
-																			<i aria-hidden="true" class="far fa-thumbs-up"></i>
-																		</span>
-																	</div>
-																	<div class="elementor-icon-box-content">
-																		<h3 class="elementor-icon-box-title">
-																			<span>Practical Approach</span>
-																		</h3>
-																		<p class="elementor-icon-box-description">Our learning approach is rooted in practicality, with a strong emphasis on generating value and addressing real-world challenges.</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-aeefc42" data-id="aeefc42" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-b7af4ec elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="b7af4ec" data-element_type="widget" data-widget_type="icon-box.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-icon-box-wrapper">
-																	<div class="elementor-icon-box-icon">
-																		<span class="elementor-icon">
-																			<i aria-hidden="true" class="fas fa-link"></i>
-																		</span>
-																	</div>
-																	<div class="elementor-icon-box-content">
-																		<h3 class="elementor-icon-box-title">
-																			<span>Perfect Blend</span>
-																		</h3>
-																		<p class="elementor-icon-box-description">Our teaching approach seamlessly integrates theology, business, technology and leadership principles.</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-db95eb8" data-id="db95eb8" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-9e82cbd elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="9e82cbd" data-element_type="widget" data-widget_type="icon-box.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-icon-box-wrapper">
-																	<div class="elementor-icon-box-icon">
-																		<span class="elementor-icon">
-																			<i aria-hidden="true" class="icon icon-team1"></i>
-																		</span>
-																	</div>
-																	<div class="elementor-icon-box-content">
-																		<h3 class="elementor-icon-box-title">
-																			<span>Dedicated Team</span>
-																		</h3>
-																		<p class="elementor-icon-box-description">Our team is composed of dedicated individuals driven by a passion to serve God and make a positive impact on the lives of others.</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-89744ac" data-id="89744ac" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-dc8b61b elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="dc8b61b" data-element_type="widget" data-widget_type="icon-box.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-icon-box-wrapper">
-																	<div class="elementor-icon-box-icon">
-																		<span class="elementor-icon">
-																			<i aria-hidden="true" class="icon icon-money-bag"></i>
-																		</span>
-																	</div>
-																	<div class="elementor-icon-box-content">
-																		<h3 class="elementor-icon-box-title">
-																			<span>Tuition-Free</span>
-																		</h3>
-																		<p class="elementor-icon-box-description">We offer tuition-free education through scholarships and grants, making quality education accessible to everyone.</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="elementor-column elementor-col-20 elementor-top-column elementor-element elementor-element-ed8b86c" data-id="ed8b86c" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-40d762f elementor-view-default elementor-position-block-start elementor-mobile-position-block-start elementor-widget elementor-widget-icon-box" data-id="40d762f" data-element_type="widget" data-widget_type="icon-box.default">
-															<div class="elementor-widget-container">
-																<div class="elementor-icon-box-wrapper">
-																	<div class="elementor-icon-box-icon">
-																		<span class="elementor-icon">
-																			<i aria-hidden="true" class="icon icon-internet"></i>
-																		</span>
-																	</div>
-																	<div class="elementor-icon-box-content">
-																		<h3 class="elementor-icon-box-title">
-																			<span>Convenience</span>
-																		</h3>
-																		<p class="elementor-icon-box-description">Engage in flexible online learning at your convenience while fostering collaborative opportunities with fellow students worldwide.</p>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</section>
+    <!-- WHY STUDY WITH US -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Study With Us?</h2>
+            <p class="section-sub">Five reasons to choose LOGI for your educational journey.</p>
 
-										<!-- PARTNERSHIPS -->
-										<section class="elementor-section elementor-top-section elementor-element elementor-element-240699c2 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="240699c2" data-element_type="section">
-											<div class="elementor-container elementor-column-gap-no">
-												<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ab6c97f" data-id="5ab6c97f" data-element_type="column">
-													<div class="elementor-widget-wrap elementor-element-populated">
-														<div class="elementor-element elementor-element-585f7dfd elementor-widget elementor-widget-heading" data-id="585f7dfd" data-element_type="widget" data-widget_type="heading.default">
-															<div class="elementor-widget-container">
-																<h2 class="elementor-heading-title elementor-size-default"><a href="/partnerships/">Institutional Partnerships</a></h2>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-3f35c68 elementor-widget elementor-widget-text-editor" data-id="3f35c68" data-element_type="widget" data-widget_type="text-editor.default">
-															<div class="elementor-widget-container">
-																<div class="ekit-wid-con">
-																	<div class="elementskit-clients-slider simple_logo_image">
-																		<div class="ekit-main-swiper swiper">
-																			<div class="swiper-wrapper">
-																				<div class="elementskit-client-slider-item swiper-slide">
-																					<div class="swiper-slide-inner">
-																						<div class="single-client image-switcher" title="ADUSEI Foundation">
-																							<a href="#" target="_blank">
-																								<span class="content-image">
-																									<img loading="lazy" decoding="async" width="236" height="302" src="/wp-content/uploads/2023/05/Accredited-Logo-Large-2023-2027.jpg" class="" alt="ADUSEI Foundation" />
-																								</span>
-																							</a>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</main>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-thumbs-up"></i></div>
+                    <h3>Practical Approach</h3>
+                    <p>Rooted in practicality with a strong emphasis on generating value and addressing real-world challenges.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-link"></i></div>
+                    <h3>Perfect Blend</h3>
+                    <p>Seamlessly integrates theology, business, technology, and leadership principles.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <h3>Dedicated Team</h3>
+                    <p>Driven by a passion to serve God and make a positive impact on the lives of others.</p>
+                </div>
+            </div>
 
-			<!-- FOOTER -->
-			<footer data-elementor-type="footer" data-elementor-id="28032" class="elementor elementor-28032 elementor-location-footer" data-elementor-post-type="elementor_library">
-				<footer class="elementor-section elementor-top-section elementor-element elementor-element-64283b33 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="64283b33" data-element_type="section" data-settings='{"background_background":"classic"}'>
-					<div class="elementor-container elementor-column-gap-default">
-						<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3c4418ea" data-id="3c4418ea" data-element_type="column">
-							<div class="elementor-widget-wrap elementor-element-populated">
-								<section class="elementor-section elementor-inner-section elementor-element elementor-element-56b77d90 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="56b77d90" data-element_type="section">
-									<div class="elementor-container elementor-column-gap-default">
-										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2b55bd13" data-id="2b55bd13" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-17629f8c elementor-widget elementor-widget-heading" data-id="17629f8c" data-element_type="widget" data-widget_type="heading.default">
-													<div class="elementor-widget-container">
-														<h4 class="elementor-heading-title elementor-size-default">About</h4>
-													</div>
-												</div>
-												<div class="elementor-element elementor-element-4df4b3bb elementor-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4df4b3bb" data-element_type="widget" data-widget_type="icon-list.default">
-													<div class="elementor-widget-container">
-														<ul class="elementor-icon-list-items">
-															<li class="elementor-icon-list-item"><a href="/about/"><span class="elementor-icon-list-text">About LOGI</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/about/vision/"><span class="elementor-icon-list-text">Our Vision</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/about/mission/"><span class="elementor-icon-list-text">Our Mission</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/about/values/"><span class="elementor-icon-list-text">Core Values</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/about/leadership/"><span class="elementor-icon-list-text">Leadership & Board</span></a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-77c549cc" data-id="77c549cc" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-54e9e02f elementor-widget elementor-widget-heading" data-id="54e9e02f" data-element_type="widget" data-widget_type="heading.default">
-													<div class="elementor-widget-container">
-														<h4 class="elementor-heading-title elementor-size-default">Admissions</h4>
-													</div>
-												</div>
-												<div class="elementor-element elementor-element-4261a52b elementor-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4261a52b" data-element_type="widget" data-widget_type="icon-list.default">
-													<div class="elementor-widget-container">
-														<ul class="elementor-icon-list-items">
-															<li class="elementor-icon-list-item"><a href="/programs/"><span class="elementor-icon-list-text">Our Programs</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/apply/"><span class="elementor-icon-list-text">Apply Now</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/apply/scholarship/"><span class="elementor-icon-list-text">Scholarship Info</span></a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-ac9b38b" data-id="ac9b38b" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-a086192 elementor-widget elementor-widget-heading" data-id="a086192" data-element_type="widget" data-widget_type="heading.default">
-													<div class="elementor-widget-container">
-														<h4 class="elementor-heading-title elementor-size-default">Resources</h4>
-													</div>
-												</div>
-												<div class="elementor-element elementor-element-c411df9 elementor-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="c411df9" data-element_type="widget" data-widget_type="icon-list.default">
-													<div class="elementor-widget-container">
-														<ul class="elementor-icon-list-items">
-															<li class="elementor-icon-list-item"><a href="https://log.moodiy.org/login" target="_blank"><span class="elementor-icon-list-text">Student Portal</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/faq/"><span class="elementor-icon-list-text">FAQ</span></a></li>
-															<li class="elementor-icon-list-item"><a href="/contact/"><span class="elementor-icon-list-text">Contact Us</span></a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-651598ea" data-id="651598ea" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-21cc6753 elementor-widget elementor-widget-heading" data-id="21cc6753" data-element_type="widget" data-widget_type="heading.default">
-													<div class="elementor-widget-container">
-														<h4 class="elementor-heading-title elementor-size-default">Follow Us</h4>
-													</div>
-												</div>
-												<div class="elementor-element elementor-element-6a8f6b93 elementor-align-start elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6a8f6b93" data-element_type="widget" data-widget_type="icon-list.default">
-													<div class="elementor-widget-container">
-														<ul class="elementor-icon-list-items">
-															<li class="elementor-icon-list-item">
-																<a href="#"><span class="elementor-icon-list-icon"><i aria-hidden="true" class="fab fa-facebook"></i></span><span class="elementor-icon-list-text">Facebook</span></a>
-															</li>
-															<li class="elementor-icon-list-item">
-																<a href="#"><span class="elementor-icon-list-icon"><i aria-hidden="true" class="fab fa-linkedin"></i></span><span class="elementor-icon-list-text">LinkedIn</span></a>
-															</li>
-															<li class="elementor-icon-list-item">
-																<a href="#"><span class="elementor-icon-list-icon"><i aria-hidden="true" class="fab fa-youtube"></i></span><span class="elementor-icon-list-text">YouTube</span></a>
-															</li>
-															<li class="elementor-icon-list-item">
-																<a href="#"><span class="elementor-icon-list-icon"><i aria-hidden="true" class="fab fa-instagram"></i></span><span class="elementor-icon-list-text">Instagram</span></a>
-															</li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
+            <div class="grid-3" style="margin-top:20px;">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h3>Tuition-Free</h3>
+                    <p>We offer tuition-free education through scholarships and grants, making quality education accessible to everyone.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Convenience</h3>
+                    <p>Engage in flexible online learning at your convenience from anywhere in the world.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <h3>Faith-Based</h3>
+                    <p>Integrate secular learning with Christian principles to develop well-rounded leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-								<section class="elementor-section elementor-inner-section elementor-element elementor-element-644665d5 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="644665d5" data-element_type="section">
-									<div class="elementor-container elementor-column-gap-default">
-										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a103356" data-id="a103356" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-18fe5c3 elementor-widget__width-initial elementor-widget elementor-widget-shortcode" data-id="18fe5c3" data-element_type="widget" data-widget_type="shortcode.default">
-													<div class="elementor-widget-container">
-														<div class="emaillist">
-															<form action="/#es_form_f4-n1" method="post" class="es_subscription_form es_shortcode_form es_ajax_subscription_form" id="es_subscription_form_6a5258416df80" data-source="ig-es" data-form-id="4">
-																<div class="es-form-field-container">
-																	<div class="gjs-row">
-																		<div class="gjs-cell"><input type="text" name="esfpx_name" autocomplete="name" placeholder="Enter your name" class="es-name" /></div>
-																	</div>
-																	<div class="gjs-row">
-																		<div class="gjs-cell"><input type="email" required class="es-email" name="esfpx_email" autocomplete="email" placeholder="Enter your email" /></div>
-																	</div>
-																	<div class="gjs-row">
-																		<div class="gjs-cell"><input type="submit" name="submit" value="Subscribe" /></div>
-																	</div>
-																</div>
-															</form>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7ca8d874" data-id="7ca8d874" data-element_type="column">
-											<div class="elementor-widget-wrap elementor-element-populated">
-												<div class="elementor-element elementor-element-1ba3ba40 elementor-widget elementor-widget-heading" data-id="1ba3ba40" data-element_type="widget" data-widget_type="heading.default">
-													<div class="elementor-widget-container">
-														<p class="elementor-heading-title elementor-size-default"><span style="font-family: Roboto;font-size: 12px;font-style: normal;font-weight: 400;text-align: center">Copyright © 2026, Living Oracles Global Institute</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</footer>
+    <!-- STATS -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="stats">
+                <div>
+                    <h2>100%</h2>
+                    <p>Online &amp; Flexible</p>
+                </div>
+                <div>
+                    <h2>$0</h2>
+                    <p>Tuition Charged</p>
+                </div>
+                <div>
+                    <h2>50+</h2>
+                    <p>Countries Represented</p>
+                </div>
+                <div>
+                    <h2>24/7</h2>
+                    <p>Portal Availability</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<div class="owp-cart-overlay"></div>
-		</div>
-	</div>
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color:#1a2b38;">What Our Students Say</h2>
+            <p class="section-sub" style="color:#718096;">Hear from graduates who transformed their lives through LOGI's tuition-free programs.</p>
 
-	<!-- Scripts -->
-	<script type="speculationrules">
-		{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/oceanwp/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-	</script>
+            <div class="testimonial">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Student">
+                <blockquote>"LOGI gave me the theological foundation I needed to lead my church effectively. The flexibility allowed me to study while pastoring. This program truly transformed my ministry and my life."</blockquote>
+                <div class="name">Pastor James M.</div>
+                <div class="role">Graduate 2025</div>
+            </div>
+        </div>
+    </section>
 
-	<script>
-		const lazyloadRunObserver = () => {
-			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
-			const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						let lazyloadBackground = entry.target;
-						if(lazyloadBackground) {
-							lazyloadBackground.classList.add('e-lazyloaded');
-						}
-						lazyloadBackgroundObserver.unobserve(entry.target);
-					}
-				});
-			}, { rootMargin: '200px 0px 200px 0px' });
-			lazyloadBackgrounds.forEach((lazyloadBackground) => {
-				lazyloadBackgroundObserver.observe(lazyloadBackground);
-			});
-		};
-		const events = ['DOMContentLoaded', 'elementor/lazyload/observe'];
-		events.forEach((event) => {
-			document.addEventListener(event, lazyloadRunObserver);
-		});
-	</script>
+    <!-- STEPS -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Onboarding Execution Strategy</h2>
+            <p class="section-sub">How to launch your educational path through our integrated processing system.</p>
 
-	<script>
-		(function () {
-			var c = document.body.className;
-			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
-			document.body.className = c;
-		})();
-	</script>
+            <div class="steps">
+                <div class="step">
+                    <div class="number">1</div>
+                    <h4>Submit Registry File</h4>
+                    <p>Access our integrated form to input your background and identification profiles smoothly.</p>
+                </div>
+                <div class="step">
+                    <div class="number">2</div>
+                    <h4>Verification Check</h4>
+                    <p>System architects process credentials and evaluate prerequisite milestones.</p>
+                </div>
+                <div class="step">
+                    <div class="number">3</div>
+                    <h4>Initialize Campus Node</h4>
+                    <p>Receive authentication tokens and directly access our online portal.</p>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:30px;">
+                <button class="btn-hero" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Launch Application Pipeline Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTNERSHIPS -->
+    <section class="partnerships">
+        <div class="container">
+            <div class="badge">Institutional Alliance</div>
+            <h2 class="section-title" style="font-size:1.8rem;">Strategic Alliances &amp; Foundations</h2>
+            <p style="color:#718096; max-width:600px; margin:0 auto 30px;">Our academic frameworks and global outreach infrastructures are backed by leading philanthropic networks committed to educational accessibility.</p>
+
+            <div class="partner-box">
+                <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h3>ADUSEI Foundation</h3>
+                <p class="type">Primary Institutional Partner</p>
+                <div class="divider"></div>
+                <p style="color:#4a5568;">Driving resource capitalization, scholarship subsidies, and logistical support to facilitate global tuition-free operational frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLY FORM -->
+    <section id="apply" class="section" style="background:#f9f8f6;">
+        <div class="container">
+            <h2 class="section-title">Apply Now</h2>
+            <p class="section-sub">Complete your enrollment application to begin your academic journey at LOGI.</p>
+
+            <div style="max-width:700px; margin:0 auto; background:#fff; padding:40px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.05); border:1px solid #e2e8f0;">
+                <form id="applyForm">
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                        <div>
+                            <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">First Name <span style="color:#e53e3e;">*</span></label>
+                            <input type="text" placeholder="Enter first name" required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px;">
+                        </div>
+                        <div>
+                            <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Last Name <span style="color:#e53e3e;">*</span></label>
+                            <input type="text" placeholder="Enter last name" required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px;">
+                        </div>
+                    </div>
+
+                    <div style="margin-top:16px;">
+                        <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Email Address <span style="color:#e53e3e;">*</span></label>
+                        <input type="email" placeholder="you@example.com" required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px;">
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;">
+                        <div>
+                            <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Phone <span style="color:#e53e3e;">*</span></label>
+                            <input type="tel" placeholder="+233 XX XXX XXXX" required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px;">
+                        </div>
+                        <div>
+                            <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Country <span style="color:#e53e3e;">*</span></label>
+                            <select required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px; background:#fff;">
+                                <option value="">Select Country</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="United States">United States</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:16px;">
+                        <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Program of Interest <span style="color:#e53e3e;">*</span></label>
+                        <select required style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px; background:#fff;">
+                            <option value="">Select Program</option>
+                            <option value="certificate">Certificate Programs</option>
+                            <option value="diploma">Diploma Programs</option>
+                            <option value="bachelors">Bachelor's Degrees</option>
+                            <option value="masters">Master's Degrees</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-top:16px;">
+                        <label style="display:block; font-weight:600; margin-bottom:5px; font-size:14px;">Why do you want to join LOGI?</label>
+                        <textarea rows="3" placeholder="Tell us briefly about your goals and what inspired you to apply..." style="width:100%; padding:12px; border:1.5px solid #e2e8f0; border-radius:8px; font-size:14px; resize:vertical;"></textarea>
+                    </div>
+
+                    <div style="margin-top:20px; padding:16px; background:#f7fafc; border-radius:8px; display:flex; align-items:flex-start; gap:12px;">
+                        <input type="checkbox" required style="width:18px; height:18px; margin-top:2px; accent-color:#1a2b38;">
+                        <label style="font-size:13px; color:#4a5568; cursor:pointer;">I accept the institutional terms and conditions and certify that all declarations are accurate. <span style="color:#e53e3e;">*</span></label>
+                    </div>
+
+                    <button type="submit" style="width:100%; margin-top:25px; padding:16px; background:#b68b5b; color:#fff; border:none; border-radius:8px; font-size:16px; font-weight:700; cursor:pointer; transition:background 0.3s;" onmouseover="this.style.background='#8f6e47'" onmouseout="this.style.background='#b68b5b'">
+                        <i class="fas fa-paper-plane"></i> Submit Application
+                    </button>
+                </form>
+
+                <div id="formMessage" style="margin-top:20px; padding:14px; border-radius:8px; display:none; text-align:center; font-weight:500;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-sub">Have questions? Reach out to our team.</p>
+
+            <div style="max-width:600px; margin:0 auto; text-align:center;">
+                <p style="margin-bottom:10px;"><i class="fas fa-envelope" style="color:#b68b5b; width:30px;"></i> office@livingoracles.org</p>
+                <p style="margin-bottom:10px;"><i class="fas fa-phone" style="color:#b68b5b; width:30px;"></i> +233 241 456 581</p>
+                <p><i class="fas fa-map-marker-alt" style="color:#b68b5b; width:30px;"></i> Online - Global</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Our Vision</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Core Values</a></li>
+                    <li><a href="#">Leadership &amp; Board</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Programs</h4>
+                <ul>
+                    <li><a href="#">Certificate Programs</a></li>
+                    <li><a href="#">Diploma Programs</a></li>
+                    <li><a href="#">Bachelor's Degrees</a></li>
+                    <li><a href="#">Master's Degrees</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Admissions</h4>
+                <ul>
+                    <li><a href="#">Apply Now</a></li>
+                    <li><a href="#">Scholarship Info</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Living Oracles Global Institute. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.remove('open');
+            });
+        });
+
+        // Form Submit Handler
+        document.getElementById('applyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = document.getElementById('formMessage');
+            message.style.display = 'block';
+            message.className = '';
+            message.style.background = '#c6f6d5';
+            message.style.color = '#22543d';
+            message.innerHTML = '✅ Success! Your application has been submitted. You will receive a confirmation email shortly.';
+            this.reset();
+
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 5000);
+        });
+    </script>
 
 </body>
 </html>
